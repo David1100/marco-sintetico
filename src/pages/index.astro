@@ -1,11 +1,244 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const modules = [
+  {
+    title: "Apropiación de la Productividad Social",
+    slug: "/apropiacion-de-la-productividad-social",
+    description: "Dashboard inmersivo que articula Naturaleza, Riqueza y Sociedad.",
+    status: "Publicado",
+    icon: "hub",
+    accent: "primary",
+  },
+  {
+    title: "Ecosistemas Regenerativos",
+    slug: "#",
+    description: "Modelos bióticos, indicadores de resiliencia y mapas de restauración.",
+    status: "En diseño",
+    icon: "eco",
+    accent: "secondary",
+  },
+  {
+    title: "Cadenas de Valor Solidarias",
+    slug: "#",
+    description: "Flujos productivos con trazabilidad social y económica.",
+    status: "Próximo",
+    icon: "sync_alt",
+    accent: "tertiary",
+  },
+  {
+    title: "Gobernanza Comunitaria",
+    slug: "#",
+    description: "Roles, nodos y acuerdos colaborativos para cada territorio.",
+    status: "Prototipo",
+    icon: "groups",
+    accent: "secondary",
+  },
+  {
+    title: "Laboratorio de Datos Sociales",
+    slug: "#",
+    description: "KPIs, cohortes y experimentos de impacto en tiempo real.",
+    status: "En investigación",
+    icon: "monitoring",
+    accent: "primary",
+  },
+  {
+    title: "Atlas de Aprendizajes",
+    slug: "#",
+    description: "Historias, insights y repositorio audiovisual del proceso.",
+    status: "Ideación",
+    icon: "auto_stories",
+    accent: "tertiary",
+  },
+];
+
+const metrics = [
+  { label: "Territorios conectados", value: "32", trend: "+5", accent: "primary" },
+  { label: "Equipos creativos", value: "18", trend: "+3", accent: "secondary" },
+  { label: "Ciclos documentados", value: "64", trend: "+12", accent: "tertiary" },
+];
+
+const accentText = {
+  primary: "text-primary",
+  secondary: "text-secondary",
+  tertiary: "text-tertiary",
+} as const;
+
+const accentTrack = {
+  primary: "bg-primary/30",
+  secondary: "bg-secondary/30",
+  tertiary: "bg-tertiary/30",
+} as const;
+
+const accentFixedBadge = {
+  primary: "bg-primary-fixed text-on-primary-fixed",
+  secondary: "bg-secondary-fixed text-on-secondary-fixed",
+  tertiary: "bg-tertiary-fixed text-on-tertiary-fixed",
+} as const;
+
+const accentHover = {
+  primary: "group-hover:text-primary",
+  secondary: "group-hover:text-secondary",
+  tertiary: "group-hover:text-tertiary",
+} as const;
 ---
 
-<Layout>
-	<Welcome />
+<Layout
+  title="Marco Sintético - Dashboard Vivo"
+  description="Centro de mando para navegar más de 30 experiencias sobre productividad social."
+>
+  <main class="min-h-screen bg-surface">
+    <div class="max-w-6xl mx-auto px-6 py-12 space-y-14">
+      <header class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+        <div>
+          <p class="uppercase text-xs tracking-[0.3em] text-on-surface-variant">Marco Sintético</p>
+          <h1 class="font-headline text-4xl md:text-5xl font-extrabold text-primary mt-2">
+            Dashboard maestro de Apropiación Social
+          </h1>
+          <p class="text-on-surface-variant mt-3 max-w-2xl">
+            Conecta todas las capas del modelo: visión estratégica, tableros inmersivos y futuros módulos (30+) listos para activarse.
+          </p>
+        </div>
+        <a
+          href="/apropiacion-de-la-productividad-social"
+          class="inline-flex items-center gap-2 rounded-full px-6 py-3 bg-primary text-on-primary font-semibold shadow-lg shadow-primary/20 hover:bg-primary-container transition"
+        >
+          <span class="material-symbols-outlined">trending_up</span>
+          Abrir último módulo
+        </a>
+      </header>
+
+      <section class="relative overflow-hidden rounded-[2rem] p-10 bg-gradient-to-br from-primary/10 via-surface to-tertiary/5 border border-outline/20">
+        <div class="grid gap-8 lg:grid-cols-[2fr,1fr] items-center">
+          <div class="space-y-6">
+            <h2 class="text-3xl font-headline font-extrabold text-on-surface">Cartografía de experiencias</h2>
+            <p class="text-on-surface-variant text-base leading-relaxed">
+              Diseñamos un sistema navegable que escala a más de treinta páginas temáticas. Cada nodo conserva el mismo lenguaje visual, métricas comparables y acceso rápido a fuentes.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <span class="px-4 py-2 rounded-full bg-primary-fixed text-on-primary-fixed text-xs font-bold tracking-widest">Núcleo Productivo</span>
+              <span class="px-4 py-2 rounded-full bg-secondary-fixed text-on-secondary-fixed text-xs font-bold tracking-widest">Territorios</span>
+              <span class="px-4 py-2 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-xs font-bold tracking-widest">Laboratorios</span>
+            </div>
+          </div>
+          <div class="glass-card rounded-[1.5rem] p-8 border border-white/40 shadow-2xl">
+            <p class="text-sm text-on-surface-variant">Próximo corte</p>
+            <h3 class="text-4xl font-headline font-extrabold text-primary mt-2">Q3 · 2026</h3>
+            <p class="text-sm text-on-surface-variant mt-4">Ruta de despliegue simultáneo para los siguientes capítulos y tableros.</p>
+            <button class="w-full mt-6 py-3 rounded-full bg-on-surface text-background font-semibold hover:bg-primary hover:text-white transition">
+              Descargar plan maestro
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="grid gap-6 md:grid-cols-3">
+          {metrics.map((metric) => (
+            <article class="rounded-3xl p-6 bg-surface-container-high shadow-sm border border-outline/10" key={metric.label}>
+              <p class="text-sm uppercase tracking-[0.2em] text-on-surface-variant">{metric.label}</p>
+              <div class="flex items-end justify-between mt-4">
+                <span class="text-4xl font-headline font-extrabold text-on-surface">{metric.value}</span>
+                <span class={`${accentText[metric.accent]} text-sm font-semibold`}>{metric.trend}</span>
+              </div>
+              <div class={`h-1 mt-6 rounded-full ${accentTrack[metric.accent]}`}></div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section>
+        <div class="flex flex-col gap-3 mb-6">
+          <div class="flex items-center gap-3">
+            <span class="h-1 w-10 bg-primary rounded-full"></span>
+            <p class="uppercase text-xs tracking-[0.3em] text-on-surface-variant">Mapa navegable</p>
+          </div>
+          <h2 class="text-3xl font-headline font-extrabold text-on-surface">Módulos del ecosistema</h2>
+          <p class="text-on-surface-variant max-w-3xl">
+            Cada tarjeta resume el propósito de la página, su estado de maduración y acceso directo (cuando está disponible). El dashboard escalará a 30+ rutas.
+          </p>
+        </div>
+        <div class="dashboard-grid">
+          {modules.map((module) => (
+            <a
+              href={module.slug}
+              class={`group relative border border-outline/15 rounded-[1.5rem] p-6 bg-surface-container-low hover:-translate-y-1 hover:shadow-2xl transition flex flex-col gap-4 ${module.slug === "#" ? "cursor-not-allowed opacity-80" : ""}`}
+              aria-disabled={module.slug === "#"}
+            >
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <span class={`material-symbols-outlined ${accentText[module.accent]}`}>{module.icon}</span>
+                  <h3 class="font-headline text-xl font-bold text-on-surface">{module.title}</h3>
+                </div>
+                <span class={`text-xs font-bold tracking-widest px-3 py-1 rounded-full ${accentFixedBadge[module.accent]}`}>
+                  {module.status}
+                </span>
+              </div>
+              <p class="text-on-surface-variant text-sm leading-relaxed">{module.description}</p>
+              <div class={`flex items-center gap-2 text-sm font-semibold text-on-surface ${accentHover[module.accent]}`}>
+                <span>{module.slug === "#" ? "Muy pronto" : "Entrar"}</span>
+                <span class="material-symbols-outlined text-base">trending_flat</span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="rounded-[2rem] border border-outline/15 p-8 lg:p-12 bg-surface-container-high">
+        <div class="grid gap-8 lg:grid-cols-2">
+          <div class="space-y-4">
+            <p class="uppercase text-xs tracking-[0.3em] text-on-surface-variant">Next steps</p>
+            <h3 class="text-2xl font-headline font-bold text-on-surface">Orquestando las 30+ páginas</h3>
+            <ul class="space-y-4 text-sm text-on-surface-variant">
+              <li class="flex gap-3">
+                <span class="material-symbols-outlined text-primary">check_circle</span>
+                <span>Estandarizamos paleta, tipografías y componentes en `global.css` para asegurar consistencia.</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="material-symbols-outlined text-secondary">data_usage</span>
+                <span>El layout ahora centraliza fuentes e íconos, permitiendo que cada vista sólo se concentre en su contenido.</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="material-symbols-outlined text-tertiary">share</span>
+                <span>El dashboard puede incorporar nuevas rutas simplemente añadiendo entradas al arreglo `modules`.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="rounded-[1.5rem] bg-background p-8 shadow-inner space-y-6">
+            <div>
+              <p class="text-xs uppercase tracking-[0.3em] text-on-surface-variant">Integraciones</p>
+              <h4 class="text-xl font-headline font-bold text-on-surface mt-2">Estados y lanzamientos</h4>
+            </div>
+            <div class="space-y-4">
+              <article class="flex items-center justify-between">
+                <div>
+                  <p class="text-sm text-on-surface-variant">Sprint 05</p>
+                  <p class="font-semibold text-on-surface">Narrativas territoriales</p>
+                </div>
+                <span class="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary">En curso</span>
+              </article>
+              <article class="flex items-center justify-between">
+                <div>
+                  <p class="text-sm text-on-surface-variant">Sprint 06</p>
+                  <p class="font-semibold text-on-surface">Laboratorio de Datos</p>
+                </div>
+                <span class="text-xs px-3 py-1 rounded-full bg-secondary/10 text-secondary">Planeado</span>
+              </article>
+              <article class="flex items-center justify-between">
+                <div>
+                  <p class="text-sm text-on-surface-variant">Sprint 07</p>
+                  <p class="font-semibold text-on-surface">Cierre colectivo</p>
+                </div>
+                <span class="text-xs px-3 py-1 rounded-full bg-tertiary/10 text-tertiary">Descubrimiento</span>
+              </article>
+            </div>
+            <a href="#" class="inline-flex items-center gap-2 text-primary font-semibold">
+              Ver cronograma completo
+              <span class="material-symbols-outlined text-base">north_east</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
 </Layout>
