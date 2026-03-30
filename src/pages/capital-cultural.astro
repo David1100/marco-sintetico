@@ -1,0 +1,214 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Capital Cultural: Cibernética Natural - Marco Sintético">
+  <!-- Title Section -->
+  <header class="w-full max-w-7xl pt-8 pb-8 flex flex-col items-center text-center animate-fade-in">
+    <h1 class="font-headline font-extrabold text-5xl text-primary tracking-tight mb-4">
+      Capital Cultural
+    </h1>
+    <p class="font-body text-xl text-on-surface-variant max-w-2xl">
+      Cibernética Natural
+    </p>
+  </header>
+
+  <!-- Main Diagram Ecosystem -->
+  <main class="relative w-full max-w-6xl aspect-square md:aspect-[4/3] flex items-center justify-center p-4 md:p-8 mb-12">
+    <!-- Technical Circular Diagram -->
+    <div class="relative w-full max-w-[600px] md:max-w-[800px] aspect-square flex items-center justify-center">
+      <svg class="absolute inset-0 w-full h-full pointer-events-none" viewbox="0 0 1000 1000">
+        <defs>
+          <marker id="arrowhead" markerheight="7" markerwidth="10" orient="auto" refx="0" refy="3.5">
+            <polygon fill="currentColor" points="0 0, 10 3.5, 0 7"></polygon>
+          </marker>
+          <!-- Outer Paths -->
+          <path d="M500,150 A350,350 0 0,1 850,500" id="path-outer-top-right"></path>
+          <path d="M850,500 A350,350 0 0,1 500,850" id="path-outer-bottom-right"></path>
+          <path d="M500,850 A350,350 0 0,1 150,500" id="path-outer-bottom-left"></path>
+          <path d="M150,500 A350,350 0 0,1 500,150" id="path-outer-top-left"></path>
+          <!-- Inner Paths -->
+          <path d="M500,250 A250,250 0 0,1 750,500" id="path-inner-top-right"></path>
+          <path d="M750,500 A250,250 0 0,1 500,750" id="path-inner-bottom-right"></path>
+          <path d="M500,750 A250,250 0 0,1 250,500" id="path-inner-bottom-left"></path>
+          <path d="M250,500 A250,250 0 0,1 500,250" id="path-inner-top-left"></path>
+        </defs>
+        <!-- Circles for the diagram -->
+        <circle cx="500" cy="500" fill="none" r="350" stroke="#cbd5e1" stroke-width="1.5" class="animate-flow" style="animation-delay: 0.3s;"></circle>
+        <circle cx="500" cy="500" fill="none" r="250" stroke="#cbd5e1" stroke-width="1.5" class="animate-flow" style="animation-delay: 0.4s;"></circle>
+        <!-- Connection Arrows (Outer Loop) -->
+        <path class="text-slate-400 animate-flow" style="animation-delay: 0.5s;" d="M500,130 A370,370 0 0,1 870,500" fill="none" marker-end="url(#arrowhead)" stroke="currentColor" stroke-width="2"></path>
+        <path class="text-slate-400 animate-flow" style="animation-delay: 0.6s;" d="M870,500 A370,370 0 0,1 500,870" fill="none" marker-end="url(#arrowhead)" stroke="currentColor" stroke-width="2"></path>
+        <path class="text-slate-400 animate-flow" style="animation-delay: 0.7s;" d="M500,870 A370,370 0 0,1 130,500" fill="none" marker-end="url(#arrowhead)" stroke="currentColor" stroke-width="2"></path>
+        <path class="text-slate-400 animate-flow" style="animation-delay: 0.8s;" d="M130,500 A370,370 0 0,1 500,130" fill="none" marker-end="url(#arrowhead)" stroke="currentColor" stroke-width="2"></path>
+        <!-- Connection Arrows (Inner Loop) -->
+        <path class="text-slate-600 animate-flow" style="animation-delay: 0.9s;" d="M500,270 A230,230 0 0,0 730,500" fill="none" marker-end="url(#arrowhead)" stroke="currentColor" stroke-width="2"></path>
+        <path class="text-slate-600 animate-flow" style="animation-delay: 1.0s;" d="M730,500 A230,230 0 0,0 500,730" fill="none" marker-end="url(#arrowhead)" stroke="currentColor" stroke-width="2"></path>
+        <path class="text-slate-600 animate-flow" style="animation-delay: 1.1s;" d="M500,730 A230,230 0 0,0 270,500" fill="none" marker-end="url(#arrowhead)" stroke="currentColor" stroke-width="2"></path>
+        <path class="text-slate-600 animate-flow" style="animation-delay: 1.2s;" d="M270,500 A230,230 0 0,0 500,270" fill="none" marker-end="url(#arrowhead)" stroke="currentColor" stroke-width="2"></path>
+        <!-- Labels on Paths -->
+        <text class="fill-slate-500 font-bold uppercase animate-fade-in" style="font-size: 14px; letter-spacing: 2px; animation-delay: 1.3s;">
+          <textpath href="#path-outer-top-left" startoffset="30%">POLÍTICA</textpath>
+          <textpath href="#path-outer-top-right" startoffset="30%">FILOSOFÍA</textpath>
+          <textpath href="#path-outer-bottom-right" startoffset="30%">OCIO CREADOR</textpath>
+          <textpath href="#path-outer-bottom-left" startoffset="30%">AUTOMATIZACIÓN</textpath>
+        </text>
+        <text class="fill-slate-600 font-bold uppercase animate-fade-in" style="font-size: 14px; letter-spacing: 2px; animation-delay: 1.4s;">
+          <textpath href="#path-inner-top-left" startoffset="50%">TEOLOGÍA</textpath>
+          <textpath href="#path-inner-top-right" startoffset="50%">UTOPÍA</textpath>
+          <textpath href="#path-inner-bottom-right" startoffset="50%">LITERATURA</textpath>
+          <textpath href="#path-inner-bottom-left" startoffset="50%">REALIDAD</textpath>
+        </text>
+      </svg>
+      
+      <!-- Central Element -->
+      <div class="z-20 relative flex flex-col items-center justify-center animate-scale-in" style="animation-delay: 0.3s; opacity: 0;">
+        <div class="relative w-32 h-32 md:w-48 md:h-48 mb-4">
+          <div class="absolute inset-0 flex items-center justify-center opacity-30">
+            <div class="w-full h-full border border-slate-300 rounded-full"></div>
+          </div>
+          <div class="absolute inset-0 flex flex-col items-center justify-center">
+            <span class="material-symbols-outlined text-5xl md:text-6xl text-primary scale-x-150" style="font-variation-settings: 'wght' 200;">air</span>
+            <span class="material-symbols-outlined text-6xl md:text-7xl text-primary scale-x-150 translate-x-2 md:translate-x-4" style="font-variation-settings: 'wght' 200;">air</span>
+            <span class="material-symbols-outlined text-5xl md:text-6xl text-primary scale-x-150" style="font-variation-settings: 'wght' 200;">air</span>
+          </div>
+        </div>
+        <h3 class="font-headline font-black text-slate-900 text-sm md:text-lg tracking-widest uppercase text-center bg-surface-container-lowest px-4 py-1 rounded-full">CIBERNÉTICA NATURAL</h3>
+      </div>
+      
+      <!-- Main Nodes -->
+      <!-- Top: Simbiosis -->
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-2 z-30 animate-slide-up" style="animation-delay: 0.5s; opacity: 0;">
+        <div class="bg-surface-container-lowest px-6 md:px-8 py-2 md:py-3 rounded-full shadow-lg border-2 border-primary hover-lift cursor-pointer">
+          <span class="font-headline font-black text-primary tracking-[0.15em] text-sm md:text-lg">SIMBIOSIS</span>
+        </div>
+      </div>
+      
+      <!-- Right: Productividad -->
+      <div class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 z-30 animate-slide-up" style="animation-delay: 0.6s; opacity: 0;">
+        <div class="bg-surface-container-lowest px-6 md:px-8 py-2 md:py-3 rounded-full shadow-lg border-2 border-primary hover-lift cursor-pointer">
+          <span class="font-headline font-black text-primary tracking-[0.15em] text-sm md:text-lg">PRODUCTIVIDAD</span>
+        </div>
+        <div class="mt-2 text-center w-full">
+          <p class="font-bold text-[8px] md:text-[10px] uppercase text-primary/70 tracking-tighter">Tecnología Punta Propia</p>
+        </div>
+      </div>
+      
+      <!-- Bottom: Convergencia -->
+      <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-2 z-30 animate-slide-up" style="animation-delay: 0.7s; opacity: 0;">
+        <div class="bg-surface-container-lowest px-6 md:px-8 py-2 md:py-3 rounded-full shadow-lg border-2 border-primary hover-lift cursor-pointer">
+          <span class="font-headline font-black text-primary tracking-[0.15em] text-sm md:text-lg">CONVERGENCIA</span>
+        </div>
+      </div>
+      
+      <!-- Left: Gestion -->
+      <div class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 z-30 animate-slide-up" style="animation-delay: 0.8s; opacity: 0;">
+        <div class="bg-surface-container-lowest px-6 md:px-8 py-2 md:py-3 rounded-full shadow-lg border-2 border-primary hover-lift cursor-pointer">
+          <span class="font-headline font-black text-primary tracking-[0.15em] text-sm md:text-lg">GESTIÓN</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Technical Deep Dive: Articulation Grid -->
+  <section class="w-full max-w-7xl grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
+    <!-- Articulación de la Producción del Tiempo Libre -->
+    <div class="md:col-span-7 bg-surface-container rounded-xl p-8 md:p-10 animate-slide-up" style="animation-delay: 0.9s; opacity: 0;">
+      <h2 class="font-headline text-2xl md:text-3xl font-extrabold text-primary mb-6">Articulación de la Producción del Tiempo Libre</h2>
+      <div class="space-y-6">
+        <div class="flex items-start space-x-4">
+          <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white shrink-0 font-bold">01</div>
+          <div>
+            <h4 class="font-bold text-on-surface">Liberación de Carga</h4>
+            <p class="text-sm text-on-surface-variant leading-relaxed">Sistemas automatizados que reducen la labor mecánica, permitiendo el despliegue del potencial creativo humano.</p>
+          </div>
+        </div>
+        <div class="flex items-start space-x-4">
+          <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white shrink-0 font-bold">02</div>
+          <div>
+            <h4 class="font-bold text-on-surface">Capitalización Cognitiva</h4>
+            <p class="text-sm text-on-surface-variant leading-relaxed">Transformación de la curiosidad y el ocio en procesos de investigación y desarrollo cultural.</p>
+          </div>
+        </div>
+        <div class="flex items-start space-x-4">
+          <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white shrink-0 font-bold">03</div>
+          <div>
+            <h4 class="font-bold text-on-surface">Redes de Intercambio</h4>
+            <p class="text-sm text-on-surface-variant leading-relaxed">Infraestructura digital para la transferencia de conocimiento entre nodos locales y globales.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sub-articulación de Cultura -->
+    <div class="md:col-span-5 flex flex-col space-y-6">
+      <div class="bg-secondary-container/10 rounded-xl p-8 border-l-8 border-secondary animate-slide-up" style="animation-delay: 1.0s; opacity: 0;">
+        <h3 class="font-headline font-bold text-secondary mb-3 uppercase tracking-widest text-xs">Sub-articulación</h3>
+        <h2 class="font-headline text-2xl font-bold text-on-secondary-container mb-4">Cultura</h2>
+        <p class="text-sm text-on-secondary-container/80 leading-relaxed mb-6">
+          La cultura no es un producto estático, sino un flujo dinámico que nutre la identidad y la cohesión social.
+        </p>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-white p-4 rounded-lg border border-secondary/20 shadow-sm">
+            <span class="text-2xl font-black text-secondary block">84%</span>
+            <span class="text-[10px] uppercase font-bold text-on-surface-variant">Impacto Territorial</span>
+          </div>
+          <div class="bg-white p-4 rounded-lg border border-secondary/20 shadow-sm">
+            <span class="text-2xl font-black text-secondary block">12k</span>
+            <span class="text-[10px] uppercase font-bold text-on-surface-variant">Nodos Activos</span>
+          </div>
+        </div>
+      </div>
+      <div class="bg-tertiary-container text-on-tertiary-container rounded-xl p-8 animate-slide-up" style="animation-delay: 1.1s; opacity: 0;">
+        <h4 class="font-bold mb-2">Metodología de Flujo</h4>
+        <p class="text-xs opacity-80 leading-relaxed">Implementación de ciclos de retroalimentación constante entre la base social y el capital institucional.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final Vision Section -->
+  <section class="w-full max-w-7xl bg-primary text-white rounded-2xl p-8 md:p-12 relative overflow-hidden animate-slide-up" style="animation-delay: 1.2s; opacity: 0;">
+    <div class="absolute inset-0 opacity-20 pointer-events-none">
+      <img alt="Naturaleza abstracta" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeOsQ2mdflUrNikzvLKv5FLew5n2Qd1RkEUgragA6xtZyWarDCWYVUeeBBbhAPihD9rALdAqht_9JxA8Bt5EA-V8GlID14zOQZylSzLk08WqnSgdem_A0vGeBKWwyxwy6xakZeEAKViuu4IqDN9fokWWrYvK8zhh9LnpkB6BPwEzdWnToh7q12kJEvEpZkmUsZAYRGuxho6JOHGceikFQMfhoehKg0pjhg4QiMSj40xn6lNmdm7_s9GCNEyPUNaHIJxAAn4xHxw8Ho"/>
+    </div>
+    <div class="relative z-10 max-w-3xl">
+      <h2 class="font-headline text-3xl md:text-4xl font-extrabold mb-6">Hacia un Capitalismo de la Vida</h2>
+      <p class="text-base md:text-lg font-light leading-relaxed mb-8 text-primary-fixed">
+        Nuestra propuesta redefine el capital cultural no como una acumulación de objetos, sino como la capacidad sistémica de una sociedad para autorregularse, sanar su entorno y prosperar en equilibrio con los ciclos biológicos.
+      </p>
+      <div class="flex flex-wrap gap-6 md:gap-8">
+        <div>
+          <span class="block text-primary-fixed-dim text-[10px] uppercase font-bold tracking-widest mb-2">Eje Central</span>
+          <span class="font-headline font-bold text-lg">Sistemas Vivos</span>
+        </div>
+        <div>
+          <span class="block text-primary-fixed-dim text-[10px] uppercase font-bold tracking-widest mb-2">Objetivo</span>
+          <span class="font-headline font-bold text-lg">Equilibrio Cívico</span>
+        </div>
+        <div>
+          <span class="block text-primary-fixed-dim text-[10px] uppercase font-bold tracking-widest mb-2">Estado</span>
+          <span class="font-headline font-bold text-lg">Fase de Simbiosis</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navegación -->
+  <div class="flex justify-between mt-12">
+    <a href="/capital-social" class="inline-flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors">
+      <span class="material-symbols-outlined">arrow_back</span>
+      Anterior
+    </a>
+  </div>
+
+  <style>
+    .hover-lift {
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .hover-lift:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.15);
+    }
+  </style>
+</Layout>

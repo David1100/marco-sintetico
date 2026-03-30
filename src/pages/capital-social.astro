@@ -5,17 +5,12 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="Capital Social: El Ecosistema de la Región - Marco Sintético">
   <!-- Title Section -->
   <header class="w-full max-w-7xl pt-8 pb-12 flex flex-col items-center text-center animate-fade-in">
-    <span class="text-primary font-headline font-bold tracking-widest uppercase text-xs mb-4 animate-slide-up" style="animation-delay: 0.1s; opacity: 0;">Estructura de Productividad Social</span>
-    <h1 class="text-primary font-headline font-extrabold text-5xl md:text-6xl tracking-tighter leading-none max-w-4xl animate-slide-up" style="animation-delay: 0.2s; opacity: 0;">
+    <h1 class="font-headline font-extrabold text-5xl text-primary tracking-tight mb-4">
       Capital Social: El Ecosistema de la Región
     </h1>
-    <div class="mt-8 h-1 w-24 bg-secondary rounded-full animate-scale-in" style="animation-delay: 0.4s;"></div>
-  </header>
-    <span class="text-primary font-headline font-bold tracking-widest uppercase text-xs mb-4">Estructura de Productividad Social</span>
-    <h1 class="text-primary font-headline font-extrabold text-5xl md:text-6xl tracking-tighter leading-none max-w-4xl">
-      Capital Social: El Ecosistema de la Región
-    </h1>
-    <div class="mt-8 h-1 w-24 bg-secondary rounded-full"></div>
+    <p class="font-body text-xl text-on-surface-variant max-w-2xl mb-8">
+      Estructura de Productividad Social
+    </p>
   </header>
 
   <!-- Main Diagram Canvas -->
@@ -30,13 +25,13 @@ import Layout from "../layouts/Layout.astro";
       <!-- Circular Orbit Line -->
       <circle class="animate-flow" cx="500" cy="300" fill="none" r="220" stroke="#dfe3e7" stroke-dasharray="8 8" stroke-width="1" style="animation-delay: 0.4s;"></circle>
       <!-- Central Core Relationships -->
-      <path class="central-axis animate-pulse-node" style="animation-delay: 0.3s;" d="M 420 300 L 580 300"></path>
-      <path class="central-axis animate-pulse-node" style="animation-delay: 0.3s;" d="M 500 220 L 500 380"></path>
+      <path class="central-axis" d="M 420 300 L 580 300"></path>
+      <path class="central-axis" d="M 500 220 L 500 380"></path>
     </svg>
 
     <!-- Core Relationship Center -->
     <div class="relative z-10 flex flex-col items-center justify-center animate-scale-in" style="animation-delay: 0.3s; opacity: 0;">
-      <div class="w-48 h-48 rounded-full bg-surface-container-lowest border-4 border-primary shadow-2xl flex flex-col items-center justify-center text-center p-6 backdrop-blur-md bg-opacity-80 animate-pulse-node">
+      <div class="w-48 h-48 rounded-full bg-surface-container-lowest border-4 border-primary shadow-2xl flex flex-col items-center justify-center text-center p-6 backdrop-blur-md bg-opacity-80">
         <span class="text-primary font-headline font-black text-xl leading-tight">EL HÁBITAT</span>
         <div class="my-2 h-px w-8 bg-outline-variant"></div>
         <span class="text-on-surface-variant font-body font-semibold text-sm">Contexto Inmediato</span>
@@ -49,64 +44,64 @@ import Layout from "../layouts/Layout.astro";
 
     <!-- Pillars Circular Arrangement -->
     <!-- Top -->
-    <div class="pillar-node absolute top-[10%] left-1/2 -translate-x-1/2 w-40 flex flex-col items-center">
-      <div class="bg-surface-container-highest p-4 rounded-xl shadow-sm mb-3">
+    <div class="pillar-node absolute top-[10%] left-1/2 -translate-x-1/2 w-40 flex flex-col items-center animate-slide-up" style="animation-delay: 0.5s; opacity: 0;">
+      <div class="bg-surface-container-highest p-4 rounded-xl shadow-sm mb-3 hover-lift">
         <span class="material-symbols-outlined text-primary text-3xl">lightbulb</span>
       </div>
       <span class="font-headline font-bold text-on-surface text-sm">Creatividad</span>
     </div>
     <!-- Top Right -->
-    <div class="pillar-node absolute top-[20%] right-[15%] w-40 flex flex-col items-center">
-      <div class="bg-surface-container-highest p-4 rounded-xl shadow-sm mb-3">
+    <div class="pillar-node absolute top-[20%] right-[15%] w-40 flex flex-col items-center animate-slide-up" style="animation-delay: 0.6s; opacity: 0;">
+      <div class="bg-surface-container-highest p-4 rounded-xl shadow-sm mb-3 hover-lift">
         <span class="material-symbols-outlined text-primary text-3xl">psychology</span>
       </div>
       <span class="font-headline font-bold text-on-surface text-sm">Simbiosis</span>
     </div>
     <!-- Right -->
-    <div class="pillar-node absolute top-[50%] -translate-y-1/2 right-[5%] w-40 flex flex-col items-center">
-      <div class="bg-surface-container-highest p-4 rounded-xl shadow-sm mb-3">
+    <div class="pillar-node absolute top-[50%] -translate-y-1/2 right-[5%] w-40 flex flex-col items-center animate-slide-up" style="animation-delay: 0.7s; opacity: 0;">
+      <div class="bg-surface-container-highest p-4 rounded-xl shadow-sm mb-3 hover-lift">
         <span class="material-symbols-outlined text-primary text-3xl">terminal</span>
       </div>
       <span class="font-headline font-bold text-on-surface text-sm">Cibernética</span>
     </div>
     <!-- Bottom Right -->
-    <div class="pillar-node absolute bottom-[20%] right-[15%] w-40 flex flex-col items-center">
-      <div class="bg-surface-container-highest p-4 rounded-xl shadow-sm mb-3">
+    <div class="pillar-node absolute bottom-[20%] right-[15%] w-40 flex flex-col items-center animate-slide-up" style="animation-delay: 0.8s; opacity: 0;">
+      <div class="bg-surface-container-highest p-4 rounded-xl shadow-sm mb-3 hover-lift">
         <span class="material-symbols-outlined text-primary text-3xl">factory</span>
       </div>
       <span class="font-headline font-bold text-on-surface text-sm">Productividad</span>
     </div>
     <!-- Bottom Left -->
-    <div class="pillar-node absolute bottom-[5%] left-[60%] w-40 flex flex-col items-center">
-      <div class="bg-surface-container-highest p-4 rounded-xl shadow-sm mb-3">
+    <div class="pillar-node absolute bottom-[5%] left-[60%] w-40 flex flex-col items-center animate-slide-up" style="animation-delay: 0.9s; opacity: 0;">
+      <div class="bg-surface-container-highest p-4 rounded-xl shadow-sm mb-3 hover-lift">
         <span class="material-symbols-outlined text-primary text-3xl">account_tree</span>
       </div>
       <span class="font-headline font-bold text-on-surface text-sm">Gestión</span>
     </div>
     <!-- Left Bottom -->
-    <div class="pillar-node absolute bottom-[5%] right-[60%] w-40 flex flex-col items-center">
-      <div class="bg-surface-container-highest p-4 rounded-xl shadow-sm mb-3">
+    <div class="pillar-node absolute bottom-[5%] right-[60%] w-40 flex flex-col items-center animate-slide-up" style="animation-delay: 1.0s; opacity: 0;">
+      <div class="bg-surface-container-highest p-4 rounded-xl shadow-sm mb-3 hover-lift">
         <span class="material-symbols-outlined text-primary text-3xl">museum</span>
       </div>
       <span class="font-headline font-bold text-on-surface text-sm">Cultura</span>
     </div>
     <!-- Left -->
-    <div class="pillar-node absolute bottom-[20%] left-[15%] w-40 flex flex-col items-center">
-      <div class="bg-surface-container-highest p-4 rounded-xl shadow-sm mb-3">
+    <div class="pillar-node absolute bottom-[20%] left-[15%] w-40 flex flex-col items-center animate-slide-up" style="animation-delay: 1.1s; opacity: 0;">
+      <div class="bg-surface-container-highest p-4 rounded-xl shadow-sm mb-3 hover-lift">
         <span class="material-symbols-outlined text-primary text-3xl">diversity_3</span>
       </div>
       <span class="font-headline font-bold text-on-surface text-sm">Pluralismo</span>
     </div>
     <!-- Left Top -->
-    <div class="pillar-node absolute top-[50%] -translate-y-1/2 left-[5%] w-40 flex flex-col items-center">
-      <div class="bg-surface-container-highest p-4 rounded-xl shadow-sm mb-3">
+    <div class="pillar-node absolute top-[50%] -translate-y-1/2 left-[5%] w-40 flex flex-col items-center animate-slide-up" style="animation-delay: 1.2s; opacity: 0;">
+      <div class="bg-surface-container-highest p-4 rounded-xl shadow-sm mb-3 hover-lift">
         <span class="material-symbols-outlined text-primary text-3xl">hub</span>
       </div>
       <span class="font-headline font-bold text-on-surface text-sm">Convergencia</span>
     </div>
     <!-- Top Left -->
-    <div class="pillar-node absolute top-[20%] left-[15%] w-40 flex flex-col items-center">
-      <div class="bg-surface-container-highest p-4 rounded-xl shadow-sm mb-3">
+    <div class="pillar-node absolute top-[20%] left-[15%] w-40 flex flex-col items-center animate-slide-up" style="animation-delay: 1.3s; opacity: 0;">
+      <div class="bg-surface-container-highest p-4 rounded-xl shadow-sm mb-3 hover-lift">
         <span class="material-symbols-outlined text-primary text-3xl">architecture</span>
       </div>
       <span class="font-headline font-bold text-on-surface text-sm">Planificación</span>
@@ -115,7 +110,7 @@ import Layout from "../layouts/Layout.astro";
 
   <!-- Technical Detail Sections -->
   <section class="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
-    <div class="glass-card p-10 rounded-2xl">
+    <div class="glass-card p-10 rounded-2xl animate-slide-up" style="animation-delay: 1.4s; opacity: 0;">
       <div class="flex items-center gap-4 mb-4">
         <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
           <span class="material-symbols-outlined text-on-primary text-xl">trending_up</span>
@@ -126,7 +121,7 @@ import Layout from "../layouts/Layout.astro";
         Define el flujo de valor generado por la interacción de los nueve pilares dentro del Hábitat. No es solo rendimiento económico, sino la capacidad del sistema para regenerar sus propios recursos creativos y culturales.
       </p>
     </div>
-    <div class="glass-card p-10 rounded-2xl border-l-4 border-secondary">
+    <div class="glass-card p-10 rounded-2xl border-l-4 border-secondary animate-slide-up" style="animation-delay: 1.5s; opacity: 0;">
       <div class="flex items-center gap-4 mb-4">
         <div class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center">
           <span class="material-symbols-outlined text-on-secondary text-xl">settings_input_component</span>
@@ -140,7 +135,7 @@ import Layout from "../layouts/Layout.astro";
   </section>
 
   <!-- Technical Notes -->
-  <section class="w-full bg-surface-container-highest rounded-2xl p-8 mb-8">
+  <section class="w-full bg-surface-container-highest rounded-2xl p-8 mb-8 animate-slide-up" style="animation-delay: 1.6s; opacity: 0;">
     <h4 class="font-headline font-bold text-on-surface mb-4">Notas Técnicas</h4>
     <p class="text-on-surface-variant text-sm font-body leading-relaxed">
       Este diagrama representa la interconectividad sistémica de la región. Cada nodo es interdependiente; la falla de uno compromete la estabilidad del Capital Social total. Los vectores de flujo indican la transferencia de conocimiento y energía cívica.
@@ -165,6 +160,9 @@ import Layout from "../layouts/Layout.astro";
     .pillar-node:hover .bg-surface-container-highest {
       background-color: #f0f4f8;
     }
+    .pillar-node .bg-surface-container-highest {
+      transition: all 0.3s ease;
+    }
     .connection-line {
       stroke: #c4c6cd;
       stroke-width: 1.5;
@@ -175,6 +173,9 @@ import Layout from "../layouts/Layout.astro";
       stroke: #205f44;
       stroke-width: 2;
       stroke-dasharray: 4 4;
+    }
+    .hover-lift {
+      cursor: pointer;
     }
   </style>
 </Layout>
