@@ -1,0 +1,125 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Convergencia - Marco Sintético">
+  <!-- Title Section -->
+  <header class="w-full max-w-7xl pt-8 pb-8 flex flex-col items-center text-center animate-fade-in">
+    <div class="flex items-center gap-4 mb-4">
+      <div class="h-px w-12 bg-primary"></div>
+      <span class="font-headline text-xs font-bold tracking-[0.2em] text-primary uppercase">Módulo de Análisis Técnico</span>
+    </div>
+    <h1 class="font-headline font-extrabold text-4xl md:text-5xl text-primary tracking-tight mb-4">
+      CONVERGENCIA
+    </h1>
+    <p class="font-body text-lg md:text-xl text-on-surface-variant max-w-2xl">
+      Transformación de la Productividad Social: Un estudio sobre el flujo creativo desde el capital humano hacia la resolución técnica.
+    </p>
+  </header>
+
+  <!-- Main Diagram -->
+  <main class="w-full max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12 items-center p-4 md:p-8 mb-16">
+    <!-- Column 1: COMUNIDAD -->
+    <div class="flex flex-col items-center space-y-6 relative group animate-slide-up" style="animation-delay: 0.3s; opacity: 0;">
+      <div class="relative w-full aspect-square max-w-[200px] md:max-w-none rounded-xl overflow-hidden shadow-sm transition-all duration-500 hover:shadow-xl hover:translate-y-[-4px]">
+        <img alt="Community collaboration" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtiV4T4lvZbYev12kt5yzTPPR8kwHrgHQoxgoy_RBBWWjtzWjxvyMwLUVxaQQMZwNSdSBTqj8WHYvZJbeffYUXGBB34YUb4i_rZSOes7DlfUpjV7P44rAKzZtcwNMb7xoytRyumYTzTb8mjcZN9MZb4Bgt0laLiPQRmxJGI9ZBEtKY08bm7LvWX2n_O5lnXG39BW_-6PsCCfcmavfEdWG-5KTY9VxA9KpuYkCGkeX_TFcpSfZImX0mRB1q2PZjJ4lUcbGMgTmx6aj3"/>
+        <div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+      </div>
+      <div class="text-center space-y-2">
+        <h3 class="font-headline text-xl md:text-2xl font-bold text-primary tracking-tight">COMUNIDAD</h3>
+        <p class="font-label text-[8px] md:text-xs uppercase tracking-widest text-outline">Fase de Origen: Capital Humano</p>
+      </div>
+      <!-- Connection Arrow -->
+      <div class="hidden lg:block absolute top-1/2 -right-6 translate-x-1/2 -translate-y-1/2 z-10">
+        <span class="material-symbols-outlined text-3xl md:text-4xl text-outline-variant">trending_flat</span>
+      </div>
+    </div>
+
+    <!-- Column 2: TALLER (Central Hub) -->
+    <div class="flex flex-col items-center space-y-8 relative animate-scale-in" style="animation-delay: 0.4s; opacity: 0;">
+      <!-- Floating Element: VIVIENDA -->
+      <div class="absolute -top-8 md:-top-12 left-1/2 -translate-x-1/2 z-20">
+        <div class="glass-effect px-4 md:px-6 py-2 md:py-3 rounded-full border border-outline-variant/20 shadow-sm flex items-center gap-2 md:gap-3">
+          <span class="material-symbols-outlined text-secondary text-lg md:text-xl" style="font-variation-settings: 'FILL' 1;">home</span>
+          <span class="font-headline text-xs md:text-sm font-extrabold text-on-secondary-fixed-variant tracking-widest">VIVIENDA</span>
+        </div>
+        <div class="w-px h-6 md:h-8 bg-gradient-to-b from-outline-variant to-transparent mx-auto"></div>
+      </div>
+
+      <!-- Central Node -->
+      <div class="w-40 h-40 md:w-64 md:h-64 rounded-full bg-surface-container flex items-center justify-center relative transition-transform duration-700 hover:scale-105">
+        <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-primary-container/20 to-secondary-container/10 blur-3xl"></div>
+        <div class="relative flex flex-col items-center text-center">
+          <div class="w-20 h-20 md:w-32 md:h-32 rounded-full bg-surface-container-lowest shadow-inner flex items-center justify-center mb-3 md:mb-6">
+            <span class="material-symbols-outlined text-4xl md:text-7xl text-primary" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+          </div>
+          <h3 class="font-headline text-xl md:text-3xl font-black text-primary tracking-tighter">TALLER</h3>
+          <div class="h-1 w-8 md:w-12 bg-secondary mt-1 md:mt-2 rounded-full"></div>
+        </div>
+      </div>
+
+      <div class="text-center max-w-xs px-4">
+        <p class="font-body text-sm text-tertiary leading-relaxed">
+          Espacio de síntesis donde la necesidad social converge con la factibilidad técnica y la visión arquitectónica.
+        </p>
+      </div>
+
+      <!-- Connection Arrow -->
+      <div class="hidden lg:block absolute top-1/2 -right-6 translate-x-1/2 -translate-y-1/2 z-10">
+        <span class="material-symbols-outlined text-3xl md:text-4xl text-outline-variant">trending_flat</span>
+      </div>
+    </div>
+
+    <!-- Column 3: RESULTANTE -->
+    <div class="flex flex-col items-center space-y-6 group animate-slide-up" style="animation-delay: 0.5s; opacity: 0;">
+      <div class="relative w-full aspect-square max-w-[200px] md:max-w-none rounded-xl overflow-hidden shadow-sm transition-all duration-500 hover:shadow-xl hover:translate-y-[-4px]">
+        <img alt="Final architectural result" class="w-full h-full object-cover transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHETKHXlCE13NC5cWhq6AEPucSyVI3OlPstDyaaXpxSsQ5TCJTuWVOHVx0XCjHFj_3GCvUSJ_hltkRgxV1d5lGJtHBDcmpJ1nLF4-hhVkRAyEgJIMrBxCEBxiC_RVUVXRhnogIbClnzj-MaxbDmmFsdMv4wYQeAQ5UKjOLveCFU_7q_65UJi05oUb62dEopmcyz1Onu2oXEypCQbfhQHpXeZceNJHNPNPHWYkjzzircsWacz6BPKNNQFBF2cLw4fbe1PCYY_a1Uosy"/>
+        <div class="absolute inset-0 bg-tertiary/10 mix-blend-multiply"></div>
+      </div>
+      <div class="text-center space-y-2">
+        <h3 class="font-headline text-xl md:text-2xl font-bold text-primary tracking-tight">RESULTANTE</h3>
+        <p class="font-label text-[8px] md:text-xs uppercase tracking-widest text-outline">Fase de Impacto: Materialización</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Technical Annotation Footer -->
+  <footer class="w-full max-w-5xl mx-auto mt-12 md:mt-16 pt-8 md:pt-12 border-t border-outline-variant/30 animate-slide-up" style="animation-delay: 0.6s; opacity: 0;">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-end px-4">
+      <div class="space-y-4">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary text-sm">analytics</span>
+          <span class="font-headline text-xs font-bold uppercase tracking-widest text-primary">Nota Técnica 0.44-B</span>
+        </div>
+        <p class="font-body text-sm text-on-surface-variant leading-relaxed italic">
+          "Análisis del proceso de convergencia creativa desde la base comunitaria hacia la materialización técnica. La productividad social se mide por la capacidad de transformar el diálogo en estructuras habitables sostenibles."
+        </p>
+      </div>
+      <div class="flex flex-col md:items-end space-y-2">
+        <div class="flex gap-3 md:gap-4">
+          <div class="w-8 md:w-12 h-1 bg-primary"></div>
+          <div class="w-8 md:w-12 h-1 bg-secondary"></div>
+          <div class="w-8 md:w-12 h-1 bg-tertiary"></div>
+        </div>
+        <p class="font-headline text-[8px] md:text-[10px] font-bold text-outline uppercase tracking-[0.3em]">
+          Civic Equilibrium Framework
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Navegación -->
+  <div class="flex justify-between mt-12 max-w-7xl mx-auto">
+    <a href="/simbiosis-economica" class="inline-flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors">
+      <span class="material-symbols-outlined">arrow_back</span>
+      Anterior
+    </a>
+  </div>
+
+  <style>
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(20px);
+    }
+  </style>
+</Layout>

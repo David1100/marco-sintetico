@@ -1,0 +1,156 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Simbiosis Económica - Marco Sintético">
+  <!-- Title Section -->
+  <header class="w-full max-w-7xl pt-8 pb-8 flex flex-col items-center text-center animate-fade-in">
+    <h1 class="font-headline font-extrabold text-4xl md:text-5xl text-primary tracking-tight mb-4">
+      Simbiosis Económica
+    </h1>
+    <p class="font-body text-lg md:text-xl text-on-surface-variant max-w-2xl">
+      Visualización técnica del proceso de integración sistémica
+    </p>
+  </header>
+
+  <!-- Main Diagram Section -->
+  <main class="relative w-full max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 p-4 md:p-8 mb-16">
+    <!-- Left Side: Pacto Político -->
+    <div class="w-full md:w-1/3 flex flex-col items-center animate-slide-up" style="animation-delay: 0.3s; opacity: 0;">
+      <div class="relative mb-6 group">
+        <div class="absolute inset-0 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-all"></div>
+        <div class="relative bg-surface-container-lowest p-6 md:p-8 rounded-full shadow-sm">
+          <span class="material-symbols-outlined text-4xl md:text-5xl text-primary" style="font-variation-settings: 'FILL' 1;">groups</span>
+        </div>
+        <div class="absolute -top-8 -right-12 md:-right-16 glass-card p-3 md:p-4 rounded-xl shadow-lg border border-primary/10 transform -rotate-3">
+          <span class="text-[8px] md:text-[10px] font-bold uppercase tracking-widest text-primary block mb-1">Iniciativa</span>
+          <p class="font-headline font-bold text-xs md:text-sm text-on-surface">Proyectos Tecno-Económicos</p>
+        </div>
+      </div>
+      <div class="text-center">
+        <h2 class="font-headline font-extrabold text-xl md:text-2xl text-primary mb-2">Pacto Político</h2>
+        <span class="bg-primary-container/10 text-primary text-[8px] md:text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Cooperación Social</span>
+      </div>
+      <div class="mt-8 flex items-center gap-3">
+        <div class="h-px w-8 md:w-12 bg-outline-variant"></div>
+        <p class="font-label text-xs italic text-on-surface-variant">Correspondencias entre Maneras y Modos</p>
+      </div>
+    </div>
+
+    <!-- Center: The Vortex (EN) -->
+    <div class="relative w-48 h-48 md:w-64 md:h-64 flex items-center justify-center animate-scale-in" style="animation-delay: 0.4s; opacity: 0;">
+      <!-- Decorative Spiral SVG -->
+      <svg class="absolute w-full h-full animate-[spin_20s_linear_infinite]" viewbox="0 0 200 200">
+        <defs>
+          <linearGradient id="vortex-grad" x1="0%" x2="100%" y1="0%" y2="100%">
+            <stop offset="0%" style="stop-color:var(--primary);stop-opacity:0.2"></stop>
+            <stop offset="100%" style="stop-color:var(--primary-container);stop-opacity:0.8"></stop>
+          </linearGradient>
+        </defs>
+        <path d="M100,20 C144.18,20 180,55.82 180,100 C180,144.18 144.18,180 100,180 C55.82,180 20,144.18 20,100" fill="none" stroke="url(#vortex-grad)" stroke-dasharray="8 4" stroke-width="2"></path>
+        <circle cx="100" cy="100" fill="none" r="60" stroke="#205f44" stroke-opacity="0.3" stroke-width="0.5"></circle>
+      </svg>
+      <div class="relative z-10 bg-primary w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center shadow-2xl shadow-primary/40 border-4 border-primary-fixed">
+        <span class="font-headline font-black text-2xl md:text-3xl text-on-primary italic tracking-tighter">EN</span>
+      </div>
+      <!-- Transformation Labels -->
+      <div class="absolute -bottom-12 md:-bottom-16 w-max text-center">
+        <p class="font-label text-[8px] md:text-[10px] font-bold uppercase tracking-[0.2em] text-on-surface-variant mb-1">Proceso de Regulación</p>
+        <div class="h-0.5 w-full bg-gradient-to-r from-transparent via-primary to-transparent opacity-30"></div>
+      </div>
+    </div>
+
+    <!-- Right Side: Formación Económica -->
+    <div class="w-full md:w-1/3 flex flex-col items-center animate-slide-up" style="animation-delay: 0.5s; opacity: 0;">
+      <div class="relative mb-6 w-full max-w-[180px] md:max-w-[200px]">
+        <div class="aspect-square bg-surface-container-highest rounded-full overflow-hidden border-4 md:border-8 border-surface-container shadow-inner group">
+          <img alt="South American Territory" class="w-full h-full object-cover grayscale mix-blend-multiply opacity-80 group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQsBj31F2w40Eqdvft-y9BDnIOVkCgtdtVQavxs65RmSFKikMLOuwIG7RF8PkEI6lIsA6EPp5d9oMnv00UWYI-H86XJ_cu7E74gV56MuG09JWhbqatKw1CUlgkaaSFtVXr7TE88eqWQbBS4xiZKltJNFnN95MDnmT2JRxrLR3uJDIrzzo8igK77_INefLsQm4onFQhF_LfZMoAoasRIdn2iALeZh48BGn1tQobXOVPipVDQsJVsbY95yvBwEhKyapuCg_J8FqzInOP"/>
+          <!-- Floating Equilibrium Symbol -->
+          <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div class="bg-secondary/90 text-on-secondary px-4 md:px-6 py-2 md:py-3 rounded-full flex flex-col items-center gap-1 shadow-xl">
+              <svg fill="none" height="16" md:height="20" stroke="currentColor" stroke-width="2.5" viewbox="0 0 40 20" width="32" md:width="40">
+                <path d="M2 10 Q10 2, 20 10 T38 10"></path>
+                <path d="M2 14 Q10 6, 20 14 T38 14" opacity="0.6"></path>
+              </svg>
+              <span class="text-[7px] md:text-[9px] font-bold uppercase tracking-widest">Equilibrium</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <h2 class="font-headline font-extrabold text-lg md:text-2xl text-secondary mb-2 uppercase tracking-tight">Formación Económica</h2>
+        <span class="bg-secondary-container/20 text-secondary text-[8px] md:text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Gestión Territorial</span>
+      </div>
+      <div class="mt-8 flex items-center gap-3">
+        <p class="font-label text-xs italic text-on-surface-variant">Transferencias y Apropiaciones</p>
+        <div class="h-px w-8 md:w-12 bg-outline-variant"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Technical Detail Grid (Bento Style) -->
+  <section class="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+    <div class="md:col-span-2 bg-surface-container-low p-6 md:p-8 rounded-xl border border-outline-variant/10 animate-slide-up" style="animation-delay: 0.6s; opacity: 0;">
+      <h3 class="font-headline font-bold text-lg md:text-xl text-primary mb-4 flex items-center gap-2">
+        <span class="material-symbols-outlined">analytics</span>
+        Análisis de Transferencia de Propiedad
+      </h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <div>
+          <p class="text-sm text-on-surface-variant leading-relaxed">
+            Los flujos representados entre el <span class="font-semibold italic">Pacto Político</span> y la <span class="font-semibold italic">Formación Económica</span> no son estáticos; representan la cesión deliberada de activos infraestructurales hacia el bien común regulado.
+          </p>
+        </div>
+        <div class="flex flex-col gap-3 md:gap-4">
+          <div class="flex items-center gap-3 md:gap-4 p-3 bg-surface-container-lowest rounded-lg">
+            <div class="w-8 md:w-10 h-8 md:h-10 rounded-full bg-emerald-100 flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-emerald-900 text-lg md:text-xl" style="font-variation-settings: 'FILL' 1;">account_balance</span>
+            </div>
+            <div>
+              <div class="text-[8px] md:text-[10px] font-bold text-slate-400 uppercase">Institución</div>
+              <div class="text-xs md:text-sm font-semibold">Marco Regulatorio</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-3 md:gap-4 p-3 bg-surface-container-lowest rounded-lg">
+            <div class="w-8 md:w-10 h-8 md:h-10 rounded-full bg-amber-100 flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-amber-900 text-lg md:text-xl" style="font-variation-settings: 'FILL' 1;">public</span>
+            </div>
+            <div>
+              <div class="text-[8px] md:text-[10px] font-bold text-slate-400 uppercase">Alcance</div>
+              <div class="text-xs md:text-sm font-semibold">Territorialidad Integral</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-primary text-on-primary p-6 md:p-8 rounded-xl flex flex-col justify-between overflow-hidden relative animate-slide-up" style="animation-delay: 0.7s; opacity: 0;">
+      <div class="relative z-10">
+        <span class="text-[8px] md:text-[10px] font-bold uppercase tracking-[0.2em] opacity-70">Nota Técnica</span>
+        <h3 class="font-headline font-bold text-lg md:text-2xl mt-2 mb-3 md:mb-4 leading-tight">Simbiosis Vital</h3>
+        <p class="text-xs md:text-sm opacity-80 leading-relaxed">
+          La formación no es solo monetaria, es la capacidad de transformar la geografía en valor social mediante la técnica.
+        </p>
+      </div>
+      <!-- Abstract pattern background -->
+      <div class="absolute -bottom-4 md:-8 -right-4 md:-8 opacity-10">
+        <span class="material-symbols-outlined text-[100px] md:text-[160px]">bubble_chart</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navegación -->
+  <div class="flex justify-between mt-8 max-w-7xl mx-auto">
+    <a href="/sobredeterminacion-cultura" class="inline-flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors">
+      <span class="material-symbols-outlined">arrow_back</span>
+      Anterior
+    </a>
+  </div>
+
+  <style>
+    .glass-card {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(20px);
+    }
+  </style>
+</Layout>

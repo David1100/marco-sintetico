@@ -1,0 +1,132 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Creatividad - Marco Sintético">
+  <!-- Title Section -->
+  <header class="w-full max-w-7xl pt-8 pb-8 flex flex-col items-center text-center animate-fade-in">
+    <h1 class="font-headline font-extrabold text-4xl md:text-5xl text-primary tracking-tight mb-4">
+      Creatividad
+    </h1>
+    <p class="font-body text-lg md:text-xl text-on-surface-variant max-w-2xl">
+      El nodo central de la productividad social donde convergen la imaginación, la apropiación y el conocimiento técnico para la generación de soberanía tecnológica.
+    </p>
+  </header>
+
+  <!-- Main Diagram -->
+  <main class="w-full max-w-6xl mx-auto px-4 md:px-8 pb-12">
+    <div class="relative w-full aspect-[16/9] md:aspect-[21/9] flex items-center justify-center mb-12">
+      <!-- Connection Flow SVG Layer -->
+      <svg class="absolute inset-0 w-full h-full pointer-events-none opacity-20" fill="none" viewbox="0 0 1000 400" xmlns="http://www.w3.org/2000/svg">
+        <path class="connection-line animate-flow" d="M100 200 C 250 200, 350 200, 450 200" stroke="url(#gradient-primary)" stroke-width="2"></path>
+        <path class="connection-line animate-flow" style="animation-delay: 0.5s;" d="M550 200 C 650 200, 750 200, 900 200" stroke="url(#gradient-secondary)" stroke-width="2"></path>
+        <path class="connection-line animate-flow" style="animation-delay: 0.3s;" d="M500 100 V 150" stroke="url(#gradient-primary)" stroke-width="2"></path>
+        <defs>
+        <linearGradient id="gradient-primary" x1="0" x2="1" y1="0" y2="0">
+        <stop offset="0%" stop-color="#00472f"></stop>
+        <stop offset="100%" stop-color="#205f44"></stop>
+        </linearGradient>
+        <linearGradient id="gradient-secondary" x1="0" x2="1" y1="0" y2="0">
+        <stop offset="0%" stop-color="#9b4500"></stop>
+        <stop offset="100%" stop-color="#fd8a42"></stop>
+        </linearGradient>
+        </defs>
+      </svg>
+
+      <!-- Grid Layout for Nodes -->
+      <div class="grid grid-cols-12 gap-4 md:gap-6 w-full relative z-10">
+        <!-- Left Node: Transferencia -->
+        <div class="col-span-12 md:col-span-3 flex flex-col justify-center items-end text-right space-y-3 md:space-y-4 animate-slide-up" style="animation-delay: 0.3s; opacity: 0;">
+          <div class="p-4 md:p-6 rounded-xl bg-surface-container-high shadow-sm border-r-4 border-primary/20">
+            <span class="text-xs md:text-sm font-bold uppercase tracking-widest text-primary block mb-1 md:mb-2">Transferencia</span>
+            <h3 class="font-headline text-lg md:text-2xl font-bold text-on-surface">Imaginación / Apropiación</h3>
+            <p class="text-xs md:text-sm text-on-surface-variant mt-1 md:mt-2 italic">Entrada de flujos cognitivos</p>
+          </div>
+        </div>
+
+        <!-- Central Node: Creatividad -->
+        <div class="col-span-12 md:col-span-6 flex flex-col items-center justify-center relative">
+          <!-- Generation Node (Top) -->
+          <div class="absolute -top-20 md:-top-32 flex flex-col items-center z-20 animate-slide-up" style="animation-delay: 0.4s; opacity: 0;">
+            <div class="px-4 md:px-6 py-2 md:py-3 rounded-full bg-primary text-on-primary font-headline font-bold text-xs md:text-sm tracking-wide shadow-lg mb-3 md:mb-4">
+              GENERACIÓN
+            </div>
+            <div class="glass-effect p-3 md:p-4 rounded-xl border border-outline-variant/10 text-center max-w-[200px]">
+              <span class="text-[10px] md:text-xs font-bold uppercase text-on-surface-variant block">Objetivo</span>
+              <p class="text-sm md:text-base text-primary font-bold">Tecnología Punta Propia</p>
+            </div>
+          </div>
+
+          <!-- Main Illustration -->
+          <div class="relative w-40 h-40 md:w-64 md:h-64 bg-surface-container-lowest rounded-full shadow-2xl flex items-center justify-center overflow-hidden border-4 md:border-8 border-surface-container animate-scale-in" style="animation-delay: 0.5s; opacity: 0;">
+            <img alt="Symbolic realization heads" class="w-full h-full object-cover mix-blend-multiply opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAC6O29sxjnpIN6VsU8OxRtdNy7OVuvazBX6Q_AIrVZkxTbIyIyT-7gG2mSz0Jm8gBoxD3KMhPzgupwoCfiV_ZJXcZdUKvc1ScfmpGNs-IWYiD2EzfGNP30zFhTCOuR-IVXZKiakgHKPzHcq0d_N6pLO_044ckc2Jxk6_Yv0kYrIN2ZZO_M5HT50SXgwIhuZnARvwdU21VQk_eZ-e8vVGix-cquCf2kKIaFjHeLE5w7ui93xGThCIrlOv2BmCSIISIL4wyiZsyq24cx"/>
+            <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-4 md:bottom-6 px-3 md:px-4 py-1 md:py-1.5 rounded-full bg-white/90 backdrop-blur-md shadow-sm border border-outline-variant/20">
+              <span class="font-headline font-extrabold text-xs md:text-xl text-primary tracking-tight">REALIZACIÓN</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Node: Desface -->
+        <div class="col-span-12 md:col-span-3 flex flex-col justify-center items-start space-y-3 md:space-y-4 animate-slide-up" style="animation-delay: 0.6s; opacity: 0;">
+          <div class="p-4 md:p-6 rounded-xl bg-surface-container-high shadow-sm border-l-4 border-secondary/20">
+            <span class="text-xs md:text-sm font-bold uppercase tracking-widest text-secondary block mb-1 md:mb-2">Desface</span>
+            <h3 class="font-headline text-lg md:text-2xl font-bold text-on-surface">Conocimiento Téc.</h3>
+            <p class="text-xs md:text-sm text-on-surface-variant mt-1 md:mt-2 italic">Salida y aplicación sistémica</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Descriptive Metadata Cards -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+      <div class="p-6 md:p-8 rounded-xl bg-surface-container flex flex-col space-y-4 animate-slide-up" style="animation-delay: 0.7s; opacity: 0;">
+        <div class="w-10 md:w-12 h-10 md:h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+          <span class="material-symbols-outlined">hub</span>
+        </div>
+        <h4 class="font-headline font-bold text-lg md:text-xl">Nodo Central</h4>
+        <p class="text-sm text-on-surface-variant leading-relaxed">
+          La creatividad no es un proceso aislado, sino el punto de articulación donde el capital humano transforma la información bruta en valor tecnológico estratégico.
+        </p>
+      </div>
+
+      <div class="p-6 md:p-8 rounded-xl bg-surface-container-high flex flex-col space-y-4 md:-mt-4 animate-slide-up" style="animation-delay: 0.8s; opacity: 0;">
+        <div class="w-10 md:w-12 h-10 md:h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+          <span class="material-symbols-outlined">auto_awesome</span>
+        </div>
+        <h4 class="font-headline font-bold text-lg md:text-xl">Soberanía Tecnológica</h4>
+        <p class="text-sm text-on-surface-variant leading-relaxed">
+          El fin último de la Generación es reducir la dependencia externa mediante la creación de protocolos y herramientas diseñadas desde el contexto local.
+        </p>
+      </div>
+
+      <div class="p-6 md:p-8 rounded-xl bg-surface-container flex flex-col space-y-4 animate-slide-up" style="animation-delay: 0.9s; opacity: 0;">
+        <div class="w-10 md:w-12 h-10 md:h-12 rounded-full bg-tertiary/10 flex items-center justify-center text-tertiary">
+          <span class="material-symbols-outlined">cycle</span>
+        </div>
+        <h4 class="font-headline font-bold text-lg md:text-xl">Ciclo de Capital</h4>
+        <p class="text-sm text-on-surface-variant leading-relaxed">
+          Un flujo continuo donde el excedente de conocimiento se reinvierte en las etapas de imaginación, cerrando el bucle de innovación social productiva.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Navegación -->
+  <div class="flex justify-between mt-12 max-w-7xl mx-auto px-4">
+    <a href="/sintesis-paradigma-cibernetico" class="inline-flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors">
+      <span class="material-symbols-outlined">arrow_back</span>
+      Anterior
+    </a>
+  </div>
+
+  <style>
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(20px);
+    }
+    .connection-line {
+      stroke-dasharray: 4;
+    }
+  </style>
+</Layout>
