@@ -1,0 +1,176 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="La apropiación de la productividad social - Marco Sintético">
+  <!-- Hero Title Section -->
+  <div class="mb-12 animate-fade-in">
+    <h1 class="font-headline font-extrabold text-5xl text-primary tracking-tight mb-2">
+      La apropiación de la productividad social
+    </h1>
+    <p class="font-body text-lg text-on-surface-variant max-w-2xl animate-fade-in" style="animation-delay: 0.1s;">
+      Visualización sistémica de la interacción entre los recursos naturales, la generación de riqueza y el desarrollo social.
+    </p>
+  </div>
+
+  <!-- Main Diagram Container -->
+  <div class="relative bg-surface-container-low rounded-[2rem] p-12 overflow-hidden shadow-inner mb-12">
+    <!-- SVG Flows (Background) -->
+    <svg class="absolute inset-0 w-full h-full pointer-events-none" fill="none" viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+      <!-- Top Arrow: Actividad (Nature -> Society) -->
+      <path class="text-primary/30 animate-flow" d="M250,200 C400,100 600,100 750,200" stroke="currentColor" stroke-dasharray="8 4" stroke-width="3"></path>
+      <path class="text-primary" d="M740,195 L755,205 L740,215" fill="currentColor"></path>
+      <text class="fill-primary font-bold text-xs uppercase tracking-widest" text-anchor="middle" x="500" y="110">Actividad</text>
+      
+      <!-- Bottom Arrow: Transformación y Regulación (Society -> Nature) -->
+      <path class="text-tertiary/30 animate-flow" style="animation-delay: 0.5s;" d="M750,400 C600,500 400,500 250,400" stroke="currentColor" stroke-dasharray="8 4" stroke-width="3"></path>
+      <path class="text-tertiary" d="M260,395 L245,405 L260,415" fill="currentColor"></path>
+      <text class="fill-tertiary font-bold text-xs uppercase tracking-widest" text-anchor="middle" x="500" y="520">Transformación y Regulación</text>
+      
+      <!-- Spiral Flows -->
+      <path class="text-secondary/40 animate-flow" style="animation-delay: 0.3s;" d="M300,300 Q400,250 450,300" stroke="currentColor" stroke-width="2"></path>
+      <path class="text-secondary/40 animate-flow" style="animation-delay: 0.6s;" d="M550,300 Q600,250 700,300" stroke="currentColor" stroke-width="2"></path>
+    </svg>
+
+    <!-- Interactive Nodes Grid -->
+    <div class="relative z-10 flex flex-col md:flex-row justify-between items-center h-[500px] gap-8">
+      <!-- Naturaleza (Left) -->
+      <div class="group relative flex flex-col items-center animate-slide-up" style="animation-delay: 0.2s;">
+        <div class="w-48 h-48 rounded-full bg-primary-container/10 border-4 border-primary/20 flex items-center justify-center transition-all duration-500 hover:scale-110 hover:bg-primary-container/20 hover:shadow-2xl cursor-pointer">
+          <img alt="Naturaleza" class="w-full h-full rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7q1LTFFZ95qULuE5OfAW1pgeXP7ngfV9fn7pPHWazDJw9p_r_ZmuYmbhu6NNVdPbdA1Lg8Be-6a2fVsbHX6V0fjcxtvxoxtfwW1x5pLlip3LSk4jNqb9zmf-xuT4H8A9c0SgF7UnxX8rN2uvdfepZZlKgJ0wG0BIoiZqARWCXI2Eq8cYhCrw8En_Qse_j_EAAUzmPJ2fCwr8IzQvpn_8dkS4Odf3vjbooysLoWfckOlG6nBFCCANaHFZn87lsenY7Gm765qwrhhIn"/>
+        </div>
+        <div class="mt-6 text-center">
+          <h3 class="font-headline font-extrabold text-2xl text-primary uppercase tracking-tighter group-hover:scale-105 transition-transform">Naturaleza</h3>
+          <p class="text-sm text-on-surface-variant font-medium mt-1">Sustento Biótico</p>
+        </div>
+        <!-- Tooltip -->
+        <div class="absolute -top-12 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 glass-card px-4 py-2 rounded-xl text-xs font-bold text-primary shadow-xl pointer-events-none">
+          RECURSOS Y ECOSISTEMAS
+        </div>
+      </div>
+
+      <!-- Riqueza (Middle) -->
+      <div class="group relative flex flex-col items-center animate-slide-up" style="animation-delay: 0.4s;">
+        <div class="w-64 h-64 rounded-full bg-secondary-container/10 border-4 border-secondary/20 flex items-center justify-center transition-all duration-500 hover:scale-110 hover:bg-secondary-container/20 hover:shadow-2xl cursor-pointer">
+          <img alt="Riqueza" class="w-full h-full rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxD5uLLHraBNkmAq4HGyC9-WYShqBGgCJeBRV_43WG_YTSbxYlCYAKVFeZq9bsMWcCIYHKP1WtftciQyCyLE39r8s5KxFkld6E4eaTvZnseMAEX5c3luJa6AHIINoKIe82gC8v91RFYUkrDs6qoDnllwDpOynw-NR9LG1OEpWQAv93A_uIYYS6xDOsCx9nljc-ptSI59Or38KGD4bxrkzWjyGyTLndjLIf7kOlECCMqkGbd6AP44EIpBsrou0DXJIDGoCu2SCoahmY"/>
+        </div>
+        <div class="mt-6 text-center">
+          <h3 class="font-headline font-extrabold text-3xl text-secondary uppercase tracking-tighter group-hover:scale-105 transition-transform">Riqueza</h3>
+          <p class="text-sm text-on-surface-variant font-medium mt-1">Capital Social y Material</p>
+          <!-- Central Text below Riqueza node -->
+          <div class="mt-8 px-6 py-2 bg-white/50 backdrop-blur rounded-full inline-block border border-outline-variant/20 animate-pulse">
+            <span class="font-headline font-extrabold text-primary tracking-widest text-sm">PRODUCTIVIDAD SOCIAL</span>
+          </div>
+        </div>
+        <div class="absolute -top-12 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 glass-card px-4 py-2 rounded-xl text-xs font-bold text-secondary shadow-xl pointer-events-none">
+          VALOR GENERADO
+        </div>
+      </div>
+
+      <!-- Sociedad (Right) -->
+      <div class="group relative flex flex-col items-center animate-slide-up" style="animation-delay: 0.6s;">
+        <div class="w-48 h-48 rounded-full bg-tertiary-container/10 border-4 border-tertiary/20 flex items-center justify-center transition-all duration-500 hover:scale-110 hover:bg-tertiary-container/20 hover:shadow-2xl cursor-pointer">
+          <img alt="Sociedad" class="w-full h-full rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBqG7d-gA9beBgWGmICAXGcwLzSek0Ovtt66tKKhHbVmAwc0s-Q2js7XLPGu63V7iyhhivHIkT7CepbBEo5mEqEl_TBDcwg0W51ZS0r3NzaObG479Jx-aY4zkPOLULrQ8DT8xF2V2t_qC3Z5Wdw6k-kOFhdnstPN8ytQxydpH-U618vbq8jg4D0h9F10PZgqq_RnGNYZ4aN6tB3GItY4ycI5G1XTXp6cL0y7ac6GpxhJ5pBwBbxENbPHmmlAdhSxN-xxTFa_MW3wxs"/>
+        </div>
+        <div class="mt-6 text-center">
+          <h3 class="font-headline font-extrabold text-2xl text-tertiary uppercase tracking-tighter group-hover:scale-105 transition-transform">Sociedad</h3>
+          <p class="text-sm text-on-surface-variant font-medium mt-1">Estructura Humana</p>
+        </div>
+        <div class="absolute -top-12 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 glass-card px-4 py-2 rounded-xl text-xs font-bold text-tertiary shadow-xl pointer-events-none">
+          BIENESTAR COLECTIVO
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bento Stats Section -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+    <!-- Impacto Ecológico -->
+    <div class="glass-card p-8 rounded-[2rem] hover:bg-white transition-all duration-300 shadow-sm hover-lift animate-slide-up group" style="animation-delay: 0.3s;">
+      <div class="flex justify-between items-start mb-6">
+        <span class="material-symbols-outlined text-primary text-4xl group-hover:animate-bounce">analytics</span>
+        <span class="text-xs font-bold text-primary bg-primary-fixed px-2 py-1 rounded-full">+12%</span>
+      </div>
+      <h4 class="font-headline font-bold text-xl text-on-surface mb-2 group-hover:text-primary transition-colors">Impacto Ecológico</h4>
+      <p class="text-sm text-on-surface-variant leading-relaxed">Medición de la regeneración de recursos naturales en el último ciclo productivo.</p>
+    </div>
+
+    <!-- Eficiencia de Riqueza -->
+    <div class="glass-card p-8 rounded-[2rem] hover:bg-white transition-all duration-300 shadow-sm hover-lift animate-slide-up group" style="animation-delay: 0.4s;">
+      <div class="flex justify-between items-start mb-6">
+        <span class="material-symbols-outlined text-secondary text-4xl group-hover:animate-bounce">monitoring</span>
+        <span class="text-xs font-bold text-secondary bg-secondary-fixed px-2 py-1 rounded-full">Optimizado</span>
+      </div>
+      <h4 class="font-headline font-bold text-xl text-on-surface mb-2 group-hover:text-secondary transition-colors">Eficiencia de Riqueza</h4>
+      <p class="text-sm text-on-surface-variant leading-relaxed">Distribución del capital generado y su retorno hacia los pilares del ecosistema social.</p>
+    </div>
+
+    <!-- Tejido Social -->
+    <div class="glass-card p-8 rounded-[2rem] hover:bg-white transition-all duration-300 shadow-sm hover-lift animate-slide-up group" style="animation-delay: 0.5s;">
+      <div class="flex justify-between items-start mb-6">
+        <span class="material-symbols-outlined text-tertiary text-4xl group-hover:animate-bounce">diversity_3</span>
+        <span class="text-xs font-bold text-tertiary bg-tertiary-fixed px-2 py-1 rounded-full">Activo</span>
+      </div>
+      <h4 class="font-headline font-bold text-xl text-on-surface mb-2 group-hover:text-tertiary transition-colors">Tejido Social</h4>
+      <p class="text-sm text-on-surface-variant leading-relaxed">Nivel de participación y apropiación de los procesos productivos por la comunidad.</p>
+    </div>
+  </div>
+
+  <!-- Detailed Content Section -->
+  <div class="flex flex-col lg:flex-row gap-8 animate-slide-up" style="animation-delay: 0.6s;">
+    <!-- Dinámica del Ciclo -->
+    <div class="flex-1 glass-card rounded-[2rem] p-10 shadow-sm hover:shadow-lg transition-shadow duration-300">
+      <div class="flex items-center gap-4 mb-8">
+        <div class="h-1 w-12 bg-primary rounded-full"></div>
+        <h3 class="font-headline font-extrabold text-2xl uppercase tracking-tighter text-on-surface">Dinámica del Ciclo</h3>
+      </div>
+      
+      <div class="space-y-6">
+        <!-- Paso 01 -->
+        <div class="flex gap-4 group">
+          <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
+            <span class="text-primary font-bold">01</span>
+          </div>
+          <div>
+            <h5 class="font-bold text-on-surface group-hover:text-primary transition-colors">Extracción Responsable</h5>
+            <p class="text-sm text-on-surface-variant">La naturaleza provee los insumos básicos mediante procesos de actividad regulada.</p>
+          </div>
+        </div>
+        
+        <!-- Paso 02 -->
+        <div class="flex gap-4 group">
+          <div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center shrink-0 group-hover:bg-secondary/20 transition-colors">
+            <span class="text-secondary font-bold">02</span>
+          </div>
+          <div>
+            <h5 class="font-bold text-on-surface group-hover:text-secondary transition-colors">Transformación de Valor</h5>
+            <p class="text-sm text-on-surface-variant">La riqueza no es el fin, sino el medio para estructurar una sociedad más resiliente.</p>
+          </div>
+        </div>
+        
+        <!-- Paso 03 -->
+        <div class="flex gap-4 group">
+          <div class="w-10 h-10 rounded-full bg-tertiary/10 flex items-center justify-center shrink-0 group-hover:bg-tertiary/20 transition-colors">
+            <span class="text-tertiary font-bold">03</span>
+          </div>
+          <div>
+            <h5 class="font-bold text-on-surface group-hover:text-tertiary transition-colors">Retorno Sistémico</h5>
+            <p class="text-sm text-on-surface-variant">La sociedad regula su impacto y devuelve transformación positiva al entorno natural.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Imagen Lateral -->
+    <div class="w-full lg:w-1/3 rounded-[2rem] overflow-hidden relative group min-h-[300px]">
+      <img alt="Sustainability Landscape" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAp3xDyPbij4Ow_uAlyGB7TVsgVTi-WdlrEvTmDeX4YmB7lBGM4wx0OgZ7CwD2tP8Pt1Wc1uvHMFhd4GJv5fzBNwI7wetEnwOz0l84hCsUoerkfvGZBoLdTw5R4DbMXHM5o_fx_CPksb4jePSkZaSTsx7qTUNniFBOJfKBwjvUlF7TZXorY2gKWMG4-2UNKgHy3Mp1j2dMMwPHMdvxblP4BE5xcsfjLZvM4PrtuJTk2sMpgzE0vD5zY3ufaxTgpgVrWYhDaQ-t_VVuk"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent p-10 flex flex-col justify-end">
+        <span class="text-xs font-bold text-primary-fixed uppercase tracking-widest mb-2">Visión 2030</span>
+        <h4 class="font-headline font-bold text-2xl text-white mb-4">Sustentabilidad Integral</h4>
+        <button class="bg-white text-primary font-bold px-6 py-3 rounded-full text-sm hover:bg-primary-fixed hover:scale-105 transition-all duration-300 w-fit">
+          Ver Reporte
+        </button>
+      </div>
+    </div>
+  </div>
+</Layout>
