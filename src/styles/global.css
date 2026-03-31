@@ -1,66 +1,66 @@
 @import "tailwindcss";
 
 @theme {
-  /* Colores Principales */
-  --color-primary: #00472f;
-  --color-primary-container: #205f44;
+  /* Colores Principales - Tonos Tierra/Culturales */
+  --color-primary: #8B4513;
+  --color-primary-container: #D2691E;
   --color-on-primary: #ffffff;
-  --color-on-primary-container: #97d6b5;
-  --color-primary-fixed: #b1f0ce;
-  --color-on-primary-fixed: #002114;
-  --color-on-primary-fixed-variant: #0e5138;
-  --color-primary-fixed-dim: #95d4b3;
+  --color-on-primary-container: #fff3e0;
+  --color-primary-fixed: #ffcc80;
+  --color-on-primary-fixed: #2C1810;
+  --color-on-primary-fixed-variant: #8B4513;
+  --color-primary-fixed-dim: #deb887;
   
-  /* Colores Secundarios */
-  --color-secondary: #9b4500;
-  --color-secondary-container: #fd8a42;
+  /* Colores Secundarios - Verde Selva */
+  --color-secondary: #2E8B57;
+  --color-secondary-container: #3CB371;
   --color-on-secondary: #ffffff;
-  --color-on-secondary-container: #682c00;
-  --color-secondary-fixed: #ffdbca;
-  --color-on-secondary-fixed: #331200;
-  --color-on-secondary-fixed-variant: #763300;
-  --color-secondary-fixed-dim: #ffb68e;
+  --color-on-secondary-container: #e8f5e9;
+  --color-secondary-fixed: #a5d6a7;
+  --color-on-secondary-fixed: #1b3a22;
+  --color-on-secondary-fixed-variant: #2E8B57;
+  --color-secondary-fixed-dim: #90EE90;
   
-  /* Colores Terciarios */
-  --color-tertiary: #303e52;
-  --color-tertiary-container: #47556a;
+  /* Colores Terciarios - Café/Cacao */
+  --color-tertiary: #6B4226;
+  --color-tertiary-container: #8B5A2B;
   --color-on-tertiary: #ffffff;
-  --color-on-tertiary-container: #bbcae2;
-  --color-tertiary-fixed: #d5e3fd;
-  --color-on-tertiary-fixed: #0d1c2f;
-  --color-on-tertiary-fixed-variant: #3a485c;
-  --color-tertiary-fixed-dim: #b9c7e0;
+  --color-on-tertiary-container: #f5e6d3;
+  --color-tertiary-fixed: #d7ccc8;
+  --color-on-tertiary-fixed: #2C1810;
+  --color-on-tertiary-fixed-variant: #6B4226;
+  --color-tertiary-fixed-dim: #bcaaa4;
   
   /* Superficies */
-  --color-background: #f6fafe;
-  --color-surface: #f6fafe;
-  --color-surface-bright: #f6fafe;
-  --color-surface-dim: #d6dade;
-  --color-surface-container: #eaeef2;
-  --color-surface-container-low: #f0f4f8;
-  --color-surface-container-high: #e4e9ed;
-  --color-surface-container-highest: #dfe3e7;
-  --color-surface-container-lowest: #ffffff;
+  --color-background: #FFF8DC;
+  --color-surface: #FFF8DC;
+  --color-surface-bright: #FFF8DC;
+  --color-surface-dim: #d4c4a8;
+  --color-surface-container: #F5DEB3;
+  --color-surface-container-low: #FAF0E6;
+  --color-surface-container-high: #EED9B6;
+  --color-surface-container-highest: #DEB887;
+  --color-surface-container-lowest: #FFFAF0;
   
   /* Texto */
-  --color-on-background: #171c1f;
-  --color-on-surface: #171c1f;
-  --color-on-surface-variant: #44474c;
+  --color-on-background: #2C1810;
+  --color-on-surface: #2C1810;
+  --color-on-surface-variant: #5D4037;
   
   /* Otros */
-  --color-outline: #75777d;
-  --color-outline-variant: #c4c6cd;
-  --color-inverse-surface: #2c3134;
-  --color-inverse-on-surface: #edf1f5;
-  --color-inverse-primary: #95d4b3;
-  --color-error: #ba1a1a;
+  --color-outline: #8D6E63;
+  --color-outline-variant: #D7CCC8;
+  --color-inverse-surface: #FFFAF0;
+  --color-inverse-on-surface: #2C1810;
+  --color-inverse-primary: #DEB887;
+  --color-error: #c62828;
   --color-on-error: #ffffff;
-  --color-error-container: #ffdad6;
-  --color-on-error-container: #93000a;
+  --color-error-container: #ffcdd2;
+  --color-on-error-container: #b71c1c;
   
   /* Superficies - Variantes */
-  --color-surface-variant: #dfe3e7;
-  --color-surface-tint: #2c694e;
+  --color-surface-variant: #D7CCC8;
+  --color-surface-tint: #A0522D;
   
   /* Fonts */
   --font-headline: "Manrope", "Manrope Variable", sans-serif;
@@ -87,7 +87,7 @@
   }
   
   body {
-    @apply bg-background font-body text-on-background antialiased;
+    @apply font-body text-on-surface;
   }
 }
 
@@ -99,9 +99,34 @@
   
   /* Efecto Glass */
   .glass-card {
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: rgba(255, 250, 240, 0.75);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(139, 69, 19, 0.12);
+    box-shadow: 0 8px 32px rgba(44, 24, 16, 0.08);
+  }
+  
+  /* Panel con blur transparente */
+  .glass-panel {
+    background: rgba(255, 250, 240, 0.65);
+    backdrop-filter: blur(12px) saturate(150%);
+    -webkit-backdrop-filter: blur(12px) saturate(150%);
+    border: 1px solid rgba(139, 69, 19, 0.08);
+  }
+  
+  /* Surface containers con glass effect */
+  .bg-surface-container,
+  .bg-surface-container-low,
+  .bg-surface-container-lowest,
+  .bg-surface-container-high,
+  .bg-surface-container-highest {
+    background: rgba(255, 250, 240, 0.7) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  
+  .bg-surface-container-lowest {
+    background: rgba(255, 250, 247, 0.85) !important;
   }
   
   /* Grid Asimétrico */
