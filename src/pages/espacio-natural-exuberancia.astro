@@ -1,0 +1,177 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageNav from "../components/PageNav.astro";
+---
+
+<Layout title="Página 17 - Espacio natural de la exuberancia">
+  <article class="sheet">
+    <header class="sheet-header animate-fade-in" style="animation-delay: 0s; opacity: 0;">
+      <h1 class="sheet-title">Espacio Natural de la Exuberancia</h1>
+    </header>
+
+    <div class="sheet-body">
+      <section class="map-panel animate-slide-up" style="animation-delay: 0.1s; opacity: 0;">
+        <div class="map-frame">
+          <p class="map-label">ZONA TROPICAL</p>
+          <div class="map-slot">
+            <img src="/images/pagina17/mapa-zona-tropical.png" alt="Mapa zona tropical" loading="lazy" decoding="async" onerror="this.remove();" />
+          </div>
+        </div>
+        <p class="map-foot">Tecnologías Propias de Regulación</p>
+      </section>
+
+      <section class="notes animate-slide-up" style="animation-delay: 0.15s; opacity: 0;">
+        <h2>LA ZONA TROPICAL</h2>
+        <ul>
+          <li>
+            <span class="arrow">〉</span>
+            <div>
+              <p class="note-label">COSTOS :</p>
+              <p class="note-body">CUALQUIER PRODUCTO AGRÍCOLA CUESTA CIEN (100) VECES MENOS !</p>
+            </div>
+          </li>
+          <li>
+            <span class="arrow">〉</span>
+            <p class="note-body">Culturas de Inclusión</p>
+          </li>
+          <li>
+            <span class="arrow">〉</span>
+            <div>
+              <p class="note-label">CULTIVO :</p>
+              <p class="note-body">SE CULTIVA DURANTE TODO EL AÑO !</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </article>
+
+  <PageNav prev={{ href: "/tributario-capitalista", label: "La Contradicción", sublabel: "Clima · Suelo" }} next={{ href: "/social-poder-politico", label: "El Espacio Social", sublabel: "Poder Político" }} />
+
+  <style>
+    .sheet {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 242, 228, 0.95));
+      border-radius: 2.75rem;
+      padding: clamp(1.75rem, 5vw, 3.5rem);
+      border: 1px solid rgba(44, 24, 16, 0.12);
+      box-shadow: 0 18px 45px rgba(44, 24, 16, 0.18);
+    }
+
+    .sheet-title {
+      font-family: var(--font-body);
+      font-weight: 800;
+      font-size: clamp(1.9rem, 4vw, 2.7rem);
+      letter-spacing: 0.02em;
+      text-align: center;
+      color: var(--color-primary);
+    }
+
+    .sheet-body {
+      display: grid;
+      grid-template-columns: minmax(280px, 3fr) minmax(220px, 1fr);
+      gap: clamp(1.5rem, 4vw, 3.5rem);
+      margin-top: 2.5rem;
+      align-items: start;
+    }
+
+    .map-panel {
+      text-align: center;
+    }
+
+    .map-frame {
+      border: 3px solid rgba(44, 24, 16, 0.9);
+      border-radius: 2rem;
+      padding: clamp(1rem, 3vw, 2.2rem);
+      position: relative;
+      background: rgba(255, 255, 255, 0.85);
+    }
+
+    .map-label {
+      font-family: var(--font-body);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+      color: rgba(44, 24, 16, 0.8);
+    }
+
+    .map-slot {
+      width: 100%;
+      aspect-ratio: 3 / 1.4;
+      border: 1px dashed rgba(44, 24, 16, 0.3);
+      border-radius: 1.5rem;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 253, 247, 0.8);
+    }
+
+    .map-slot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .map-foot {
+      margin-top: 0.8rem;
+      font-size: 0.95rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: rgba(44, 24, 16, 0.7);
+    }
+
+    .notes h2 {
+      font-family: var(--font-body);
+      font-size: 1.3rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      color: var(--color-primary);
+    }
+
+    .notes ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .notes li {
+      display: flex;
+      gap: 0.8rem;
+      align-items: flex-start;
+    }
+
+    .arrow {
+      font-size: 1.8rem;
+      line-height: 1;
+      color: rgba(44, 24, 16, 0.65);
+    }
+
+    .note-label {
+      font-family: var(--font-body);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 0.2rem;
+    }
+
+    .note-body {
+      font-size: 0.95rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(44, 24, 16, 0.75);
+    }
+
+    @media (max-width: 900px) {
+      .sheet-body {
+        grid-template-columns: 1fr;
+      }
+
+      .notes li {
+        flex-direction: row;
+      }
+    }
+  </style>
+</Layout>

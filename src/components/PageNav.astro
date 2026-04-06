@@ -1,0 +1,125 @@
+---
+interface NavTarget {
+  href: string;
+  label: string;
+  sublabel?: string;
+}
+
+interface Props {
+  prev?: NavTarget;
+  next?: NavTarget;
+}
+
+const { prev, next } = Astro.props;
+---
+
+{(prev || next) && (
+  <nav class="page-nav" aria-label="Navegación secuencial">
+    {prev && (
+      <a href={prev.href} class="page-nav-button page-nav-button--prev">
+        <span class="material-symbols-outlined page-nav-icon">arrow_back</span>
+        <span class="page-nav-text">
+          <span class="page-nav-meta">Anterior</span>
+          <span class="page-nav-title">{prev.label}</span>
+          {prev.sublabel && <span class="page-nav-subtitle">{prev.sublabel}</span>}
+        </span>
+      </a>
+    )}
+
+    {next && (
+      <a href={next.href} class="page-nav-button page-nav-button--next">
+        <span class="page-nav-text">
+          <span class="page-nav-meta">Siguiente</span>
+          <span class="page-nav-title">{next.label}</span>
+          {next.sublabel && <span class="page-nav-subtitle">{next.sublabel}</span>}
+        </span>
+        <span class="material-symbols-outlined page-nav-icon">arrow_forward</span>
+      </a>
+    )}
+  </nav>
+)}
+
+<style>
+  :global(.page-nav) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    justify-content: space-between;
+  }
+  .page-nav-button {
+    flex: 1 1 260px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 1.75rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 250, 240, 0.85));
+    border: 1px solid rgba(44, 24, 16, 0.12);
+    box-shadow: 0 12px 30px -12px rgba(44, 24, 16, 0.35);
+    color: var(--color-on-surface);
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  }
+  .page-nav-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 35px -18px rgba(44, 24, 16, 0.45);
+    border-color: var(--color-primary);
+  }
+  .page-nav-button--prev {
+    justify-content: flex-start;
+  }
+  .page-nav-button--next {
+    justify-content: flex-end;
+    text-align: right;
+  }
+  .page-nav-icon {
+    font-size: 1.35rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(139, 69, 19, 0.08);
+    color: var(--color-primary);
+  }
+  .page-nav-button--next .page-nav-icon {
+    background: rgba(46, 139, 87, 0.1);
+    color: var(--color-secondary);
+  }
+  .page-nav-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+  .page-nav-meta {
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(44, 24, 16, 0.6);
+    margin-bottom: 0.2rem;
+  }
+  .page-nav-title {
+    font-family: var(--font-headline);
+    font-size: 1.15rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .page-nav-subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(44, 24, 16, 0.6);
+  }
+  @media (max-width: 640px) {
+    .page-nav-button {
+      border-radius: 1.5rem;
+    }
+    .page-nav-button--next {
+      justify-content: space-between;
+      text-align: left;
+    }
+  }
+</style>

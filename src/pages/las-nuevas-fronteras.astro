@@ -1,0 +1,197 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageNav from "../components/PageNav.astro";
+
+const frontierSections = [
+  {
+    code: "A) LA EXTERNA :",
+    legend: "LA TECNOLOGIA PUNTA",
+    technologies: [
+      {
+        label: "TECNOLOGIA PESADA",
+        imagePath: "/images/pagina15/tecnologia-pesada.png",
+      },
+      {
+        label: "TECNOLOGIA LIVIANA",
+        imagePath: "/images/pagina15/tecnologia-liviana.png",
+      },
+    ],
+  },
+  {
+    code: "B) LA INTERNA :",
+    legend: "LA TECNOLOGIA PROPIA",
+    technologies: [
+      {
+        label: "TECNOLOGIA DE SUBSISTENCIA",
+        imagePath: "/images/pagina15/tecnologia-subsistencia.png",
+      },
+      {
+        label: "TECNOLOGIA DE DESARROLLO",
+        imagePath: "/images/pagina15/tecnologia-desarrollo.png",
+      },
+    ],
+  },
+];
+---
+
+<Layout title="Las Nuevas Fronteras - Página 15">
+  <article class="frontiers-sheet">
+    <header class="sheet-header">
+      <h1 class="sheet-title">Las Nuevas Fronteras</h1>
+    </header>
+
+    {frontierSections.map((section, index) => (
+      <section class="frontier-section animate-slide-up" style={`animation-delay: ${index * 0.1}s; opacity: 0;`}>
+        <div class="frontier-label">
+          <p class="frontier-code">{section.code}</p>
+          <p class="frontier-legend">{section.legend}</p>
+        </div>
+
+        <div class="frontier-technologies">
+          {section.technologies.map((tech) => (
+            <article class="frontier-technology">
+              <div class="tech-ellipse">
+                <div class="tech-slot">
+                  <img
+                    src={tech.imagePath}
+                    alt={tech.label}
+                    loading="lazy"
+                    decoding="async"
+                    onerror="this.remove();"
+                  />
+                </div>
+              </div>
+              <h3>{tech.label}</h3>
+            </article>
+          ))}
+        </div>
+      </section>
+    ))}
+  </article>
+
+  <PageNav
+    prev={{ href: "/planificacion-sintesis-economica", label: "Planificación", sublabel: "Síntesis" }}
+    next={{ href: "/tributario-capitalista", label: "La Contradicción", sublabel: "Clima · Suelo · Nutrientes" }}
+  />
+
+  <style>
+    .frontiers-sheet {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(250, 246, 236, 0.95));
+      border-radius: 2.5rem;
+      padding: clamp(1.5rem, 5vw, 3.5rem);
+      border: 1px solid rgba(44, 24, 16, 0.1);
+      box-shadow: 0 20px 45px rgba(44, 24, 16, 0.15);
+    }
+
+    .sheet-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .sheet-title {
+      font-family: var(--font-body);
+      font-weight: 800;
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: 0.02em;
+      color: var(--color-primary);
+    }
+
+    .frontier-section {
+      display: grid;
+      grid-template-columns: minmax(180px, 240px) 1fr;
+      gap: clamp(1rem, 3vw, 3rem);
+      padding: clamp(1rem, 3vw, 2rem) 0;
+      border-top: 1px dashed rgba(44, 24, 16, 0.25);
+    }
+
+    .frontier-section:first-of-type {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .frontier-label {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .frontier-code {
+      font-family: var(--font-body);
+      letter-spacing: 0.05em;
+      font-size: 1rem;
+      text-transform: uppercase;
+      color: rgba(44, 24, 16, 0.85);
+    }
+
+    .frontier-legend {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: rgba(44, 24, 16, 0.65);
+    }
+
+    .frontier-technologies {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: clamp(1.25rem, 3vw, 3rem);
+      align-items: center;
+    }
+
+    .frontier-technology {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .tech-ellipse {
+      width: min(320px, 100%);
+      margin: 0 auto;
+      aspect-ratio: 4 / 3;
+      border: 2px solid rgba(44, 24, 16, 0.25);
+      border-radius: 50% / 40%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.9), rgba(233, 224, 207, 0.65));
+    }
+
+    .tech-slot {
+      width: 65%;
+      aspect-ratio: 1 / 1;
+      border-radius: 999px;
+      border: 1px dashed rgba(44, 24, 16, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .tech-slot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .frontier-technology h3 {
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: rgba(44, 24, 16, 0.85);
+    }
+
+    @media (max-width: 860px) {
+      .frontier-section {
+        grid-template-columns: 1fr;
+      }
+
+      .frontier-label {
+        text-align: center;
+        align-items: center;
+      }
+    }
+  </style>
+</Layout>

@@ -1,12 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import PageNav from "../components/PageNav.astro";
 ---
 
 <Layout title="Síntesis del Paradigma Cibernético - Marco Sintético">
   <!-- Title Section -->
   <header class="w-full max-w-7xl pt-8 pb-8 flex flex-col items-center text-center animate-fade-in">
     <span class="inline-block px-4 py-1.5 rounded-full bg-primary-fixed text-on-primary-fixed text-[10px] font-bold uppercase tracking-widest mb-4">Paradigma Cibernético</span>
-    <h1 class="font-headline font-extrabold text-3xl md:text-5xl text-primary tracking-tight mb-2 uppercase">
+    <h1 class="font-body font-extrabold text-3xl md:text-5xl text-primary tracking-tight mb-2 uppercase">
       Síntesis del Paradigma Cibernético
     </h1>
     <span class="text-tertiary opacity-50 text-lg md:text-2xl font-light mb-4">(Natural - Artificial)</span>
@@ -36,7 +37,7 @@ import Layout from "../layouts/Layout.astro";
         <div class="bg-surface-container-lowest rounded-xl p-6 md:p-8 shadow-sm hover:shadow-md transition-all border border-outline-variant/10 relative overflow-hidden group">
           <div class="absolute top-0 left-0 w-1.5 h-full bg-primary"></div>
           <div class="flex items-center justify-between mb-6">
-            <h2 class="font-headline font-bold text-lg md:text-xl text-primary tracking-tight">Tecnología Propia</h2>
+            <h2 class="font-body font-bold text-lg md:text-xl text-primary tracking-tight">Tecnología Propia</h2>
             <span class="material-symbols-outlined text-primary-container opacity-40 text-3xl md:text-4xl">agriculture</span>
           </div>
           <div class="aspect-video rounded-lg overflow-hidden mb-4 md:mb-6 bg-surface-container">
@@ -65,7 +66,7 @@ import Layout from "../layouts/Layout.astro";
           <div class="glass-panel w-40 h-40 md:w-64 md:h-64 rounded-full flex flex-col items-center justify-center text-center p-4 md:p-8 shadow-2xl border border-secondary-container/30 relative">
             <div class="absolute -top-4 px-2 md:px-4 py-1 bg-secondary text-white text-[8px] md:text-[10px] font-bold rounded-full tracking-tighter">Centro de Síntesis</div>
             <span class="material-symbols-outlined text-secondary text-4xl md:text-5xl mb-2 md:mb-4" style="font-variation-settings: 'FILL' 1;">hub</span>
-            <h3 class="font-headline font-extrabold text-sm md:text-lg text-secondary leading-tight uppercase">Tecnología Punta Propia</h3>
+            <h3 class="font-body font-extrabold text-sm md:text-lg text-secondary leading-tight uppercase">Tecnología Punta Propia</h3>
             <p class="text-[8px] md:text-[11px] text-on-secondary-fixed-variant font-bold mt-1 md:mt-2 opacity-70 tracking-widest">(Software de la manera)</p>
             <div class="mt-2 md:mt-4 flex gap-1">
               <div class="w-1 h-1 rounded-full bg-secondary"></div>
@@ -85,7 +86,7 @@ import Layout from "../layouts/Layout.astro";
         <div class="bg-surface-container-lowest rounded-xl p-6 md:p-8 shadow-sm hover:shadow-md transition-all border border-outline-variant/10 relative overflow-hidden group">
           <div class="absolute top-0 right-0 w-1.5 h-full bg-tertiary"></div>
           <div class="flex items-center justify-between mb-6">
-            <h2 class="font-headline font-bold text-lg md:text-xl text-tertiary tracking-tight">Tecnología Transferida</h2>
+            <h2 class="font-body font-bold text-lg md:text-xl text-tertiary tracking-tight">Tecnología Transferida</h2>
             <span class="material-symbols-outlined text-tertiary-container opacity-40 text-3xl md:text-4xl">satellite_alt</span>
           </div>
           <div class="aspect-video rounded-lg overflow-hidden mb-4 md:mb-6 bg-surface-container">
@@ -116,7 +117,7 @@ import Layout from "../layouts/Layout.astro";
         <span class="material-symbols-outlined text-[80px] md:text-[120px] text-primary">data_object</span>
       </div>
       <div class="relative z-10 max-w-4xl">
-        <h4 class="font-headline font-bold text-primary mb-4 flex items-center gap-2">
+        <h4 class="font-body font-bold text-primary mb-4 flex items-center gap-2">
           <span class="material-symbols-outlined text-lg">description</span>
           Nota Técnica sobre la Síntesis
         </h4>
@@ -132,13 +133,9 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </div>
 
-  <!-- Navegación -->
-  <div class="flex justify-between mt-8 max-w-7xl mx-auto px-4">
-    <a href="/gestion-social" class="inline-flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors">
-      <span class="material-symbols-outlined">arrow_back</span>
-      Anterior
-    </a>
-  </div>
+  <PageNav
+    prev={{ href: "/sobredeterminacion-cultura", label: "Sobredeterminación", sublabel: "Cultura" }}
+  />
 
   <style>
     .glass-panel {

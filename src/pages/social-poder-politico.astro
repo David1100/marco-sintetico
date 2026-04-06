@@ -1,0 +1,185 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageNav from "../components/PageNav.astro";
+---
+
+<Layout title="Página 18 - El espacio social y el poder político">
+  <article class="sheet">
+    <header class="sheet-header animate-fade-in" style="animation-delay: 0s; opacity: 0;">
+      <h1 class="sheet-title">El Espacio Social y el Poder Político</h1>
+    </header>
+
+    <section class="diagram animate-slide-up" style="animation-delay: 0.1s; opacity: 0;">
+      <p class="diagram-heading">REALIDAD CULTURAL</p>
+      <div class="diagram-circles">
+        <article class="bubble">
+          <div class="bubble-slot" data-path="/images/pagina18/accion-social.png">
+            <img src="/images/pagina18/accion-social.png" alt="La acción social" loading="lazy" decoding="async" onerror="this.remove();" />
+          </div>
+          <p class="bubble-caption">LA ACCIÓN SOCIAL :</p>
+        </article>
+
+        <span class="arrow">➜</span>
+
+        <article class="bubble">
+          <div class="bubble-slot" data-path="/images/pagina18/region-ecologica.png">
+            <img src="/images/pagina18/region-ecologica.png" alt="Región ecológica" loading="lazy" decoding="async" onerror="this.remove();" />
+          </div>
+          <p class="bubble-caption">REGIÓN ECOLÓGICA</p>
+        </article>
+
+        <span class="arrow">➜</span>
+
+        <article class="bubble">
+          <div class="bubble-slot" data-path="/images/pagina18/control-politico.png">
+            <img src="/images/pagina18/control-politico.png" alt="El control político" loading="lazy" decoding="async" onerror="this.remove();" />
+          </div>
+          <p class="bubble-caption">EL CONTROL POLÍTICO :</p>
+        </article>
+      </div>
+      <p class="software-label">SOFTWARE DE LA MANERA</p>
+    </section>
+
+    <footer class="sheet-note animate-fade-in" style="animation-delay: 0.2s; opacity: 0;">
+      <p>NOTA: SOLO LA ARMONIZACIÓN DE LAS FORMACIONES PERMITE LAS REALIZACIONES</p>
+    </footer>
+  </article>
+
+  <PageNav prev={{ href: "/espacio-natural-exuberancia", label: "Espacio Natural", sublabel: "Zona Tropical" }} next={{ href: "/proceso-cibernetico", label: "Página 19", sublabel: "Secuencia" }} />
+
+  <style>
+    .sheet {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 243, 232, 0.94));
+      border-radius: 2.5rem;
+      padding: clamp(1.6rem, 5vw, 3.6rem);
+      border: 1px solid rgba(44, 24, 16, 0.12);
+      box-shadow: 0 20px 48px rgba(44, 24, 16, 0.18);
+    }
+
+    .sheet-title {
+      font-family: var(--font-body);
+      font-weight: 800;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      letter-spacing: 0.02em;
+      text-align: center;
+      color: var(--color-primary);
+    }
+
+    .diagram {
+      margin-top: 2rem;
+    }
+
+    .diagram-heading {
+      font-family: var(--font-body);
+      font-size: 1.1rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-align: center;
+      color: rgba(44, 24, 16, 0.8);
+      margin-bottom: 1.5rem;
+    }
+
+    .diagram-circles {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(180px, 1fr));
+      gap: 1.5rem;
+      align-items: center;
+      position: relative;
+    }
+
+    .diagram-circles .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2.5rem;
+      color: rgba(44, 24, 16, 0.7);
+      animation: arrowPulse 2s ease-in-out infinite;
+    }
+
+    .diagram-circles .arrow:nth-of-type(1) {
+      left: calc(33% - 1rem);
+    }
+
+    .diagram-circles .arrow:nth-of-type(2) {
+      right: calc(33% - 1rem);
+    }
+
+    .bubble {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .bubble-slot {
+      width: min(260px, 100%);
+      aspect-ratio: 1 / 1;
+      border-radius: 999px;
+      border: 1px dashed rgba(44, 24, 16, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: rgba(255, 252, 245, 0.9);
+    }
+
+    .bubble-slot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .bubble-caption {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-align: center;
+      color: rgba(44, 24, 16, 0.8);
+    }
+
+    .software-label {
+      text-align: center;
+      margin-top: 1.8rem;
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: rgba(44, 24, 16, 0.75);
+    }
+
+    .sheet-note {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 0.95rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: rgba(44, 24, 16, 0.65);
+    }
+
+    @media (max-width: 940px) {
+      .diagram-circles {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+      }
+
+      .diagram-circles .arrow {
+        position: relative;
+        top: auto;
+        transform: none;
+        left: auto;
+        right: auto;
+      }
+    }
+
+    @keyframes arrowPulse {
+      0%, 100% {
+        opacity: 0.4;
+        transform: translateY(-50%);
+      }
+      50% {
+        opacity: 1;
+        transform: translateY(-50%) scale(1.1);
+      }
+    }
+  </style>
+</Layout>

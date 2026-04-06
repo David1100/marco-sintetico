@@ -168,6 +168,64 @@
   .hover-scale:hover {
     transform: scale(1.05);
   }
+
+  .animate-float {
+    animation: floatOrbit 5.5s ease-in-out infinite;
+  }
+
+  .nav-group summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .nav-group[open] .nav-chevron {
+    transform: rotate(180deg);
+  }
+
+  .nav-label {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .mobile-nav-slider {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .mobile-nav-slider::-webkit-scrollbar {
+    display: none;
+  }
+
+  .mobile-nav-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    white-space: nowrap;
+  }
+
+  .mobile-nav-fade {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2rem;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .mobile-nav-fade-left {
+    left: 0.25rem;
+    background: linear-gradient(90deg, rgba(255,255,255,0.95), transparent);
+  }
+
+  .mobile-nav-fade-right {
+    right: 0.25rem;
+    background: linear-gradient(270deg, rgba(255,255,255,0.95), transparent);
+  }
 }
 
 /* Keyframes */
@@ -195,6 +253,15 @@
   to { 
     opacity: 1; 
     transform: scale(1); 
+  }
+}
+
+@keyframes floatOrbit {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.02);
   }
 }
 

@@ -1,0 +1,345 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageNav from "../components/PageNav.astro";
+
+const stages = [
+  {
+    slug: "continuidad",
+    title: "Continuidad de la Mercancía",
+    label: "Circulación",
+    summary: "Δx coordinado + Plus técnico + Plus tecnológico + Plus administrativo",
+    bullets: [
+      "Δx coordinado",
+      "Plus técnico",
+      "Plus tecnológico",
+      "Plus administrativo",
+    ],
+    imagePath: "/images/planificacion/continuidad.png",
+    placeholder: "Carga la imagen de continuidad en /images/planificacion/continuidad.png",
+  },
+  {
+    slug: "productividad",
+    title: "Productividad",
+    label: "Eje Regulador",
+    summary: "Síntesis entre circulación y producción. Mantiene el ritmo del sistema.",
+    bullets: [
+      "Equilibra flujos",
+      "Conecta nodos logísticos",
+      "Asegura continuidad",
+    ],
+    imagePath: "/images/planificacion/productividad.png",
+    placeholder: "Carga la imagen central en /images/planificacion/productividad.png",
+  },
+  {
+    slug: "exuberancia",
+    title: "Discretos de la Exuberancia",
+    label: "Producción",
+    summary: "Excedente de fertilidad + solidaridad + lo provisto de los recursos.",
+    bullets: [
+      "Excedente de fertilidad",
+      "Solidaridad",
+      "Lo provisto",
+      "De los recursos",
+    ],
+    imagePath: "/images/planificacion/exuberancia.png",
+    placeholder: "Carga la imagen de exuberancia en /images/planificacion/exuberancia.png",
+  },
+];
+
+const metrics = [
+  {
+    title: "Continuidad",
+    value: "92%",
+    desc: "Rutas logísticas activas",
+  },
+  {
+    title: "Productividad",
+    value: "+14",
+    desc: "Índice de síntesis",
+  },
+  {
+    title: "Exuberancia",
+    value: "68%",
+    desc: "Excedentes redistribuidos",
+  },
+];
+---
+
+<Layout title="Planificación - Síntesis Económica">
+  <header class="w-full max-w-6xl mx-auto pt-10 pb-6 text-center animate-fade-in">
+    <p class="text-xs font-bold tracking-[0.35em] uppercase text-on-surface-variant mb-3">Planificación · Síntesis Económica</p>
+    <h1 class="font-body font-extrabold text-4xl md:text-5xl text-primary tracking-tight mb-3">
+      Continuidad · Productividad · Exuberancia
+    </h1>
+    <p class="font-body text-base md:text-lg text-on-surface-variant max-w-3xl mx-auto">
+      El plano original describe cómo la circulación garantiza la continuidad de la mercancía, cómo la productividad
+      sirve de nodo regulador y cómo la producción genera discretos de exuberancia. Esta versión digital mantiene el
+      trinomio y deja espacios listos para integrar imágenes generadas.
+    </p>
+  </header>
+
+  <section class="w-full max-w-6xl mx-auto px-4 mb-16">
+    <div class="sintesis-diagram">
+      <svg class="diagram-lines" viewBox="0 0 1400 500" fill="none">
+        <defs>
+          <marker id="arrow-end" markerHeight="12" markerWidth="12" orient="auto" refX="10" refY="6">
+            <polygon points="0 0, 12 6, 0 12" fill="currentColor"></polygon>
+          </marker>
+        </defs>
+        <path d="M140 250 C300 90 520 90 700 250" stroke="currentColor" stroke-width="8" class="arc" marker-end="url(#arrow-end)"></path>
+        <path d="M700 250 C880 410 1100 410 1260 250" stroke="currentColor" stroke-width="8" class="arc" marker-end="url(#arrow-end)"></path>
+      </svg>
+
+      <div class="stages">
+        {stages.map((stage, idx) => (
+          <article class={`stage stage-${idx}`}>
+            <div class="stage-circle">
+              <div
+                class:list={[
+                  "image-slot animate-float",
+                  stage.imagePath ? "image-slot--has-image" : "",
+                ]}
+                data-path={stage.imagePath}
+              >
+                {stage.imagePath ? (
+                  <img
+                    src={stage.imagePath}
+                    alt={`Ilustración ${stage.title}`}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                ) : (
+                  <span>{stage.placeholder}</span>
+                )}
+              </div>
+            </div>
+            <p class="stage-label">{stage.label}</p>
+            <h3>{stage.title}</h3>
+            <p class="stage-summary">{stage.summary}</p>
+            <ul>
+              {stage.bullets.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="w-full max-w-6xl mx-auto px-4 mb-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+    {metrics.map((metric, idx) => (
+      <article class="metric-card animate-slide-up" style={`animation-delay: ${idx * 0.1}s; opacity: 0;`}>
+        <p class="label">{metric.title}</p>
+        <strong>{metric.value}</strong>
+        <span>{metric.desc}</span>
+      </article>
+    ))}
+  </section>
+
+  <section class="w-full max-w-6xl mx-auto px-4 mb-16 grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <article class="glass-card rounded-3xl p-8 animate-slide-up" style="animation-delay: 0.1s; opacity: 0;">
+      <p class="text-xs uppercase tracking-[0.3em] text-primary mb-3">Circulación avanzada</p>
+      <h2 class="font-body text-3xl text-on-surface mb-4">Δx como control logístico</h2>
+      <p class="text-on-surface-variant leading-relaxed mb-4">
+        La continuidad es más que transporte; implica compensar distancias con plus técnicos y administrativos.
+        Cada iteración ajusta el vector Δx para mantener estable la mercancía.
+      </p>
+      <div class="flow-bar">
+        <div style="width: 72%" aria-label="72% continuidad"></div>
+      </div>
+      <p class="mt-2 text-sm text-on-surface-variant">72% del circuito funciona en régimen óptimo.</p>
+    </article>
+
+    <article class="glass-card rounded-3xl p-8 animate-slide-up" style="animation-delay: 0.2s; opacity: 0;">
+      <p class="text-xs uppercase tracking-[0.3em] text-primary mb-3">Producción exuberante</p>
+      <h2 class="font-body text-3xl text-on-surface mb-4">Excedente distribuido</h2>
+      <p class="text-on-surface-variant leading-relaxed mb-4">
+        Los discretos de exuberancia representan aquellos excedentes que se liberan hacia territorios solidarios.
+        En esta etapa, la cultura decide cómo repartir fertilidad, recursos y tiempo social.
+      </p>
+      <ul class="exuberance-list">
+        <li><span>Fertilidad</span><strong>+8 pts</strong></li>
+        <li><span>Solidaridad</span><strong>+5 pts</strong></li>
+        <li><span>Recursos</span><strong>+11 pts</strong></li>
+      </ul>
+    </article>
+  </section>
+
+  <PageNav
+    prev={{ href: "/tecnologia-propia", label: "Tecnología", sublabel: "Propia" }}
+    next={{ href: "/las-nuevas-fronteras", label: "Las Nuevas Fronteras", sublabel: "Tecnologías" }}
+  />
+
+  <style>
+    .sintesis-diagram {
+      position: relative;
+      border-radius: 3rem;
+      padding: 3rem 2rem;
+      background: radial-gradient(circle at top, rgba(255,255,255,0.25), rgba(15,23,42,0.4));
+      border: 1px solid rgba(255,255,255,0.08);
+      overflow: hidden;
+    }
+    .diagram-lines {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      color: rgba(15,118,110,0.4);
+      pointer-events: none;
+    }
+    .arc {
+      stroke-dasharray: 26 18;
+      animation: arcflow 12s linear infinite;
+    }
+    @keyframes arcflow {
+      from { stroke-dashoffset: 0; }
+      to { stroke-dashoffset: -900; }
+    }
+    .stages {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      position: relative;
+    }
+    .stage {
+      background: rgba(255,255,255,0.9);
+      border-radius: 1.8rem;
+      padding: 1.75rem;
+      text-align: center;
+      box-shadow: 0 20px 45px -35px rgba(0,0,0,0.5);
+    }
+    .stage-circle {
+      width: 190px;
+      height: 190px;
+      margin: 0 auto 1rem;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px dashed rgba(15,23,42,0.2);
+      position: relative;
+      overflow: hidden;
+    }
+    .image-slot {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 1rem;
+      color: var(--on-surface-variant);
+      font-size: 0.8rem;
+      line-height: 1.2;
+      background: repeating-linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.9) 10px, rgba(245,222,179,0.5) 10px, rgba(245,222,179,0.5) 20px);
+    }
+    .image-slot span {
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .image-slot--has-image {
+      padding: 0;
+      background: transparent;
+    }
+    .image-slot--has-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: inherit;
+      display: block;
+    }
+    .stage-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 0.3rem;
+    }
+    .stage h3 {
+      font-family: var(--font-body);
+      font-size: 1.3rem;
+      color: var(--on-surface);
+    }
+    .stage-summary {
+      font-size: 0.9rem;
+      color: var(--on-surface-variant);
+      margin: 0.5rem 0 0.75rem;
+    }
+    .stage ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      font-size: 0.85rem;
+      color: var(--on-surface-variant);
+      text-align: left;
+    }
+    .stage ul li::before {
+      content: "•";
+      margin-right: 0.4rem;
+      color: var(--primary);
+    }
+    .metric-card {
+      background: var(--surface-container-lowest);
+      border-radius: 1.5rem;
+      padding: 1.75rem;
+      text-align: center;
+      border: 1px solid rgba(15,23,42,0.08);
+      box-shadow: 0 18px 40px -30px rgba(0,0,0,0.4);
+    }
+    .metric-card .label {
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--primary);
+    }
+    .metric-card strong {
+      display: block;
+      font-size: 2.4rem;
+      font-family: var(--font-body);
+      color: var(--on-surface);
+      margin: 0.4rem 0;
+    }
+    .metric-card span { color: var(--on-surface-variant); }
+    .flow-bar {
+      width: 100%;
+      height: 12px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.1);
+    }
+    .flow-bar div {
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+    }
+    .exuberance-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .exuberance-list li {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.95rem;
+      color: var(--on-surface);
+      background: rgba(255,255,255,0.7);
+      padding: 0.8rem 1rem;
+      border-radius: 1rem;
+    }
+
+    @media (max-width: 1024px) {
+      .stage-circle {
+        width: 150px;
+        height: 150px;
+      }
+      .diagram-lines {
+        display: none;
+      }
+    }
+  </style>
+</Layout>

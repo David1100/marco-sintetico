@@ -1,0 +1,135 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageNav from "../components/PageNav.astro";
+---
+
+<Layout title="Simbiosis Económica - Coexistencia Pacífica">
+  <!-- Header Section -->
+  <header class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-4 animate-fade-in">
+    <div class="max-w-2xl animate-slide-up" style="animation-delay: 0s; opacity: 0;">
+      <h1 class="font-body font-extrabold text-4xl md:text-6xl text-primary tracking-tight leading-tight">
+        Simbiosis Económica:<br/>
+        <span class="text-secondary">Coexistencia Pacífica</span>
+      </h1>
+    </div>
+    <div class="bg-secondary-container/10 px-6 py-3 rounded-full border-l-4 border-secondary animate-slide-up" style="animation-delay: 0.1s; opacity: 0;">
+      <span class="font-body text-xs uppercase tracking-widest text-secondary font-bold">Reducción de la brecha Económica</span>
+    </div>
+  </header>
+
+  <!-- Main Diagrammatic Canvas -->
+  <div class="relative grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-center min-h-[600px]">
+    <!-- Connection Lines Overlay -->
+    <div class="hidden md:block absolute inset-0 pointer-events-none z-0">
+      <svg class="w-full h-full" fill="none" viewbox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+        <path class="bezier-path" d="M350 300 Q 475 300 550 300" stroke="url(#gradient-left)" stroke-dasharray="8 8" stroke-width="3"></path>
+        <path d="M540 290 L 560 300 L 540 310" stroke="#8B4513" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+        <path class="bezier-path" d="M850 300 Q 725 300 650 300" stroke="url(#gradient-right)" stroke-dasharray="8 8" stroke-width="3"></path>
+        <path d="M660 290 L 640 300 L 660 310" stroke="#2E8B57" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+        <defs>
+          <linearGradient gradientUnits="userSpaceOnUse" id="gradient-left" x1="350" x2="550" y1="300" y2="300">
+            <stop stop-color="#8B4513"></stop>
+            <stop offset="1" stop-color="#D2691E" stop-opacity="0.5"></stop>
+          </linearGradient>
+          <linearGradient gradientUnits="userSpaceOnUse" id="gradient-right" x1="850" x2="650" y1="300" y2="300">
+            <stop stop-color="#2E8B57"></stop>
+            <stop offset="1" stop-color="#3CB371" stop-opacity="0.5"></stop>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+
+    <!-- Left Node: LA DESINTEGRACIÓN NUCLEAR -->
+    <div class="relative z-10 flex flex-col items-center group animate-slide-up" style="animation-delay: 0.2s; opacity: 0;">
+      <div class="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full bg-surface-container-highest shadow-2xl flex items-center justify-center overflow-hidden border-4 border-primary/20 p-2 transition-transform duration-500 group-hover:scale-105">
+        <img class="w-full h-full object-cover rounded-full" alt="Desintegración Nuclear" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeWR_iI_KIE7_HXiJtHSUs_Iq_pEsvrQWElxvblDedkrIRsRhNRvAtBucWSBwI6Nh9QwasYl_Evp63q22l8e49sq022xZItb-H3Capqw1l9RU7CmigcwnNh68KUaWlO2uj8brGx33xgiJg6-lkElcJQD_6yy29LZv0KhCdwDICz6au0t160kz6eSaMkjll1OAWHYwqXjm1gf_kWrNkoAu5I_s4piS_9yLEsVE-gdkKfqXAEth-DRe_gZBcqFVMpjFYbuxsih-Ivq3J"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+      </div>
+      <div class="mt-6 text-center px-4">
+        <h3 class="font-body font-extrabold text-lg md:text-xl text-primary uppercase tracking-tighter mb-2">LA DESINTEGRACIÓN NUCLEAR</h3>
+        <p class="font-body text-on-surface-variant text-sm leading-relaxed max-w-xs">Representación de la potencia energética liberada y la capacidad tecnológica de contención para el desarrollo.</p>
+      </div>
+    </div>
+
+    <!-- Center Node: LA PAZ (Pivot) -->
+    <div class="relative z-20 flex flex-col items-center animate-slide-up" style="animation-delay: 0.3s; opacity: 0;">
+      <div class="w-40 h-40 md:w-48 md:h-48 lg:w-64 lg:h-64 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center border-4 border-primary/10 relative overflow-hidden backdrop-blur-md">
+        <div class="text-primary/10 absolute -top-4 -right-4">
+          <span class="material-symbols-outlined text-6xl md:text-8xl" style="font-variation-settings: 'FILL' 0;">nest_eco_leaf</span>
+        </div>
+        <div class="text-primary flex flex-col items-center">
+          <span class="material-symbols-outlined text-5xl md:text-7xl" style="font-variation-settings: 'FILL' 1;">nest_eco_leaf</span>
+          <h2 class="font-body font-black text-2xl md:text-3xl lg:text-4xl mt-2 md:mt-4 tracking-widest uppercase">LA PAZ</h2>
+        </div>
+        <div class="absolute bottom-4 text-primary/40">
+          <span class="material-symbols-outlined">all_inclusive</span>
+        </div>
+      </div>
+      <div class="mt-6 glass-card px-4 py-3 rounded-xl text-center max-w-xs">
+        <span class="font-body text-xs font-bold text-primary uppercase tracking-widest block mb-1">Eje de Equilibrio</span>
+        <p class="font-body text-xs text-on-surface-variant">Punto de convergencia donde los procesos se integran para la estabilidad social y económica.</p>
+      </div>
+    </div>
+
+    <!-- Right Node: LA EXPLOSIÓN SOCIAL -->
+    <div class="relative z-10 flex flex-col items-center group animate-slide-up" style="animation-delay: 0.4s; opacity: 0;">
+      <div class="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full bg-surface-container-highest shadow-2xl flex items-center justify-center overflow-hidden border-4 border-secondary/20 p-2 transition-transform duration-500 group-hover:scale-105">
+        <img class="w-full h-full object-cover rounded-full" alt="Explosión Social" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSC1sNGv8uzCBy4cOvO2mjGsiqXB0xCq7EbEgML_784RECJlNi93sAU3PvKFL-fLZeU31Joi0q2KsM22_hLRGK6-nGaDEWxHlAU_U1BeF91y2VXxnIuq1UHIujf3rtDBNqVyIP46GHw5UnRDwqyurs74n4kihAZnPjLXVSLpi-UT3SlTM3gPiEboQ1xdG_z2wL3zN4emvqUdZyXfS72R91pcsz4B56eqFjHV2RN8AMkfZIR_1x8uSj7I7ZmXLI2lppeHl17oHXcfa_"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-secondary/80 to-transparent"></div>
+      </div>
+      <div class="mt-6 text-center px-4">
+        <h3 class="font-body font-extrabold text-lg md:text-xl text-secondary uppercase tracking-tighter mb-2">LA EXPLOSIÓN SOCIAL</h3>
+        <p class="font-body text-on-surface-variant text-sm leading-relaxed max-w-xs">Integración de los procesos humanos y productivos en una sinergia de crecimiento coordinado.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Explanatory Bottom Section -->
+  <section class="mt-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <div class="space-y-6">
+      <div class="flex gap-4 items-start animate-slide-up" style="animation-delay: 0.5s; opacity: 0;">
+        <div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-white">insights</span>
+        </div>
+        <div>
+          <h4 class="font-body font-bold text-primary text-xl">Sinergia Productiva</h4>
+          <p class="text-on-surface-variant mt-2">La reducción de la brecha económica se logra mediante la transferencia eficiente de valor entre los núcleos tecnológicos y sociales, bajo el paraguas de un estado de paz estable.</p>
+        </div>
+      </div>
+      <div class="flex gap-4 items-start animate-slide-up" style="animation-delay: 0.6s; opacity: 0;">
+        <div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-white">balance</span>
+        </div>
+        <div>
+          <h4 class="font-body font-bold text-secondary text-xl">Equilibrio Cívico</h4>
+          <p class="text-on-surface-variant mt-2">No existe progreso económico sostenible sin una infraestructura social que soporte la integración de los procesos de producción y convivencia.</p>
+        </div>
+      </div>
+    </div>
+    <div class="glass-card p-8 rounded-[2rem] relative animate-slide-up" style="animation-delay: 0.7s; opacity: 0;">
+      <div class="aspect-video rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-center px-6 md:px-10 border-l-8 border-primary">
+        <span class="text-primary font-body text-xs font-black uppercase tracking-[0.2em] mb-4">Indicador de Impacto</span>
+        <div class="flex items-baseline gap-2">
+          <span class="text-4xl md:text-5xl font-body font-black text-on-background">92%</span>
+          <span class="text-primary font-bold text-sm">Coeficiente de Integración</span>
+        </div>
+        <div class="w-full bg-surface-variant h-1 rounded-full mt-6 overflow-hidden">
+          <div class="bg-primary w-11/12 h-full"></div>
+        </div>
+        <p class="text-[10px] text-on-surface-variant mt-4 font-mono">DATA_STREAM: [PAZ_SECURE] :: [ECON_PULSE_NOMINAL]</p>
+      </div>
+    </div>
+  </section>
+
+  <PageNav
+    prev={{ href: "/reciclaje-cibernetico", label: "Reciclaje", sublabel: "Cibernético" }}
+    next={{ href: "/genialidad", label: "Civic", sublabel: "Equilibrium" }}
+  />
+
+  <style>
+    .bezier-path {
+      stroke-dasharray: 10;
+      stroke-linecap: round;
+    }
+  </style>
+</Layout>

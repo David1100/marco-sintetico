@@ -1,0 +1,134 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageNav from "../components/PageNav.astro";
+---
+
+<Layout title="Coordinación Sistémica - Equilibrio Cívico">
+  <!-- Hero Title -->
+  <div class="text-center mb-16 space-y-4 animate-fade-in">
+    <h1 class="text-5xl md:text-7xl font-body font-extrabold tracking-tight text-primary leading-tight animate-slide-up" style="animation-delay: 0s; opacity: 0;">
+      Equilibrio Cívico
+    </h1>
+    <p class="text-on-surface-variant font-body max-w-2xl mx-auto uppercase tracking-[0.2em] text-sm font-medium animate-slide-up" style="animation-delay: 0.1s; opacity: 0;">
+      Infraestructura de Productividad Social y Armonización Sistémica
+    </p>
+  </div>
+
+  <!-- Systemic Framework Container -->
+  <div class="relative aspect-square md:aspect-video w-full flex items-center justify-center mb-16">
+    <!-- SVG Connections (Bezier Flow) -->
+    <svg class="absolute inset-0 w-full h-full pointer-events-none" viewbox="0 0 1000 600">
+      <!-- Circular Flow Arrows -->
+      <path class="stroke-outline-variant stroke-2" d="M 300 150 Q 500 50 700 150" fill="none" stroke-dasharray="8 8"></path>
+      <path class="stroke-outline-variant stroke-2" d="M 700 450 Q 500 550 300 450" fill="none" stroke-dasharray="8 8"></path>
+      <path class="stroke-outline-variant stroke-2" d="M 200 250 Q 150 300 200 350" fill="none" stroke-dasharray="8 8"></path>
+      <path class="stroke-outline-variant stroke-2" d="M 800 250 Q 850 300 800 350" fill="none" stroke-dasharray="8 8"></path>
+      <!-- Core Outputs -->
+      <path class="stroke-primary stroke-1 opacity-40" d="M 500 160 L 250 150"></path>
+      <path class="stroke-primary stroke-1 opacity-40" d="M 500 160 L 750 150"></path>
+      <path class="stroke-primary stroke-1 opacity-40" d="M 500 160 L 250 450"></path>
+      <path class="stroke-primary stroke-1 opacity-40" d="M 500 160 L 750 450"></path>
+    </svg>
+
+    <!-- Central Production Block (Core Output) -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-4 z-30 animate-slide-up" style="animation-delay: 0.15s; opacity: 0;">
+      <div class="bg-primary px-12 py-4 rounded-full shadow-lg">
+        <span class="text-on-primary font-body font-black tracking-widest text-lg">PRODUCCIÓN</span>
+      </div>
+    </div>
+
+    <!-- Main Layout Grid -->
+    <div class="grid grid-cols-12 grid-rows-6 w-full h-full items-center justify-items-center gap-4">
+      <!-- Node: Industria de Regulación -->
+      <div class="col-start-1 col-end-5 row-start-1 row-end-3 group animate-slide-up" style="animation-delay: 0.2s; opacity: 0;">
+        <div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl border-l-4 border-primary">
+          <div class="w-full h-32 mb-4 rounded-lg overflow-hidden">
+            <img alt="Regulación" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeBxQ1x939AWjmqVTD_Rx_b9V1LvroTX_gY9N-URUYwtIvDi1VrwyltETPW8Y0Nz5Wi7jQKc0w_nIyK14UwH_xwjGiUZ0PxXcyo7-vPiG4G5zPGPRD5ZRWg8S-32M0UTa1dzctykNzkRolAHzGvWgQ1C4LKvQrj3Rlyi0t0VR8-csxtOWFItJ6wssGlKRQF-TDbQ0fP9Ng4LqVE6lmB5SvEP8JpmAX74BUyH_3NRyVMQ607hdzMtM9QXc07OyhxZ6KG83eQw34Bal9" />
+          </div>
+          <h3 class="font-body font-bold text-primary text-sm uppercase tracking-wider">INDUSTRIA DE REGULACIÓN</h3>
+        </div>
+      </div>
+
+      <!-- Node: Industria Residual -->
+      <div class="col-start-9 col-end-13 row-start-1 row-end-3 group animate-slide-up" style="animation-delay: 0.25s; opacity: 0;">
+        <div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl border-r-4 border-secondary">
+          <div class="w-full h-32 mb-4 rounded-lg overflow-hidden">
+            <img alt="Residual" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsiL4TbsN9hS5fiPDQ5UA8KRk071M7gF-gnEBm2Rkefx5VQb9Dr1lCgXMcY9BMxIL5ly7_pI_xauWLaa9uMXg9abJNdrBaP1meZL1THOr-g7b-C0zPyseeTlq7klqaA15viD6-ijIIto17JoJiRjZ0StFSOUAtcaoznZJ5LCoYzKdtD2XCS6i37SHC_HFzucK1KTebty_AUXyzNi5kq6v9aZDWYsvYP4DjIE86FfkE-MvclLc53fRemxAzWCYujGIyiSTiW-zeJLAW" />
+          </div>
+          <h3 class="font-body font-bold text-secondary text-sm uppercase tracking-wider">INDUSTRIA RESIDUAL</h3>
+        </div>
+      </div>
+
+      <!-- CENTRAL HUB: COORDINACION (ARMONIZACION) -->
+      <div class="col-start-4 col-end-10 row-start-2 row-end-6 relative animate-slide-up" style="animation-delay: 0.3s; opacity: 0;">
+        <div class="w-80 h-80 md:w-96 md:h-96 rounded-full glass-panel flex flex-col items-center justify-center p-8 shadow-2xl relative">
+          <!-- Circular Technical Labels -->
+          <div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-surface-container-high px-4 py-1 rounded-full border border-outline-variant/30">
+            <span class="text-[10px] font-black text-tertiary tracking-[0.3em]">CIBERNÉTICA</span>
+          </div>
+          <div class="w-full h-full rounded-full overflow-hidden relative group">
+            <img alt="Coordinación" class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJrcFYUDIcF25BqICpCtF7zIXRusdMx9bp88X9abKq6B02PtgM5vGVbi7OlCpqD-w8WNCsZBV2Y2tZSRYoAug1N-KMirUyRZh8c6vJ5hlz9KSwlKaSwWHZ6UQo5SDJWEZ0y32pkqtg7BYlJSRHdZ77GRK4C5w1HkeZMjHHsJXolC7Hyu74sQTWePxUIKdqrMJqKiZaWXxz9p_A5uoKsdExZv0ZlA-PCRdEgo94EIy5Axa2_fFDqB9GtA3N_AlVNvVnw53kq7N4baKN" />
+            <div class="absolute inset-0 bg-primary/40 mix-blend-multiply"></div>
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6 bg-gradient-to-t from-primary/90 to-transparent">
+              <h2 class="text-white font-body font-black text-2xl md:text-3xl leading-tight tracking-tight">COORDINACIÓN</h2>
+              <p class="text-primary-fixed text-xs font-bold uppercase tracking-[0.2em] mt-1">(ARMONIZACIÓN)</p>
+            </div>
+          </div>
+          <!-- Inner Circle Labels -->
+          <div class="absolute -bottom-6 flex gap-4">
+            <div class="bg-primary-container px-3 py-1 rounded shadow-sm">
+              <span class="text-[10px] font-bold text-on-primary-container tracking-widest uppercase">EFICIENCIA</span>
+            </div>
+            <div class="bg-tertiary-container px-3 py-1 rounded shadow-sm">
+              <span class="text-[10px] font-bold text-on-tertiary-container tracking-widest uppercase">EFICACIA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Node: Industria de Producción -->
+      <div class="col-start-1 col-end-5 row-start-4 row-end-6 group animate-slide-up" style="animation-delay: 0.35s; opacity: 0;">
+        <div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl border-l-4 border-tertiary">
+          <div class="w-full h-32 mb-4 rounded-lg overflow-hidden">
+            <img alt="Producción" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBn0ltj1oPl6xw4_FJo6fshUSbaWIUFAFKhSURhMUBGIx66AdcO5O9zQf_pHLfHdmLUzBjzKyA6afudaYDflW2V8nxW2bw0U8LXWwNo0vwqwwbNpWG6L1DFmVFHPv7f2xwJ3Fg13xEPLypwrtKwjB_TAkZpzEq4BDPCBZt-BT0fT638aiPIavDUyNvmSqx87_INc1R9zPTVT7_mOCDUFgF4M26UkCxgzCSGVvCtT43KinYBbf_ATrVRW7LUchAfYoAm_xoOgs_4HwEm" />
+          </div>
+          <h3 class="font-body font-bold text-tertiary text-sm uppercase tracking-wider">INDUSTRIA DE PRODUCCIÓN</h3>
+        </div>
+      </div>
+
+      <!-- Node: Industria de Reciclaje -->
+      <div class="col-start-9 col-end-13 row-start-4 row-end-6 group animate-slide-up" style="animation-delay: 0.4s; opacity: 0;">
+        <div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl border-r-4 border-emerald-600">
+          <div class="w-full h-32 mb-4 rounded-lg overflow-hidden">
+            <img alt="Reciclaje" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAG12RdNGqGQbidc7p5UNax7WtViLkg_LSf35xHHJh4zW4OQ6WUfUqMllggpFcPw7vcGjFETgjzpcc2MH0cdJxWcHAc8la7wpb0fN7nBlMlNp0kfvQpK46I8wMUExWrAbDu1qE0Ys2fYYiskoQmY5hct8CfZRXXqFDmy3zq6GCAoTYdMcd0ikilZyk2S0DmGy3eYT91RIs4Z-m4zxJFs9XiJxtwqDoGDJRIafbriAmRL-tiP6RCJFb3sOTxq_Wa-ZmWrKRubryIgwKR" />
+          </div>
+          <h3 class="font-body font-bold text-emerald-700 text-sm uppercase tracking-wider">INDUSTRIA DE RECICLAJE</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Descriptive Annotations Section -->
+  <div class="mt-24 grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+    <div class="space-y-4 animate-slide-up" style="animation-delay: 0.5s; opacity: 0;">
+      <span class="text-primary font-black text-4xl opacity-20">01</span>
+      <h4 class="font-body font-bold text-on-surface">Armonización de Flujos</h4>
+      <p class="text-on-surface-variant text-sm leading-relaxed">El núcleo cibernético asegura que la regulación y la producción operen en sincronía perfecta, minimizando el desperdicio residual a través de retroalimentación en tiempo real.</p>
+    </div>
+    <div class="space-y-4 animate-slide-up" style="animation-delay: 0.55s; opacity: 0;">
+      <span class="text-secondary font-black text-4xl opacity-20">02</span>
+      <h4 class="font-body font-bold text-on-surface">Circularidad Intrínseca</h4>
+      <p class="text-on-surface-variant text-sm leading-relaxed">Cada salida residual es tratada no como un fin, sino como una entrada estratégica para la industria de reciclaje, cerrando el ciclo de valor sistémico.</p>
+    </div>
+    <div class="space-y-4 animate-slide-up" style="animation-delay: 0.6s; opacity: 0;">
+      <span class="text-tertiary font-black text-4xl opacity-20">03</span>
+      <h4 class="font-body font-bold text-on-surface">Escalabilidad de Red</h4>
+      <p class="text-on-surface-variant text-sm leading-relaxed">La coordinación centralizada permite la expansión modular de los sectores industriales sin comprometer la eficiencia operativa del equilibrio cívico.</p>
+    </div>
+  </div>
+
+  <PageNav
+    prev={{ href: "/tecnologia-punta-propia", label: "Apropiación Social", sublabel: "Ecosistema" }}
+    next={{ href: "/cibernetica-social", label: "Cibernética Social", sublabel: "Ciberneta" }}
+  />
+</Layout>

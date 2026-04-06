@@ -1,0 +1,373 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageNav from "../components/PageNav.astro";
+
+const matrixTop = [
+  {
+    title: "Analogías",
+    desc: "Traducciones simbólicas que abren rutas entre disciplinas y lenguajes técnicos.",
+    icon: "sync_alt",
+  },
+  {
+    title: "Comunicación",
+    desc: "Sincroniza canales, protocolos y ritmos de intercambio dentro del sistema.",
+    icon: "campaign",
+  },
+  {
+    title: "Coordinación",
+    desc: "Orquesta la energía operativa para que cada nodo aporte al proyecto.",
+    icon: "device_hub",
+  },
+];
+
+const matrixBottom = [
+  {
+    title: "Correspondencias",
+    desc: "Encuentra equivalencias estructurales que permiten replicar soluciones.",
+    icon: "schema",
+  },
+  {
+    title: "Información",
+    desc: "Gestiona señal versus ruido para mantener estable el circuito cognitivo.",
+    icon: "insights",
+  },
+  {
+    title: "Selección",
+    desc: "Filtra alternativas y convierte datos en decisiones tácticas.",
+    icon: "how_to_vote",
+  },
+];
+---
+
+<Layout title="Cibernética Artificial - Marco Sintético">
+  <!-- Hero -->
+  <header class="w-full max-w-6xl mx-auto pt-10 pb-8 text-center animate-fade-in">
+    <p class="text-xs font-bold tracking-[0.4em] uppercase text-on-surface-variant mb-4">
+      Programa → Matriz → Proyecto
+    </p>
+    <h1 class="font-body font-extrabold text-4xl md:text-5xl text-primary tracking-tight mb-4">
+      Cibernética: Artificial
+    </h1>
+    <p class="font-body text-base md:text-lg text-on-surface-variant max-w-3xl mx-auto">
+      Circuito de traducciones y retroalimentaciones que transforma un programa inicial en un proyecto operativo,
+      controlando la entropía del proceso.
+    </p>
+  </header>
+
+  <!-- Diagram Section -->
+  <section class="relative w-full max-w-6xl mx-auto px-4 mb-12">
+    <div class="diagram-panel">
+      <div class="matrix-grid">
+        {matrixTop.map((cell) => (
+          <div class="matrix-cell" data-label="Superior">
+            <span class="material-symbols-outlined">{cell.icon}</span>
+            <h3>{cell.title}</h3>
+            <p>{cell.desc}</p>
+          </div>
+        ))}
+        {matrixBottom.map((cell) => (
+          <div class="matrix-cell" data-label="Inferior">
+            <span class="material-symbols-outlined">{cell.icon}</span>
+            <h3>{cell.title}</h3>
+            <p>{cell.desc}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="flow flow-left">
+        <span>Programa</span>
+      </div>
+      <div class="flow flow-right">
+        <span>Proyecto</span>
+      </div>
+
+      <div class="entropy-pill">
+        <span class="material-symbols-outlined">autorenew</span>
+        Entropía controlada
+      </div>
+
+      <svg class="flow-svg" viewBox="0 0 1200 500" fill="none">
+        <defs>
+          <marker id="arrowhead" markerHeight="8" markerWidth="10" orient="auto" refX="9" refY="4">
+            <polygon fill="currentColor" points="0 0, 10 4, 0 8"></polygon>
+          </marker>
+        </defs>
+        <path d="M120 250 H1080" stroke="currentColor" stroke-width="6" class="flow-line"></path>
+        <path d="M340 250 V380 H860 V250" stroke="currentColor" stroke-width="6" class="flow-line" marker-end="url(#arrowhead)"></path>
+        <path d="M340 250 V120 H860 V250" stroke="currentColor" stroke-width="6" class="flow-line"></path>
+        <path d="M360 380 C360 430 360 430 420 430 H780 C840 430 840 430 840 380" stroke="currentColor" stroke-width="5" class="entropy-line" marker-end="url(#arrowhead)"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Interpretation Grid -->
+  <section class="w-full max-w-7xl mx-auto px-4 mb-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {[...matrixTop, ...matrixBottom].map((cell, idx) => (
+        <article class={`insight-card animate-slide-up`} style={`animation-delay: ${0.1 * idx}s; opacity: 0;`}>
+          <div class="flex items-center gap-3 mb-4">
+            <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">
+              {cell.icon}
+            </span>
+            <div class="h-px flex-1 bg-outline-variant/20"></div>
+          </div>
+          <h3 class="font-body text-xl text-on-surface mb-2">{cell.title}</h3>
+          <p class="text-sm text-on-surface-variant leading-relaxed">{cell.desc}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <!-- Entropy Loop Detail -->
+  <section class="w-full max-w-6xl mx-auto px-4 mb-16 grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <div class="glass-card rounded-3xl p-8 animate-slide-up" style="animation-delay: 0.2s; opacity: 0;">
+      <p class="text-xs uppercase font-bold tracking-[0.3em] text-primary mb-4">Loop de regulación</p>
+      <h2 class="font-body text-3xl text-on-surface mb-4">Cómo opera la entropía</h2>
+      <p class="text-on-surface-variant leading-relaxed mb-6">
+        El circuito inferior absorbe desviaciones energéticas, las cataloga como ruido y devuelve sólo la información
+        útil. Esta retroalimentación mantiene el programa alineado con el proyecto, evitando la dispersión de recursos.
+      </p>
+      <ul class="space-y-3 text-sm text-on-surface-variant">
+        <li class="flex items-start gap-3">
+          <span class="material-symbols-outlined text-primary">check_small</span>
+          Fase de <strong>diagnóstico</strong>: identifica incoherencias y saturación de canales.
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="material-symbols-outlined text-primary">check_small</span>
+          Fase de <strong>depuración</strong>: filtra eventos y reorganiza prioridades.
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="material-symbols-outlined text-primary">check_small</span>
+          Fase de <strong>reinserción</strong>: devuelve la señal al circuito principal.
+        </li>
+      </ul>
+    </div>
+
+    <div class="entropy-card animate-scale-in" style="animation-delay: 0.3s; opacity: 0;">
+      <div class="relative w-56 h-56 mx-auto">
+        <svg viewBox="0 0 200 200" class="w-full h-full">
+          <circle cx="100" cy="100" r="80" stroke="var(--outline-variant)" stroke-width="8" fill="none" opacity="0.2"></circle>
+          <circle cx="100" cy="100" r="80" stroke="var(--primary)" stroke-width="8" fill="none" stroke-dasharray="502" stroke-dashoffset="180" class="entropy-progress"></circle>
+        </svg>
+        <div class="absolute inset-0 flex flex-col items-center justify-center">
+          <span class="text-xs uppercase tracking-[0.3em] text-primary">Ruido</span>
+          <strong class="text-4xl font-body text-on-surface">36%</strong>
+          <span class="text-on-surface-variant text-sm">controlado</span>
+        </div>
+      </div>
+      <p class="text-center text-sm text-on-surface-variant max-w-sm mx-auto">
+        El sistema admite hasta un 36% de fluctuaciones antes de redirigir la energía al programa original.
+      </p>
+      <div class="entropy-metrics">
+        <div>
+          <span class="label">Fase</span>
+          <strong>Depuración</strong>
+        </div>
+        <div>
+          <span class="label">Latencia</span>
+          <strong>1.4s</strong>
+        </div>
+        <div>
+          <span class="label">Canales</span>
+          <strong>08</strong>
+        </div>
+      </div>
+      <div class="entropy-chip">Canalizando ruido blanco hacia patrones útiles</div>
+    </div>
+  </section>
+
+  <PageNav
+    prev={{ href: "/capital-social", label: "Capital", sublabel: "Social" }}
+    next={{ href: "/tecnologia-propia", label: "Tecnología", sublabel: "Propia" }}
+  />
+
+  <style>
+    .diagram-panel {
+      position: relative;
+      padding: 3rem 1.5rem;
+      border-radius: 2.5rem;
+      background: radial-gradient(circle at top, rgba(255,255,255,0.08), rgba(17,17,17,0.2));
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 25px 60px -30px rgba(15, 23, 42, 0.45);
+      overflow: hidden;
+    }
+    .matrix-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+    .matrix-cell {
+      background: rgba(255,255,255,0.9);
+      border-radius: 1.5rem;
+      padding: 1.5rem;
+      text-align: center;
+      min-height: 10rem;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+      position: relative;
+    }
+    .matrix-cell span {
+      color: var(--primary);
+      font-size: 1.75rem;
+      margin-bottom: 0.75rem;
+    }
+    .matrix-cell h3 {
+      font-family: var(--font-body, "Space Grotesk", sans-serif);
+      font-size: 1.15rem;
+      color: var(--on-surface);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .matrix-cell p {
+      font-size: 0.85rem;
+      color: var(--on-surface-variant);
+      margin-top: 0.5rem;
+    }
+    .flow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      pointer-events: none;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--primary);
+    }
+    .flow::before {
+      content: "";
+      display: block;
+      height: 4px;
+      width: 6rem;
+      background: linear-gradient(90deg, transparent, var(--primary));
+    }
+    .flow.flow-left {
+      left: -0.5rem;
+    }
+    .flow.flow-right {
+      right: -0.5rem;
+      flex-direction: row-reverse;
+    }
+    .flow.flow-right::before {
+      background: linear-gradient(90deg, var(--primary), transparent);
+    }
+    .flow-svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      color: rgba(14,116,144,0.35);
+    }
+    .flow-line {
+      stroke-dasharray: 20 12;
+      animation: flow 12s linear infinite;
+    }
+    .entropy-line {
+      color: rgba(21,128,61,0.6);
+      stroke-dasharray: 8 8;
+      animation: flow 8s linear infinite reverse;
+    }
+    .entropy-pill {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(34,197,94,0.15);
+      color: var(--tertiary);
+      padding: 0.6rem 1.4rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+    .entropy-pill span {
+      font-size: 1.25rem;
+      color: inherit;
+    }
+    .insight-card {
+      background: var(--surface-container-lowest);
+      border-radius: 1.5rem;
+      padding: 1.75rem;
+      border-left: 4px solid rgba(15,118,110,0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .insight-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 35px -20px rgba(15, 23, 42, 0.4);
+    }
+    .entropy-card {
+      position: relative;
+      background: radial-gradient(circle at top, rgba(34,197,94,0.25), rgba(15,23,42,0.9));
+      border-radius: 2rem;
+      padding: 2.5rem;
+      box-shadow: 0 25px 60px -35px rgba(0,0,0,0.45);
+      text-align: center;
+      overflow: hidden;
+    }
+    .entropy-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, rgba(255,255,255,0.12), transparent 55%);
+      pointer-events: none;
+    }
+    .entropy-card > * {
+      position: relative;
+      z-index: 1;
+    }
+    .entropy-progress {
+      animation: pulse-stroke 10s ease-in-out infinite;
+    }
+    .entropy-metrics {
+      margin: 2rem auto 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+    .entropy-metrics div {
+      background: rgba(255,255,255,0.1);
+      padding: 0.75rem 1rem;
+      border-radius: 1rem;
+      color: var(--surface);
+    }
+    .entropy-metrics .label {
+      display: block;
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+    }
+    .entropy-metrics strong {
+      display: block;
+      font-size: 1.1rem;
+      color: #fff;
+    }
+    .entropy-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.65rem 1.5rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      border: 1px solid rgba(255,255,255,0.3);
+      color: #fff;
+      background: rgba(15,23,42,0.35);
+    }
+    @keyframes flow {
+      from { stroke-dashoffset: 0; }
+      to { stroke-dashoffset: -400; }
+    }
+    @keyframes pulse-stroke {
+      0%, 100% { stroke-dashoffset: 180; }
+      50% { stroke-dashoffset: 80; }
+    }
+  </style>
+</Layout>

@@ -1,0 +1,126 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageNav from "../components/PageNav.astro";
+---
+
+<Layout title="Equilibrio Cívico - Diagramas Técnicos">
+  <!-- Header Section -->
+  <header class="max-w-5xl mx-auto mb-12 md:mb-16 text-center lg:text-left animate-fade-in">
+    <h1 class="font-body text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary tracking-tight mb-4 animate-slide-up" style="animation-delay: 0s; opacity: 0;">
+      Equilibrio Cívico
+    </h1>
+    <p class="font-body text-lg text-tertiary-container max-w-2xl leading-relaxed animate-slide-up" style="animation-delay: 0.1s; opacity: 0;">
+      Diagrama técnico de interdependencia sistémica: La convergencia del trabajo, la necesidad, la ciencia y la cultura en un ecosistema de productividad social.
+    </p>
+  </header>
+
+  <!-- Interactive Diagram Area (Asymmetric Layout) -->
+  <div class="relative max-w-6xl mx-auto mb-16" style="display: grid; grid-template-columns: repeat(12, 1fr); grid-template-rows: repeat(12, 1fr); min-height: 70vh;">
+    <!-- CENTRAL NODE: SYNTESIS -->
+    <div class="col-start-5 col-end-9 row-start-5 row-end-9 z-30 flex items-center justify-center animate-slide-up" style="animation-delay: 0.2s; opacity: 0;">
+      <div class="w-36 h-36 md:w-48 md:h-48 rounded-full bg-gradient-to-br from-primary to-primary-container shadow-2xl flex flex-col items-center justify-center text-on-primary text-center p-4 md:p-6 border-4 border-white/20">
+        <span class="material-symbols-outlined text-3xl md:text-4xl mb-1 md:mb-2" style="font-variation-settings: 'FILL' 1;">emergency_share</span>
+        <span class="font-body font-extrabold text-lg md:text-xl tracking-tighter">SÍNTESIS</span>
+        <span class="text-[8px] md:text-[10px] uppercase tracking-widest opacity-80 mt-1">Punto de Convergencia</span>
+      </div>
+    </div>
+
+    <!-- NODE 1: APTITUD DEL TRABAJO (LEFT) -->
+    <div class="col-start-1 col-end-5 row-start-4 row-end-10 z-20 flex items-center animate-slide-up" style="animation-delay: 0.3s; opacity: 0;">
+      <div class="glass-card p-1 rounded-[2rem] shadow-xl w-full">
+        <div class="relative overflow-hidden rounded-[2rem] aspect-square border-4 border-surface-container">
+          <img class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" alt="Agricultor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKgYtNmG-bbxk9UKrvOt-mrN56BbZInPdBXOuLYMHlbzv01TlRYBhYySFhIU0IF8Z2_D3V1Sqjf7yqX2ja2A-Fb-5iwO1a6-oyZPfkKddz1NpjFPgwsJu-o-NBtsAW_Xq3yUcYhkKbPbMwQ31VY7ZHlzUSc3jRhibEQKGJtru03RSB6y7iddBKM3t-3LRQ-SVT16d3W--eOeWAjDN5rLNJJ3PAQTOH0qiS5TddQMj-rwU6bB9MMmoqFf4zXS8MwYDsQR2JdiIZ3xwK"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-6 md:p-8">
+            <h3 class="font-body font-bold text-xl md:text-2xl text-white">Aptitud del Trabajo</h3>
+            <p class="text-white/80 text-sm font-body">Capacidad técnica y transformación productiva del entorno.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NODE 2: NECESIDAD SOCIAL (RIGHT) -->
+    <div class="col-start-9 col-end-13 row-start-4 row-end-10 z-20 flex items-center animate-slide-up" style="animation-delay: 0.4s; opacity: 0;">
+      <div class="glass-card p-1 rounded-[2rem] shadow-xl w-full">
+        <div class="relative overflow-hidden rounded-[2rem] aspect-square border-4 border-surface-container">
+          <img class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" alt="Familia" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0cJOzxzm1CLE6hcbS7ahyvojLhLl_WUYStIxWTGnauJ-q9RaWQzkBic-UFDbxCJMASTFYTbcTsXzFg1USbPUybtbTXvCxKA05J287ZaZEmJ8P0MzLubujQAUxeQN2viOVoJwyDW6zr8xsgVyEMQSMuDqQoDWWLVtdWiPxAIG8Atl2bI9rzaXBzgd3CsfdoZaXVYT-ss_pT_O49bpSfyqqNzg3HAgexNhJf4LKHpqS5l9Q7nTJ4ObsJTkGhzrHMGJde1KPNsh5rSSO"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-secondary/80 to-transparent flex flex-col justify-end p-6 md:p-8">
+            <h3 class="font-body font-bold text-xl md:text-2xl text-white">Necesidad Social</h3>
+            <p class="text-white/80 text-sm font-body">Demanda humana de bienestar, salud y cohesión comunitaria.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NODE 3: UNIDAD DE LA CIENCIA (TOP) -->
+    <div class="col-start-5 col-end-9 row-start-1 row-end-5 z-20 flex justify-center animate-slide-up" style="animation-delay: 0.5s; opacity: 0;">
+      <div class="bg-surface-container-highest p-4 md:p-6 rounded-full border border-outline-variant/15 text-center flex flex-col items-center justify-center max-w-xs shadow-sm hover:shadow-md transition-shadow">
+        <span class="material-symbols-outlined text-primary text-2xl md:text-3xl mb-2">auto_awesome</span>
+        <h3 class="font-body font-bold text-lg text-primary tracking-tight">Unidad de la Ciencia</h3>
+        <p class="text-xs text-on-surface-variant font-medium leading-tight">Motor de conexión lógica y validación del conocimiento técnico.</p>
+      </div>
+    </div>
+
+    <!-- NODE 4: DEMOCRATIZACIÓN DE LA CULTURA (BOTTOM) -->
+    <div class="col-start-5 col-end-9 row-start-9 row-end-13 z-20 flex justify-center items-end animate-slide-up" style="animation-delay: 0.6s; opacity: 0;">
+      <div class="bg-tertiary text-on-tertiary p-4 md:p-6 rounded-full text-center flex flex-col items-center justify-center max-w-xs shadow-lg">
+        <span class="material-symbols-outlined text-tertiary-fixed text-2xl md:text-3xl mb-2">account_balance</span>
+        <h3 class="font-body font-bold text-lg tracking-tight">Democratización de la Cultura</h3>
+        <p class="text-xs opacity-80 font-medium leading-tight">Base del flujo social y acceso universal al patrimonio intelectual.</p>
+      </div>
+    </div>
+
+    <!-- CONNECTION LINES -->
+    <svg class="absolute inset-0 w-full h-full -z-10 opacity-20" fill="none" viewbox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+      <path class="text-outline" d="M500 100 V900" stroke="currentColor" stroke-dasharray="10 10" stroke-width="2"></path>
+      <path class="text-outline" d="M100 500 H900" stroke="currentColor" stroke-dasharray="10 10" stroke-width="2"></path>
+      <circle class="text-outline-variant" cx="500" cy="500" r="150" stroke="currentColor" stroke-width="1"></circle>
+      <circle class="text-outline-variant" cx="500" cy="500" r="300" stroke="currentColor" stroke-width="1"></circle>
+    </svg>
+  </div>
+
+  <!-- Technical Notes Section -->
+  <section class="max-w-4xl mx-auto mb-12 space-y-12">
+    <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+      <div class="space-y-4 animate-slide-up" style="animation-delay: 0.7s; opacity: 0;">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-primary-fixed text-on-primary-fixed rounded-full text-[10px] font-bold uppercase tracking-widest">
+          <span class="material-symbols-outlined text-xs">analytics</span>
+          Relación Sistémica
+        </div>
+        <h4 class="font-body text-xl md:text-2xl font-bold text-on-surface">La Aptitud y la Necesidad</h4>
+        <p class="text-on-surface-variant leading-relaxed text-sm">
+          La <span class="text-primary font-bold">Aptitud Técnica</span> no es un fin en sí mismo, sino el medio por el cual la humanidad resuelve sus carencias. Esta transformación se vuelve efectiva solo cuando está guiada por la <span class="text-secondary font-bold">Necesidad Social</span>, evitando el crecimiento industrial vacío de propósito humano.
+        </p>
+      </div>
+      <div class="space-y-4 animate-slide-up" style="animation-delay: 0.8s; opacity: 0;">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-[10px] font-bold uppercase tracking-widest">
+          <span class="material-symbols-outlined text-xs">schema</span>
+          Flujos Dinámicos
+        </div>
+        <h4 class="font-body text-xl md:text-2xl font-bold text-on-surface">Conocimiento y Cultura</h4>
+        <p class="text-on-surface-variant leading-relaxed text-sm">
+          La <span class="font-bold">Ciencia</span> actúa como el catalizador intelectual que sistematiza la experiencia productiva, mientras que la <span class="font-bold">Cultura</span> asegura que este conocimiento no quede cautivo en élites, sino que fluya democráticamente hacia la base social para fertilizar nuevos ciclos de innovación.
+        </p>
+      </div>
+    </div>
+
+    <!-- Bento Card for Methodology -->
+    <div class="glass-card p-8 md:p-12 rounded-[2rem] border border-outline-variant/10 animate-slide-up" style="animation-delay: 0.9s; opacity: 0;">
+      <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+        <div class="w-20 h-20 md:w-24 md:h-24 shrink-0 rounded-full bg-surface-container-highest flex items-center justify-center">
+          <span class="material-symbols-outlined text-3xl md:text-4xl text-primary">architecture</span>
+        </div>
+        <div>
+          <h5 class="font-body text-xl font-bold mb-2">Nota Metodológica v1.0.4</h5>
+          <p class="text-sm text-on-surface-variant italic">
+            "El equilibrio cívico se alcanza cuando el potencial creativo del individuo (Aptitud) se sincroniza con el requerimiento vital de la colectividad (Necesidad), mediado por la objetividad del saber (Ciencia) y la universalidad del espíritu (Cultura)."
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <PageNav
+    prev={{ href: "/reciclaje-residual", label: "Bioprocesamiento", sublabel: "Circular" }}
+    next={{ href: "/tecnologia-punta-propia", label: "Apropiación Social", sublabel: "Ecosistema" }}
+  />
+</Layout>

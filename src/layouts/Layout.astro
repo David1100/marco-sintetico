@@ -6,22 +6,6 @@ interface Props {
 }
 
 const { title } = Astro.props;
-
-const navigation = [
-  { href: "/", label: "Portada", icon: "home" },
-  { href: "/apropiacion-productividad-social", label: "La apropiación", icon: "hub" },
-  { href: "/capital-social", label: "Capital Social", icon: "account_balance" },
-  { href: "/capital-cultural", label: "Capital Cultural", icon: "museum" },
-  { href: "/eficacia-exuberancia", label: "Eficacia Exuberancia", icon: "auto_awesome" },
-  { href: "/sobredeterminacion-cultura", label: "Sobredeterminación", icon: "psychology" },
-  { href: "/simbiosis-economica", label: "Simbiosis Económica", icon: "eco" },
-  { href: "/convergencia", label: "Convergencia", icon: "sync_alt" },
-  { href: "/gestion-social", label: "Gestión Social", icon: "settings" },
-  { href: "/sintesis-paradigma-cibernetico", label: "Síntesis Cibernético", icon: "hub" },
-  { href: "/creatividad", label: "Creatividad", icon: "lightbulb" },
-];
-
-const currentPath = Astro.url.pathname;
 ---
 
 <!doctype html>
@@ -32,20 +16,18 @@ const currentPath = Astro.url.pathname;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
-    
+
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
   </head>
   <body class="font-body text-on-surface" style="background-image: url('/images/fondo.png'); background-size: cover; background-position: center center; background-attachment: fixed; background-repeat: no-repeat; min-height: 100vh;">
-    <!-- Overlay con gradiente para suavizar y mejorar legibilidad -->
     <div class="fixed inset-0 bg-gradient-to-br from-amber-950/40 via-amber-900/20 to-amber-950/40 pointer-events-none z-0"></div>
-    
-    <!-- Header Fijo -->
+
     <header class="fixed top-0 left-0 right-0 z-50 bg-white/70 backdrop-blur-md border-b border-amber-900/20 h-16 flex items-center px-8 shadow-lg">
       <div class="flex items-center gap-3">
         <span class="material-symbols-outlined text-primary text-2xl">eco</span>
@@ -55,53 +37,10 @@ const currentPath = Astro.url.pathname;
       </div>
     </header>
 
-    <!-- Sidebar Fija -->
-    <aside class="fixed left-0 top-0 z-40 h-screen w-64 bg-white/80 backdrop-blur-md border-r border-amber-900/20 flex flex-col p-4 gap-2 pt-20 hidden md:flex shadow-xl">
-      <nav class="flex-1 flex flex-col gap-1">
-        {navigation.map((item) => (
-          <a 
-            href={item.href}
-            class:list={[
-              "flex items-center gap-3 px-4 py-3 rounded-xl font-medium transition-all hover:scale-[1.02]",
-              currentPath === item.href 
-                ? "bg-primary text-white shadow-md" 
-                : "text-on-surface-variant hover:bg-surface-container"
-            ]}
-          >
-            <span class="material-symbols-outlined">{item.icon}</span>
-            <span>{item.label}</span>
-          </a>
-        ))}
-      </nav>
-      
-
-    </aside>
-
-    <!-- Contenido Principal -->
-    <main class="md:ml-64 pt-16 min-h-screen">
+    <main class="pt-16 min-h-screen">
       <div class="max-w-7xl mx-auto p-8">
         <slot />
       </div>
     </main>
-
-    <!-- Navegación Móvil -->
-    <nav class="md:hidden fixed bottom-0 w-full bg-white flex justify-around py-4 z-50 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
-      <a href="/" class="flex flex-col items-center gap-1 text-primary">
-        <span class="material-symbols-outlined">home</span>
-        <span class="text-xs">Inicio</span>
-      </a>
-      <a href="/apropiacion-productividad-social" class="flex flex-col items-center gap-1 text-on-surface-variant">
-        <span class="material-symbols-outlined">hub</span>
-        <span class="text-xs">Ciclo</span>
-      </a>
-      <a href="/capital-cultural" class="flex flex-col items-center gap-1 text-on-surface-variant">
-        <span class="material-symbols-outlined">museum</span>
-        <span class="text-xs">Cultural</span>
-      </a>
-      <a href="/creatividad" class="flex flex-col items-center gap-1 text-on-surface-variant">
-        <span class="material-symbols-outlined">lightbulb</span>
-        <span class="text-xs">Creativ</span>
-      </a>
-    </nav>
   </body>
 </html>

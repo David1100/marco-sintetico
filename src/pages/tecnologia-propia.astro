@@ -1,0 +1,399 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageNav from "../components/PageNav.astro";
+
+const loops = [
+  {
+    title: "Apropiaciones",
+    layer: "Manera",
+    desc: "Comunidades que traducen la cultura en saberes técnicos y los redistribuyen.",
+    accent: "primary",
+  },
+  {
+    title: "Subsistencia",
+    layer: "Manera",
+    desc: "Tecnología innovada aplicada a garantizar bienestar cotidiano.",
+    accent: "secondary",
+  },
+  {
+    title: "Desarrollo",
+    layer: "Modo",
+    desc: "Ajustes adaptativos que permiten escalar la tecnología intermedia.",
+    accent: "primary",
+  },
+  {
+    title: "Recursos",
+    layer: "Modo",
+    desc: "Energía social, materias y datos que alimentan la cultura productiva.",
+    accent: "tertiary",
+  },
+];
+
+const exchanges = [
+  {
+    title: "Tecnología Intermedia",
+    desc: "Instrumentos apropiados, manufactura local y protocolos compartidos para crear resiliencia.",
+    icon: "handshake",
+  },
+  {
+    title: "Tecnología Innovada",
+    desc: "Iteraciones de alta precisión que nacen desde la cultura y regresan como soluciones propias.",
+    icon: "rocket_launch",
+  },
+];
+---
+
+<Layout title="Tecnología Propia - Marco Sintético">
+  <header class="w-full max-w-6xl mx-auto pt-10 pb-6 text-center animate-fade-in">
+    <span class="text-xs font-bold tracking-[0.4em] uppercase text-on-surface-variant block mb-4">Tecnología Propia</span>
+    <h1 class="font-headline font-extrabold text-4xl md:text-5xl text-primary tracking-tight mb-3">Maneras y Modos</h1>
+    <p class="font-body text-base md:text-lg text-on-surface-variant max-w-3xl mx-auto">
+      La cultura se convierte en vector tecnológico cuando enlaza apropiaciones comunitarias con recursos regenerativos.
+      Esta página traslada el diagrama manuscrito a una interfaz dinámica que mantiene las mismas relaciones.
+    </p>
+  </header>
+
+  <!-- Diagram -->
+  <section class="tech-diagram w-full max-w-6xl mx-auto px-4 mb-14">
+    <div class="halo halo-left">
+      <div class="halo-circle">
+        <img class="animate-float" src="/images/tecnologia-propia/desarrollo.png" alt="Tecnología intermedia" />
+      </div>
+      <div class="halo-meta">
+        <p class="badge">Tecnología Intermedia</p>
+        <h3>Apropiaciones</h3>
+      </div>
+    </div>
+    <div class="halo halo-right">
+      <div class="halo-circle">
+        <img class="animate-float" src="/images/tecnologia-propia/teconologia.png" alt="Tecnología innovada" />
+      </div>
+      <div class="halo-meta">
+        <p class="badge">Tecnología Innovada</p>
+        <h3>Subsistencia</h3>
+      </div>
+    </div>
+
+    <div class="node node-top">
+      <span class="label">Manera</span>
+      <p>Cuida los flujos comunitarios</p>
+    </div>
+    <div class="node node-bottom">
+      <span class="label">Modo</span>
+      <p>Articula desarrollo y recursos</p>
+    </div>
+    <div class="culture-core">
+      <span>Cultura</span>
+      <p>Memoria viva que regula ambos polos</p>
+    </div>
+
+    <svg class="diagram-svg" viewBox="0 0 1200 600" fill="none">
+      <defs>
+        <marker id="arrow-rounded" markerHeight="10" markerWidth="16" orient="auto" refX="12" refY="5">
+          <path d="M0,0 L10,5 L0,10" fill="currentColor"></path>
+        </marker>
+      </defs>
+      <path d="M260 260 C500 140 700 140 940 260" stroke="currentColor" stroke-width="8" class="arc"></path>
+      <path d="M260 340 C500 460 700 460 940 340" stroke="currentColor" stroke-width="8" class="arc" marker-end="url(#arrow-rounded)"></path>
+      <path d="M600 420 Q520 520 440 420" stroke="currentColor" stroke-width="6" class="loop"></path>
+      <path d="M600 180 Q680 80 760 180" stroke="currentColor" stroke-width="6" class="loop" marker-end="url(#arrow-rounded)"></path>
+    </svg>
+  </section>
+
+  <!-- Loops description -->
+  <section class="w-full max-w-6xl mx-auto px-4 mb-16 grid grid-cols-1 md:grid-cols-2 gap-6">
+    {loops.map((item, idx) => (
+      <article class="loop-card animate-slide-up" style={`animation-delay: ${0.1 * idx}s; opacity: 0;`}>
+        <p class={`layer-badge text-${item.accent}`}>{item.layer}</p>
+        <h3>{item.title}</h3>
+        <p>{item.desc}</p>
+      </article>
+    ))}
+  </section>
+
+  <section class="w-full max-w-6xl mx-auto px-4 mb-16 grid grid-cols-1 lg:grid-cols-2 gap-8">
+    {exchanges.map((item, idx) => (
+      <article class="exchange-card animate-slide-up" style={`animation-delay: ${0.1 * idx}s; opacity: 0;`}>
+        <div class="flex items-center gap-3 mb-4">
+          <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">{item.icon}</span>
+          <div class="h-px flex-1 bg-outline-variant/20"></div>
+        </div>
+        <h3>{item.title}</h3>
+        <p>{item.desc}</p>
+      </article>
+    ))}
+
+    <div class="culture-card animate-scale-in" style="animation-delay: 0.2s; opacity: 0;">
+      <p class="text-xs uppercase tracking-[0.3em] text-primary mb-2">Indicadores</p>
+      <h3>Equilibrio Cultura ↔ Tecnología</h3>
+      <div class="stats">
+        <div>
+          <span class="label">Manera</span>
+          <strong>58%</strong>
+          <p>Apropiaciones activas</p>
+        </div>
+        <div>
+          <span class="label">Modo</span>
+          <strong>42%</strong>
+          <p>Recursos asignados</p>
+        </div>
+        <div>
+          <span class="label">Ciclos</span>
+          <strong>12</strong>
+          <p>Iteraciones completadas</p>
+        </div>
+      </div>
+      <p class="foot">La cultura mantiene proporciones flexibles para que la tecnología siga siendo propia.</p>
+    </div>
+  </section>
+
+  <PageNav
+    prev={{ href: "/cibernetica-artificial", label: "Cibernética", sublabel: "Artificial" }}
+    next={{ href: "/planificacion-sintesis-economica", label: "Planificación", sublabel: "Síntesis" }}
+  />
+
+  <style>
+    .tech-diagram {
+      position: relative;
+      padding: 4rem 1.5rem;
+      border-radius: 2.8rem;
+      background: radial-gradient(circle at top, rgba(59,130,246,0.25), rgba(15,23,42,0.55));
+      border: 1px solid rgba(255,255,255,0.08);
+      overflow: hidden;
+      min-height: 420px;
+    }
+    .halo {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 240px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      text-align: center;
+    }
+    .halo-circle {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid rgba(255,255,255,0.35);
+      box-shadow: 0 25px 45px -25px rgba(0,0,0,0.5);
+    }
+    .halo-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .halo-meta {
+      background: rgba(255,255,255,0.9);
+      padding: 0.75rem 1rem;
+      border-radius: 1rem;
+      box-shadow: 0 15px 35px -25px rgba(0,0,0,0.45);
+    }
+    .halo .badge {
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--primary);
+    }
+    .halo h3 {
+      font-family: var(--font-headline, "Space Grotesk", sans-serif);
+      font-size: 1.25rem;
+      color: var(--on-surface);
+      letter-spacing: 0.08em;
+    }
+    .halo-left {
+      left: 4%;
+    }
+    .halo-right {
+      right: 4%;
+    }
+    .node {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      padding: 1rem 1.5rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(6px);
+      color: #fff;
+      width: max-content;
+    }
+    .node .label {
+      display: block;
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      opacity: 0.8;
+    }
+    .node-top { top: 30px; }
+    .node-bottom { bottom: 30px; }
+    .culture-core {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: rgba(15,23,42,0.85);
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 20px 40px -25px rgba(0,0,0,0.6);
+    }
+    .culture-core span {
+      font-family: var(--font-headline);
+      font-size: 1.5rem;
+      letter-spacing: 0.2em;
+    }
+    .culture-core p {
+      font-size: 0.85rem;
+      opacity: 0.75;
+      max-width: 140px;
+      margin-top: 0.5rem;
+    }
+    .diagram-svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      color: rgba(248,250,252,0.45);
+      pointer-events: none;
+    }
+    .arc {
+      stroke-dasharray: 24 16;
+      animation: arcflow 14s linear infinite;
+    }
+    .loop {
+      stroke-dasharray: 14 10;
+      animation: arcflow 8s linear infinite reverse;
+    }
+    @keyframes arcflow {
+      from { stroke-dashoffset: 0; }
+      to { stroke-dashoffset: -800; }
+    }
+    .loop-card {
+      background: var(--surface-container-lowest);
+      border-radius: 1.5rem;
+      padding: 1.75rem;
+      border: 1px solid rgba(15,23,42,0.08);
+      min-height: 180px;
+      box-shadow: 0 10px 30px -25px rgba(0,0,0,0.4);
+    }
+    .loop-card h3 {
+      font-family: var(--font-headline);
+      font-size: 1.4rem;
+      color: var(--on-surface);
+      margin-bottom: 0.75rem;
+    }
+    .loop-card p { color: var(--on-surface-variant); }
+    .layer-badge {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      margin-bottom: 0.6rem;
+    }
+    .exchange-card {
+      background: rgba(255,255,255,0.9);
+      border-radius: 2rem;
+      padding: 2rem;
+      box-shadow: 0 20px 40px -35px rgba(0,0,0,0.45);
+    }
+    .exchange-card h3 {
+      font-family: var(--font-headline);
+      font-size: 1.5rem;
+      color: var(--on-surface);
+      margin-bottom: 0.5rem;
+    }
+    .exchange-card p { color: var(--on-surface-variant); }
+    .culture-card {
+      background: linear-gradient(135deg, rgba(14,165,233,0.15), rgba(45,212,191,0.1));
+      border-radius: 2rem;
+      padding: 2.5rem;
+      border: 1px solid rgba(255,255,255,0.15);
+      box-shadow: 0 25px 50px -30px rgba(14,165,233,0.35);
+    }
+    .culture-card h3 {
+      font-family: var(--font-headline);
+      font-size: 1.8rem;
+      color: var(--on-surface);
+      margin-bottom: 1.5rem;
+    }
+    .culture-card .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .culture-card .stats div {
+      background: rgba(255,255,255,0.65);
+      padding: 1rem;
+      border-radius: 1rem;
+      text-align: center;
+    }
+    .culture-card .stats .label {
+      display: block;
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--primary);
+    }
+    .culture-card strong {
+      display: block;
+      font-size: 2rem;
+      color: var(--on-surface);
+    }
+    .culture-card p {
+      color: var(--on-surface-variant);
+      font-size: 0.9rem;
+    }
+    .culture-card .foot {
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--primary);
+    }
+
+    @media (max-width: 1024px) {
+      .halo {
+        position: relative;
+        left: auto;
+        right: auto;
+        transform: none;
+        margin: 1rem auto;
+      }
+      .tech-diagram {
+        padding-top: 6rem;
+      }
+      .node-top, .node-bottom {
+        position: relative;
+        top: auto;
+        bottom: auto;
+        left: 0;
+        transform: none;
+        margin: 0 auto 1rem;
+      }
+      .culture-core {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        margin: 0 auto 2rem;
+      }
+      .diagram-svg {
+        display: none;
+      }
+    }
+  </style>
+</Layout>

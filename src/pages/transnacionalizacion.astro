@@ -1,0 +1,517 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageNav from "../components/PageNav.astro";
+
+const flows = [
+  {
+    label: "Apropiación de mercados",
+    detail:
+      "El polo transnacional identifica territorios fértiles y transfiere su demanda a las filiales para sembrar presencia estable.",
+  },
+  {
+    label: "Transferencia de tecnología innovada",
+    detail:
+      "La filial de producción absorbe los prototipos más recientes para adaptar procesos y asegurar ventaja competitiva local.",
+  },
+  {
+    label: "Apropiación de innovación",
+    detail:
+      "El conglomerado multinacional recicla logros técnicos de las filiales y los centraliza en sus matrices globales.",
+  },
+  {
+    label: "Transferencia de tecnología obsoleta",
+    detail:
+      "Parte de la tecnología madura viaja de regreso, manteniendo productivas a las filiales cuando el centro ya migra al siguiente ciclo.",
+  },
+  {
+    label: "Apropiación administrativa",
+    detail:
+      "La filial de relevo toma metodologías burocráticas y de control que permiten pilotear operaciones dispersas.",
+  },
+  {
+    label: "Transferencia de la planificación política",
+    detail:
+      "El circuito devuelve lineamientos a la transnacional para ajustar alianzas y presencia estratégica.",
+  },
+  {
+    label: "Transferencia de la planificación económica",
+    detail:
+      "Las decisiones sobre inversión y abastecimiento regresan al centro multinacional cerrando la circulación.",
+  },
+];
+
+const flowAnchors = [
+  { id: "flow-01", d: "M 230 180 C 420 110 620 120 780 190", offset: "45%" },
+  { id: "flow-02", d: "M 230 210 C 420 260 620 260 780 210", offset: "40%" },
+  { id: "flow-03", d: "M 310 140 C 520 60 760 80 960 160", offset: "55%" },
+  { id: "flow-04", d: "M 320 240 C 520 320 760 320 960 250", offset: "40%" },
+  { id: "flow-05", d: "M 240 340 C 420 400 620 390 780 340", offset: "45%" },
+  { id: "flow-06", d: "M 320 380 C 520 460 760 450 960 380", offset: "40%" },
+  { id: "flow-07", d: "M 300 450 C 520 520 760 520 980 450", offset: "50%" },
+];
+
+const insightCards = [
+  {
+    title: "Filial de Producción",
+    copy:
+      "Nodo laboratorio donde se prueban innovaciones, se apropian mercados y se domestica la técnica antes de escalarla.",
+    accent: "Innovación",
+  },
+  {
+    title: "Filial de Relevo",
+    copy:
+      "Buffer administrativo que recibe tecnología madura y de allí gestiona transferencias políticas y económicas.",
+    accent: "Sincronía",
+  },
+  {
+    title: "Circuito total",
+    copy:
+      "Transnacional y multinacional funcionan como polos que intercambian saberes, control territorial y planificación.",
+    accent: "Ciclo",
+  },
+];
+---
+
+<Layout title="La Transnacionalización - Marco Sintético">
+  <header class="w-full max-w-4xl mx-auto pt-12 pb-10 text-center animate-fade-in">
+    <p class="text-xs font-bold tracking-[0.35em] uppercase text-on-surface-variant mb-4">
+      Nueva forma de la circulación internacional
+    </p>
+    <h1 class="font-body font-extrabold text-4xl md:text-5xl text-primary tracking-tight mb-4">
+      La Transnacionalización
+    </h1>
+    <p class="font-body text-base md:text-lg text-on-surface-variant">
+      Versionamos el esquema original mostrando cómo los polos transnacional y multinacional se retroalimentan a través de
+      sus filiales de producción y relevo. Cada trazo conserva la lectura circular para que puedas integrar las imágenes
+      escaneadas cuando estén listas.
+    </p>
+  </header>
+
+  <section class="w-full max-w-6xl mx-auto mb-14">
+    <div class="system-diagram">
+      <svg class="orbit-map" viewBox="0 0 1200 620" role="presentation" aria-hidden="true">
+        <defs>
+          <radialGradient id="glow" cx="50%" cy="50%" r="60%">
+            <stop offset="0%" stop-color="rgba(255, 255, 255, 0.65)"></stop>
+            <stop offset="80%" stop-color="rgba(244, 214, 186, 0.05)"></stop>
+            <stop offset="100%" stop-color="transparent"></stop>
+          </radialGradient>
+          <linearGradient id="orbit-stroke" x1="0%" x2="100%">
+            <stop offset="0%" stop-color="rgba(68, 40, 24, 0.65)"></stop>
+            <stop offset="100%" stop-color="rgba(150, 83, 48, 0.45)"></stop>
+          </linearGradient>
+          {flowAnchors.map((anchor) => (
+            <path id={anchor.id} d={anchor.d} fill="none"></path>
+          ))}
+        </defs>
+        <circle cx="180" cy="310" r="150" fill="url(#glow)"></circle>
+        <circle cx="1020" cy="310" r="150" fill="url(#glow)"></circle>
+        <path class="orbit orbit-inner" d="M 180 180 C 380 20 820 20 1020 180" />
+        <path class="orbit orbit-outer" d="M 180 440 C 420 600 780 600 1020 440" />
+        <path class="orbit orbit-diagonal" d="M 320 120 C 550 200 650 420 880 510" />
+        <path class="orbit orbit-diagonal" d="M 320 500 C 540 410 660 210 900 120" />
+        {flowAnchors.map((anchor, index) => (
+          <text class="flow-count" aria-hidden="true">
+            <textPath href={`#${anchor.id}`} startOffset={anchor.offset} dominant-baseline="middle" text-anchor="middle">
+              {String(index + 1).padStart(2, "0")}
+            </textPath>
+          </text>
+        ))}
+      </svg>
+
+      <article class="diagram-node hub hub-trans">
+        <div class="hub-ring">
+          <div class="image-slot" data-path="/images/transnacionalizacion/transnacional.png">
+            <img
+              src="/images/transnacionalizacion/transnacional.png"
+              alt="Ilustración del polo transnacional"
+              loading="lazy"
+              decoding="async"
+              onerror="this.closest('.image-slot').classList.add('is-missing'); this.remove();"
+            />
+            <p>Sube la imagen circular a /images/transnacionalizacion/transnacional.png</p>
+          </div>
+        </div>
+        <strong>Transnacional</strong>
+      </article>
+
+      <article class="diagram-node hub hub-multi">
+        <div class="hub-ring">
+          <div class="image-slot" data-path="/images/transnacionalizacion/multinacional.png">
+            <img
+              src="/images/transnacionalizacion/multinacional.png"
+              alt="Mapa del polo multinacional"
+              loading="lazy"
+              decoding="async"
+              onerror="this.closest('.image-slot').classList.add('is-missing'); this.remove();"
+            />
+            <p>Sube el mapa a /images/transnacionalizacion/multinacional.png</p>
+          </div>
+        </div>
+        <strong>Multinacional</strong>
+      </article>
+
+      <article class="diagram-node satellite sat-production">
+        <p class="node-subtitle">Filial</p>
+        <h2>Producción</h2>
+        <p class="node-tags">Mercados · Tecnología</p>
+      </article>
+
+      <article class="diagram-node satellite sat-relevo">
+        <p class="node-subtitle">Filial</p>
+        <h2>Relevo</h2>
+        <p class="node-tags">Administración · Planificación</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+    {insightCards.map((card, index) => (
+      <article class="insight-panel animate-slide-up" style={`animation-delay: ${index * 0.1}s; opacity: 0;`}>
+        <p class="text-xs uppercase tracking-[0.35em] text-on-surface-variant mb-2">{card.accent}</p>
+        <h3 class="font-body font-semibold text-lg text-primary mb-2">{card.title}</h3>
+        <p class="text-sm text-on-surface-variant leading-relaxed">{card.copy}</p>
+      </article>
+    ))}
+  </section>
+
+  <section class="w-full max-w-5xl mx-auto mb-12 glass-card rounded-3xl p-8">
+    <div class="flex flex-col gap-3 mb-6">
+      <p class="text-xs uppercase tracking-[0.4em] text-primary">Vectores del circuito</p>
+      <h3 class="font-body text-2xl text-on-surface">Lectura secuencial</h3>
+      <p class="text-on-surface-variant text-sm">
+        Describe cada flecha del esquema para mantener el sentido original incluso cuando las imágenes físicas aún no se han digitalizado.
+      </p>
+    </div>
+    <ol class="flow-sequence">
+      {flows.map((flow, index) => (
+        <li>
+          <span class="sequence-index">{String(index + 1).padStart(2, "0")}</span>
+          <div>
+            <p class="sequence-title">{flow.label}</p>
+            <p class="sequence-detail">{flow.detail}</p>
+          </div>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <PageNav
+    prev={{ href: "/las-nuevas-fronteras", label: "Las Nuevas Fronteras", sublabel: "Tecnologías" }}
+    next={{ href: "/convergencia", label: "Convergencia", sublabel: "Creativa" }}
+  />
+
+  <style>
+    .system-diagram {
+      position: relative;
+      border-radius: 3.5rem;
+      padding: clamp(2rem, 4vw, 4.5rem) clamp(1.5rem, 6vw, 5.5rem);
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.35), transparent 55%),
+        radial-gradient(circle at 85% 80%, rgba(245, 220, 196, 0.4), transparent 45%),
+        linear-gradient(135deg, rgba(255, 249, 240, 0.95), rgba(227, 200, 173, 0.92));
+      border: 1px solid rgba(44, 24, 16, 0.12);
+      box-shadow: 0 25px 55px rgba(44, 24, 16, 0.2);
+      min-height: 560px;
+      overflow: hidden;
+    }
+
+    .orbit-map {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .orbit {
+      fill: none;
+      stroke: url(#orbit-stroke);
+      stroke-width: 3;
+      stroke-linecap: round;
+      stroke-dasharray: 14 18;
+      animation: orbitFlow 12s linear infinite;
+    }
+
+    .orbit-outer {
+      animation-duration: 16s;
+    }
+
+    .orbit-diagonal {
+      stroke: rgba(89, 58, 45, 0.35);
+      stroke-dasharray: 6 14;
+      animation-duration: 20s;
+    }
+
+    .flow-count {
+      font-family: var(--font-body);
+      font-size: 0.55rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      fill: rgba(44, 24, 16, 0.55);
+    }
+
+    .diagram-node {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      background: rgba(255, 250, 240, 0.95);
+      border: 1px solid rgba(93, 64, 55, 0.18);
+      border-radius: 2.75rem;
+      padding: 1.5rem;
+      box-shadow: 0 15px 30px rgba(44, 24, 16, 0.12);
+      z-index: 1;
+    }
+
+    .diagram-node strong {
+      font-family: var(--font-body);
+      letter-spacing: 0.35em;
+      font-size: 1.05rem;
+      text-transform: uppercase;
+    }
+
+    .node-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.45em;
+      text-transform: uppercase;
+      color: rgba(93, 64, 55, 0.6);
+      margin-bottom: 0.15rem;
+    }
+
+    .hub {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0.85rem;
+      width: auto;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      padding: 0;
+    }
+
+    .hub strong {
+      font-size: 0.65rem;
+      letter-spacing: 0.55em;
+      color: rgba(44, 24, 16, 0.7);
+      position: absolute;
+      bottom: -2.4rem;
+      left: 50%;
+      transform: translate(-50%, 0.8rem);
+      opacity: 0;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      pointer-events: none;
+    }
+
+    .hub:hover strong,
+    .hub:focus-within strong {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+
+    .hub-trans {
+      left: clamp(1rem, 4vw, 3.5rem);
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .hub-multi {
+      right: clamp(1rem, 4vw, 3.5rem);
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .satellite {
+      width: clamp(260px, 32vw, 360px);
+      text-align: left;
+    }
+
+    .sat-production {
+      top: 18%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .sat-relevo {
+      bottom: 12%;
+      left: 50%;
+      transform: translate(-50%, 50%);
+    }
+
+    .node-subtitle {
+      font-size: 0.72rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: rgba(93, 64, 55, 0.65);
+      margin-bottom: 0.3rem;
+    }
+
+    .satellite h2 {
+      font-family: var(--font-body);
+      font-size: 1.2rem;
+      color: var(--color-primary);
+      margin: 0 0 0.15rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+    }
+
+    .node-tags {
+      margin: 0;
+      font-size: 0.78rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: rgba(44, 24, 16, 0.65);
+    }
+
+    .hub-ring {
+      width: clamp(220px, 17vw, 340px);
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      border: 2px solid rgba(93, 64, 55, 0.15);
+      background:
+        radial-gradient(circle at 40% 30%, rgba(255, 255, 255, 0.5), transparent 70%),
+        rgba(255, 247, 235, 0.9);
+      box-shadow: 0 20px 40px rgba(44, 24, 16, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem;
+    }
+
+    .image-slot {
+      width: 100%;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      border: 2px dashed rgba(93, 64, 55, 0.3);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .image-slot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 999px;
+    }
+
+    .image-slot p {
+      font-size: 0.7rem;
+      line-height: 1.4;
+      text-transform: none;
+      color: rgba(44, 24, 16, 0.7);
+      text-align: center;
+      display: none;
+    }
+
+    .image-slot.is-missing p {
+      display: block;
+    }
+
+    .insight-panel {
+      border-radius: 1.75rem;
+      border: 1px solid rgba(93, 64, 55, 0.16);
+      padding: 1.5rem;
+      background: rgba(255, 250, 240, 0.85);
+      box-shadow: 0 10px 24px rgba(44, 24, 16, 0.08);
+    }
+
+    .flow-sequence {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .flow-sequence li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px dashed rgba(93, 64, 55, 0.2);
+    }
+
+    .flow-sequence li:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .sequence-index {
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      letter-spacing: 0.3em;
+      color: rgba(93, 64, 55, 0.8);
+    }
+
+    .sequence-title {
+      font-size: 0.9rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 0.2rem;
+      color: var(--color-primary);
+    }
+
+    .sequence-detail {
+      margin: 0;
+      font-size: 0.95rem;
+      color: rgba(44, 24, 16, 0.85);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 992px) {
+      .system-diagram {
+        padding: 2rem 1.5rem 3rem;
+        min-height: auto;
+      }
+      .orbit-map {
+        opacity: 0.2;
+      }
+      .diagram-node {
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;
+        bottom: auto;
+        transform: none;
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+      .hub {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hub-ring {
+        width: min(80vw, 320px);
+      }
+      .hub strong {
+        letter-spacing: 0.4em;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .orbit {
+        animation: none;
+      }
+    }
+
+    @keyframes orbitFlow {
+      to {
+        stroke-dashoffset: -260;
+      }
+    }
+
+    @media (hover: none) {
+      .hub strong {
+        opacity: 1;
+        transform: translate(-50%, 0);
+      }
+    }
+  </style>
+</Layout>

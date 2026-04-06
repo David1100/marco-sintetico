@@ -1,32 +1,92 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+const modules = [
+  { href: "/apropiacion-productividad-social", title: "Apropiación", subtitle: "Productividad Social", icon: "eco", color: "primary" },
+  { href: "/productividad", title: "Productividad", subtitle: "Social", icon: "show_chart", color: "primary" },
+  { href: "/capital-cultural", title: "Capital", subtitle: "Cultural", icon: "auto_awesome", color: "primary" },
+  { href: "/capital-social", title: "Capital", subtitle: "Social", icon: "groups", color: "primary" },
+  { href: "/cibernetica-artificial", title: "Cibernética", subtitle: "Artificial", icon: "schema", color: "primary" },
+  { href: "/aptitud-trabajo", title: "Aptitud", subtitle: "Trabajo", icon: "work", color: "primary" },
+  { href: "/cibernetica-social", title: "Cibernética", subtitle: "Social", icon: "settings_suggest", color: "primary" },
+  { href: "/tecnologia-propia", title: "Tecnología", subtitle: "Propia", icon: "build", color: "secondary" },
+  { href: "/tecnologia-punta-propia", title: "Tecnología", subtitle: "Punta", icon: "rocket_launch", color: "secondary" },
+  { href: "/planificacion-sintesis-economica", title: "Planificación", subtitle: "Síntesis", icon: "local_shipping", color: "secondary" },
+  { href: "/genialidad", title: "Genialidad", subtitle: "Innovación", icon: "psychology", color: "secondary" },
+  { href: "/coexistencia-pacifica", title: "Coexistencia", subtitle: "Pacífica", icon: "handshake", color: "secondary" },
+  { href: "/reciclaje-residual", title: "Reciclaje", subtitle: "Residual", icon: "recycling", color: "secondary" },
+  { href: "/reciclaje-cibernetico", title: "Reciclaje", subtitle: "Cibernético", icon: "autorenew", color: "secondary" },
+  { href: "/coordinacion-transformacion", title: "Coordinación", subtitle: "Transformación", icon: "sync", color: "secondary" },
+  { href: "/practica-pervivencia", title: "Práctica", subtitle: "Pervivencia", icon: "history", color: "secondary" },
+  { href: "/espacio-natural-exuberancia", title: "Espacio Natural", subtitle: "Exuberancia", icon: "park", color: "secondary" },
+  { href: "/las-nuevas-fronteras", title: "Las Nuevas", subtitle: "Fronteras", icon: "terrain", color: "secondary" },
+  { href: "/tributario-capitalista", title: "La Contradicción", subtitle: "Clima · Suelo", icon: "water_drop", color: "secondary" },
+  { href: "/social-poder-politico", title: "Espacio Social", subtitle: "Poder Político", icon: "groups_3", color: "secondary" },
+  { href: "/proceso-cibernetico", title: "Proceso Cibernético", subtitle: "Paradigma Microelectrónico", icon: "precision_manufacturing", color: "secondary" },
+  { href: "/transnacionalizacion", title: "Transnacionalización", subtitle: "Circulación", icon: "public", color: "secondary" },
+  { href: "/convergencia", title: "Convergencia", subtitle: "Creativa", icon: "hub", color: "secondary" },
+  { href: "/creatividad", title: "Creatividad", subtitle: "Innovación", icon: "lightbulb", color: "secondary" },
+  { href: "/eficacia-exuberancia", title: "Eficacia", subtitle: "Exuberancia", icon: "trending_up", color: "secondary" },
+  { href: "/gestion-social", title: "Gestión", subtitle: "Social", icon: "manage_accounts", color: "tertiary" },
+  { href: "/simbiosis-economica", title: "Simbiosis", subtitle: "Económica", icon: "account_balance", color: "tertiary" },
+  { href: "/sobredeterminacion-cultura", title: "Sobredeterminación", subtitle: "Cultura", icon: "psychology", color: "tertiary" },
+  { href: "/sobredeterminacion", title: "Sobredeterminación", subtitle: "Teoría", icon: "account_tree", color: "tertiary" },
+  { href: "/sintesis-paradigma-cibernetico", title: "Síntesis", subtitle: "Cibernética", icon: "memory", color: "tertiary" },
+];
+
+const colorMap = {
+  primary: "bg-primary/10 text-primary",
+  secondary: "bg-secondary/10 text-secondary",
+  tertiary: "bg-tertiary/10 text-tertiary",
+};
 ---
 
-<Layout title="Marco Sintético - Inicio">
-  <!-- Hero Section -->
-  <div class="min-h-[70vh] flex flex-col items-center justify-center text-center animate-fade-in">
-    <div class="mb-8">
-      <span class="material-symbols-outlined text-primary text-6xl mb-4">eco</span>
-    </div>
-    
-    <h1 class="font-headline font-extrabold text-5xl text-primary tracking-tight mb-4" style="text-shadow: 2px 2px 4px rgba(255,255,255,0.8);">
+<Layout title="Marco Sintético - Dashboard">
+  <!-- Header -->
+  <header class="w-full max-w-7xl pt-8 pb-6 flex flex-col items-center text-center animate-fade-in">
+    <h1 class="font-headline font-extrabold text-4xl md:text-5xl text-primary tracking-tight mb-2">
       Marco Sintético
     </h1>
-    
-    <p class="font-body text-xl text-on-surface-variant max-w-2xl mb-8" style="text-shadow: 1px 1px 2px rgba(255,255,255,0.6);">
-      La apropiación de la productividad social
+    <p class="font-body text-lg text-on-surface-variant max-w-xl">
+      Exploración visual de la productividad social
     </p>
-    
-    <p class="text-lg text-on-surface-variant max-w-3xl mb-12" style="text-shadow: 1px 1px 2px rgba(255,255,255,0.6);">
-      Ecosistema visual para articular la comprensión y análisis de la productividad social desde una perspectiva relacional
-    </p>
-    
-    <a 
-      href="/apropiacion-productividad-social"
-      class="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-full font-medium hover:bg-primary/90 transition-all hover:scale-105 shadow-lg"
-    >
-      Comenzar exploración
-      <span class="material-symbols-outlined">arrow_forward</span>
-    </a>
-  </div>
+  </header>
+
+  <!-- Modules Grid -->
+  <main class="w-full max-w-6xl mx-auto px-4 pb-12">
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-4">
+      {modules.map((module, index) => (
+        <a 
+          href={module.href}
+          class={`group flex flex-col items-center justify-center p-4 md:p-6 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-slide-up ${colorMap[module.color as keyof typeof colorMap]}`}
+          style={`animation-delay: ${index * 0.05}s; opacity: 0;`}
+        >
+          <div class={`w-12 h-12 md:w-14 md:h-14 rounded-full ${colorMap[module.color as keyof typeof colorMap]} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300`}>
+            <span class={`material-symbols-outlined text-2xl md:text-3xl`} style="font-variation-settings: 'FILL' 1;">
+              {module.icon}
+            </span>
+          </div>
+          <h3 class="font-headline font-bold text-xs md:text-sm text-center leading-tight">
+            {module.title}
+          </h3>
+          <p class="font-body text-[10px] md:text-xs text-on-surface-variant text-center mt-1">
+            {module.subtitle}
+          </p>
+        </a>
+      ))}
+    </div>
+  </main>
+
+  <!-- Quick Actions -->
+  <section class="w-full max-w-2xl mx-auto px-4 pb-12">
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a 
+        href="/apropiacion-productividad-social"
+        class="inline-flex items-center justify-center gap-2 bg-primary text-white px-6 py-3 rounded-full font-medium hover:bg-primary/90 transition-all hover:scale-105 shadow-md"
+      >
+        <span class="material-symbols-outlined">play_arrow</span>
+        Comenzar
+      </a>
+    </div>
+  </section>
 </Layout>

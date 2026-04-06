@@ -1,0 +1,152 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageNav from "../components/PageNav.astro";
+---
+
+<Layout title="Cibernética Social - La Revolución del Ciberneta">
+  <!-- Header Section -->
+  <section class="text-center mb-12 max-w-5xl animate-fade-in">
+    <span class="inline-flex items-center px-4 py-1.5 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase bg-primary-fixed text-on-primary-fixed mb-6 animate-slide-up" style="animation-delay: 0s; opacity: 0;">
+      Lámina Técnica 01
+    </span>
+    <h2 class="font-body text-5xl md:text-7xl font-extrabold text-primary tracking-tight mb-6 leading-[1.1] animate-slide-up" style="animation-delay: 0.1s; opacity: 0;">
+      La Cibernética Social: <br/>
+      <span class="text-on-surface-variant font-light italic">Paso histórico del Alfabeto al Ciberneta</span>
+    </h2>
+    <p class="text-on-surface-variant text-lg md:text-xl leading-relaxed max-w-3xl mx-auto animate-slide-up" style="animation-delay: 0.2s; opacity: 0;">
+      Visualización sistémica del flujo de productividad social, entropía y retroalimentación humana dentro del ecosistema cibernético moderno.
+    </p>
+  </section>
+
+  <!-- Diagram Canvas -->
+  <div class="relative w-full max-w-5xl aspect-square md:aspect-[16/10] mx-auto mb-12">
+    <!-- SVG Connections -->
+    <svg class="absolute w-full h-full pointer-events-none opacity-20" viewbox="0 0 1000 625">
+      <defs>
+      <lineargradient id="emerald-grad" x1="0%" x2="100%" y1="0%" y2="0%">
+        <stop offset="0%" style="stop-color:#10b981; stop-opacity:1"></stop>
+        <stop offset="100%" style="stop-color:#475569; stop-opacity:1"></stop>
+      </lineargradient>
+      </defs>
+      <circle class="stroke-slate-200" cx="500" cy="312.5" fill="none" r="260" stroke-dasharray="10 10" stroke-width="1.5"></circle>
+      <path d="M500,52 Q760,100 850,312" fill="none" stroke="url(#emerald-grad)" stroke-dasharray="8 4" stroke-width="2"></path>
+      <path d="M850,312 Q760,525 500,573" fill="none" stroke="url(#emerald-grad)" stroke-dasharray="8 4" stroke-width="2"></path>
+      <path d="M500,573 Q240,525 150,312" fill="none" stroke="url(#emerald-grad)" stroke-dasharray="8 4" stroke-width="2"></path>
+      <path d="M150,312 Q240,100 500,52" fill="none" stroke="url(#emerald-grad)" stroke-dasharray="8 4" stroke-width="2"></path>
+    </svg>
+
+    <!-- CENTRAL NÚCLEO -->
+    <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-36 h-36 md:w-48 md:h-48 animate-slide-up" style="animation-delay: 0.25s; opacity: 0;">
+      <div class="w-full h-full rounded-full flex items-center justify-center p-1 bg-white shadow-[0_0_50px_rgba(16,185,129,0.3)] border-4 border-outline-variant">
+        <div class="relative w-full h-full rounded-full overflow-hidden">
+          <img alt="Núcleo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAX7nC21SPJ0GZE8Y7ZXqkTjguus06EN12bTgP7r7aIuPpRoAqraJbJF4GMhi-LjbtMdtg8cdpNrAm-RkJ6vt4iSbTpf92yBlQxUgHyQjxUFTAi5eOuBfl1M-FcjLVYJpictbeDvtHmXsAyHNVvfezF69ztetgoXmFMIp7X3KNywmAK8opgEAj_THLbm7x4MUC-mHVKdVQjqtaTuTUgHSdlVrzT3g0MJevMJiPSlcaviboFNlvIzvoVX4RaZp9ndq2xWmoScD3ID3_Q" />
+          <div class="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-t from-primary/70 to-transparent rounded-full">
+            <span class="font-body font-black text-slate-700 text-sm md:text-base uppercase tracking-widest">NÚCLEO</span>
+            <p class="text-[8px] text-white font-bold uppercase tracking-tight">Flujo de Información</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12 o'clock: EL MODO (top) -->
+    <div class="absolute left-1/2 -translate-x-1/2 top-[0%] z-20 animate-slide-up" style="animation-delay: 0.3s; opacity: 0;">
+      <div class="bg-primary text-white w-28 h-28 md:w-36 md:h-36 rounded-2xl flex flex-col items-center justify-center shadow-xl border-4 border-white diagram-node">
+        <span class="material-symbols-outlined text-3xl md:text-4xl mb-1 md:mb-2 opacity-80">developer_board</span>
+        <span class="font-body font-bold text-xs md:text-sm tracking-widest uppercase">EL MODO</span>
+      </div>
+      <div class="glass-card px-3 py-1.5 rounded-lg border border-slate-200 shadow-sm mt-2 mx-auto w-fit">
+        <span class="text-[9px] font-bold text-slate-600 uppercase tracking-[0.15em] whitespace-nowrap">LA ENERGÍA PERDIDA</span>
+      </div>
+    </div>
+
+    <!-- 3 o'clock: LA FORMA (right) -->
+    <div class="absolute right-[5%] top-1/2 -translate-y-1/2 z-20 flex flex-col items-center animate-slide-up" style="animation-delay: 0.35s; opacity: 0;">
+      <div class="bg-secondary text-white w-24 h-24 md:w-32 md:h-32 rounded-full flex flex-col items-center justify-center shadow-lg border-4 border-white diagram-node">
+        <span class="material-symbols-outlined text-2xl md:text-3xl mb-1 opacity-90">category</span>
+        <span class="font-body font-semibold text-[10px] md:text-xs tracking-wider uppercase">LA FORMA</span>
+      </div>
+      <div class="glass-card px-3 py-1.5 rounded-lg border border-slate-200 shadow-sm mt-2">
+        <span class="text-[8px] font-bold text-slate-600 uppercase tracking-wider">LOS DESPERDICIOS</span>
+      </div>
+      <div class="bg-tertiary text-white w-20 h-20 md:w-24 md:h-24 rounded-full flex flex-col items-center justify-center shadow-md border-4 border-white opacity-90 mt-2 diagram-node">
+        <span class="material-symbols-outlined text-xl md:text-2xl mb-1 opacity-70">delete_outline</span>
+        <span class="font-body font-semibold text-[9px] md:text-[10px] tracking-wider uppercase">DESECHOS</span>
+      </div>
+    </div>
+
+    <!-- 6 o'clock: ENTROPÍA (bottom) -->
+    <div class="absolute left-1/2 -translate-x-1/2 -bottom-[18%] z-20 flex flex-col items-center animate-slide-up" style="animation-delay: 0.4s; opacity: 0;">
+      <div class="glass-card px-3 py-1.5 rounded-full border border-slate-200 shadow-sm mb-2">
+        <span class="text-[8px] md:text-[9px] font-extrabold text-primary uppercase tracking-[0.2em] whitespace-nowrap">LA RETROALIMENTACIÓN HUMANA</span>
+      </div>
+      <div class="bg-orange-500 text-white w-24 h-24 md:w-32 md:h-32 rounded-2xl flex flex-col items-center justify-center shadow-lg border-4 border-white diagram-node">
+        <span class="material-symbols-outlined text-2xl md:text-3xl mb-1">trending_down</span>
+        <span class="font-body font-semibold text-[10px] md:text-xs tracking-wider uppercase">ENTROPÍA</span>
+      </div>
+      <div class="bg-surface-container text-slate-custom w-20 h-20 md:w-24 md:h-24 rounded-2xl flex flex-col items-center justify-center shadow-md border-2 border-slate-200 mt-2 diagram-node">
+        <span class="material-symbols-outlined text-xl md:text-2xl mb-1">history_edu</span>
+        <span class="font-body font-semibold text-[9px] md:text-[10px] tracking-wider uppercase">CRÓNICOS</span>
+      </div>
+    </div>
+
+    <!-- 9 o'clock: LA MANERA (left) -->
+    <div class="absolute left-[5%] top-1/2 -translate-y-1/2 z-20 flex flex-col items-center animate-slide-up" style="animation-delay: 0.45s; opacity: 0;">
+      <div class="bg-slate-800 text-white w-28 h-28 md:w-36 md:h-36 rounded-2xl flex flex-col items-center justify-center shadow-2xl border-4 border-white diagram-node">
+        <span class="material-symbols-outlined text-3xl md:text-4xl mb-1 md:mb-2 opacity-80">architecture</span>
+        <span class="font-body font-bold text-xs md:text-sm tracking-widest uppercase">LA MANERA</span>
+      </div>
+      <div class="glass-card px-3 py-1.5 rounded-lg border border-slate-200 shadow-sm mt-2">
+        <span class="text-[9px] font-bold text-slate-600 uppercase tracking-[0.15em]">LOS POBRES DE YAVE</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Descriptive Bento Grid -->
+  <section class="w-full grid grid-cols-1 md:grid-cols-3 gap-8 mt-48">
+    <div class="bg-white p-8 md:p-10 rounded-2xl border border-outline-variant shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300 group animate-slide-up" style="animation-delay: 0.5s; opacity: 0;">
+      <div class="w-12 h-12 md:w-14 md:h-14 bg-primary-fixed rounded-2xl flex items-center justify-center text-on-primary-fixed mb-6 group-hover:scale-110 transition-transform">
+        <span class="material-symbols-outlined text-2xl md:text-3xl">cached</span>
+      </div>
+      <h3 class="font-body font-extrabold text-xl md:text-2xl text-on-surface mb-3">Ciclo del Ciberneta</h3>
+      <p class="text-on-surface-variant text-sm md:text-[15px] leading-relaxed">De la escritura alfabética lineal a la gestión dinámica de sistemas complejos. El modo y la manera convergen en una danza de optimización energética constante.</p>
+    </div>
+    <div class="bg-white p-8 md:p-10 rounded-2xl border border-outline-variant shadow-sm hover:shadow-xl hover:border-secondary/30 transition-all duration-300 group animate-slide-up" style="animation-delay: 0.55s; opacity: 0;">
+      <div class="w-12 h-12 md:w-14 md:h-14 bg-secondary-fixed rounded-2xl flex items-center justify-center text-on-secondary-fixed mb-6 group-hover:scale-110 transition-transform">
+        <span class="material-symbols-outlined text-2xl md:text-3xl">waves</span>
+      </div>
+      <h3 class="font-body font-extrabold text-xl md:text-2xl text-on-surface mb-3">Gestión de Entropía</h3>
+      <p class="text-on-surface-variant text-sm md:text-[15px] leading-relaxed">El reconocimiento de los desechos y la entropía no como fallos, sino como subproductos naturales que requieren retroalimentación humana para su reintegración.</p>
+    </div>
+    <div class="bg-white p-8 md:p-10 rounded-2xl border border-outline-variant shadow-sm hover:shadow-xl hover:border-tertiary/30 transition-all duration-300 group animate-slide-up" style="animation-delay: 0.6s; opacity: 0;">
+      <div class="w-12 h-12 md:w-14 md:h-14 bg-surface-container-highest rounded-2xl flex items-center justify-center text-on-surface mb-6 group-hover:scale-110 transition-transform">
+        <span class="material-symbols-outlined text-2xl md:text-3xl">monitoring</span>
+      </div>
+      <h3 class="font-body font-extrabold text-xl md:text-2xl text-on-surface mb-3">Productividad Social</h3>
+      <p class="text-on-surface-variant text-sm md:text-[15px] leading-relaxed">Un modelo matemático-social que pondera la eficiencia productiva contra el bienestar humano y la sostenibilidad energética del ecosistema.</p>
+    </div>
+  </section>
+
+  <!-- Contextual Detailed Section -->
+  <section class="mt-12 w-full flex flex-col lg:flex-row gap-8 lg:gap-20 items-center bg-tertiary text-white rounded-[2.5rem] p-8 md:p-16 shadow-2xl relative overflow-hidden animate-slide-up" style="animation-delay: 0.65s; opacity: 0;">
+    <div class="absolute -top-24 -right-24 w-96 h-96 bg-secondary/10 rounded-full blur-[100px]"></div>
+    <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-white/5 rounded-full blur-[80px]"></div>
+    <div class="flex-1 space-y-6 relative z-10">
+      <div class="inline-block px-4 py-1 rounded-full bg-secondary/20 border border-secondary/30 text-secondary-fixed text-[10px] font-bold uppercase tracking-widest">
+        Enfoque Sistémico
+      </div>
+      <h4 class="font-body text-3xl md:text-4xl md:text-5xl font-extrabold leading-tight">La Intervención Humana</h4>
+      <p class="text-on-tertiary text-base md:text-lg leading-relaxed font-light">
+        En el corazón del diagrama, la retroalimentación no es algorítmica sino existencial. La transición del alfabeto (estático) al ciberneta (dinámico) exige una nueva alfabetización sistémica donde el individuo comprende su rol como modulador de energía y reductor de entropía social.
+      </p>
+    </div>
+    <div class="flex-1 w-full max-w-xl aspect-video rounded-3xl overflow-hidden shadow-2xl relative border border-white/10 group">
+      <img alt="Colaboración" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8Hr3LOcJ3p3gbnKhE_bc7fwvTG-pDBWGsKUcg3_9cfly4BfE050f3qnkBz6IuwHqGFGjlvO48abjo_4K9LIzYbQdbtGhFq_1183osMP07hE2knOGgxBh3ds4XHHzV0Mqvx6zYcwj7gvork4nePjalfJ0JXEnMY5i7RRWncakL6RHanNv95urBxsbIRxy43HBV0sjgoitC8_BFDY5zPs3pjQA3bUaF5jqqzo82InhOlt2km7tHGR0zPorlmgsVaPZUdAvgVblw7If7" />
+      <div class="absolute inset-0 bg-tertiary/40 mix-blend-multiply transition-opacity group-hover:opacity-20"></div>
+    </div>
+  </section>
+
+  <PageNav
+    prev={{ href: "/coordinacion-transformacion", label: "Coordinación Sistémica", sublabel: "Equilibrio" }}
+    next={{ href: "/", label: "Inicio", sublabel: "Dashboard" }}
+  />
+</Layout>
