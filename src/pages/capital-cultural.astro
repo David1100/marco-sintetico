@@ -28,11 +28,17 @@ import PageNav from "../components/PageNav.astro";
           <path d="M850,500 A350,350 0 0,1 500,850" id="path-outer-bottom-right"></path>
           <path d="M500,850 A350,350 0 0,1 150,500" id="path-outer-bottom-left"></path>
           <path d="M150,500 A350,350 0 0,1 500,150" id="path-outer-top-left"></path>
+          <!-- Outer Paths clockwise for text -->
+          <path d="M500,850 A350,350 0 0,0 850,500" id="path-outer-bottom-right-cw"></path>
+          <path d="M150,500 A350,350 0 0,0 500,850" id="path-outer-bottom-left-cw"></path>
           <!-- Inner Paths -->
           <path d="M500,250 A250,250 0 0,1 750,500" id="path-inner-top-right"></path>
           <path d="M750,500 A250,250 0 0,1 500,750" id="path-inner-bottom-right"></path>
           <path d="M500,750 A250,250 0 0,1 250,500" id="path-inner-bottom-left"></path>
           <path d="M250,500 A250,250 0 0,1 500,250" id="path-inner-top-left"></path>
+          <!-- Inner Paths clockwise for text -->
+          <path d="M500,750 A250,250 0 0,0 750,500" id="path-inner-bottom-right-cw"></path>
+          <path d="M250,500 A250,250 0 0,0 500,750" id="path-inner-bottom-left-cw"></path>
         </defs>
         <!-- Circles for the diagram -->
         <circle cx="500" cy="500" fill="none" r="350" stroke="#cbd5e1" stroke-width="1.5" class="animate-flow" style="animation-delay: 0.3s;"></circle>
@@ -51,14 +57,14 @@ import PageNav from "../components/PageNav.astro";
         <text class="fill-slate-500 font-bold uppercase animate-fade-in" style="font-size: 14px; letter-spacing: 2px; animation-delay: 1.3s;">
           <textpath href="#path-outer-top-left" startoffset="30%">POLÍTICA</textpath>
           <textpath href="#path-outer-top-right" startoffset="30%">FILOSOFÍA</textpath>
-          <textpath href="#path-outer-bottom-right" startoffset="30%">OCIO CREADOR</textpath>
-          <textpath href="#path-outer-bottom-left" startoffset="30%">AUTOMATIZACIÓN</textpath>
+          <textpath href="#path-outer-bottom-right-cw" startoffset="30%">OCIO CREADOR</textpath>
+          <textpath href="#path-outer-bottom-left-cw" startoffset="30%">AUTOMATIZACIÓN</textpath>
         </text>
         <text class="fill-slate-600 font-bold uppercase animate-fade-in" style="font-size: 14px; letter-spacing: 2px; animation-delay: 1.4s;">
           <textpath href="#path-inner-top-left" startoffset="50%">TEOLOGÍA</textpath>
           <textpath href="#path-inner-top-right" startoffset="50%">UTOPÍA</textpath>
-          <textpath href="#path-inner-bottom-right" startoffset="50%">LITERATURA</textpath>
-          <textpath href="#path-inner-bottom-left" startoffset="50%">REALIDAD</textpath>
+          <textpath href="#path-inner-bottom-right-cw" startoffset="50%">LITERATURA</textpath>
+          <textpath href="#path-inner-bottom-left-cw" startoffset="50%">REALIDAD</textpath>
         </text>
       </svg>
       
@@ -79,7 +85,7 @@ import PageNav from "../components/PageNav.astro";
       </div>
       
       <!-- Right: Productividad -->
-      <div class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 z-30 animate-slide-up" style="animation-delay: 0.6s; opacity: 0;">
+      <div class="absolute -right-42 top-1/2 -translate-y-1/3 translate-x-2 z-30 animate-slide-up" style="animation-delay: 0.6s; opacity: 0;">
         <div class="bg-surface-container-lowest px-6 md:px-8 py-2 md:py-3 rounded-full shadow-lg border-2 border-primary hover-lift cursor-pointer">
           <span class="font-body font-black text-primary tracking-[0.15em] text-sm md:text-lg">PRODUCTIVIDAD</span>
         </div>
@@ -96,7 +102,7 @@ import PageNav from "../components/PageNav.astro";
       </div>
       
       <!-- Left: Gestion -->
-      <div class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 z-30 animate-slide-up" style="animation-delay: 0.8s; opacity: 0;">
+      <div class="absolute -left-24 top-1/2 -translate-y-1/2 -translate-x-2 z-30 animate-slide-up" style="animation-delay: 0.8s; opacity: 0;">
         <div class="bg-surface-container-lowest px-6 md:px-8 py-2 md:py-3 rounded-full shadow-lg border-2 border-primary hover-lift cursor-pointer">
           <span class="font-body font-black text-primary tracking-[0.15em] text-sm md:text-lg">GESTIÓN</span>
         </div>

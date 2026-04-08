@@ -13,8 +13,8 @@ import PageNav from "../components/PageNav.astro";
       <p class="diagram-heading">REALIDAD CULTURAL</p>
       <div class="diagram-circles">
         <article class="bubble">
-          <div class="bubble-slot" data-path="/images/pagina18/accion-social.png">
-            <img src="/images/pagina18/accion-social.png" alt="La acción social" loading="lazy" decoding="async" onerror="this.remove();" />
+          <div class="bubble-slot" data-path="/images/social-poder-politico/accion-social.png">
+            <img src="/images/social-poder-politico/accion-social.png" alt="La acción social" loading="lazy" decoding="async" onerror="this.remove();" />
           </div>
           <p class="bubble-caption">LA ACCIÓN SOCIAL :</p>
         </article>
@@ -22,8 +22,8 @@ import PageNav from "../components/PageNav.astro";
         <span class="arrow">➜</span>
 
         <article class="bubble">
-          <div class="bubble-slot" data-path="/images/pagina18/region-ecologica.png">
-            <img src="/images/pagina18/region-ecologica.png" alt="Región ecológica" loading="lazy" decoding="async" onerror="this.remove();" />
+          <div class="bubble-slot" data-path="/images/social-poder-politico/region-ecologica.png">
+            <img src="/images/social-poder-politico/region-ecologica.png" alt="Región ecológica" loading="lazy" decoding="async" onerror="this.remove();" />
           </div>
           <p class="bubble-caption">REGIÓN ECOLÓGICA</p>
         </article>
@@ -31,8 +31,8 @@ import PageNav from "../components/PageNav.astro";
         <span class="arrow">➜</span>
 
         <article class="bubble">
-          <div class="bubble-slot" data-path="/images/pagina18/control-politico.png">
-            <img src="/images/pagina18/control-politico.png" alt="El control político" loading="lazy" decoding="async" onerror="this.remove();" />
+          <div class="bubble-slot" data-path="/images/social-poder-politico/control-politico.png">
+            <img src="/images/social-poder-politico/control-politico.png" alt="El control político" loading="lazy" decoding="async" onerror="this.remove();" />
           </div>
           <p class="bubble-caption">EL CONTROL POLÍTICO :</p>
         </article>
@@ -112,9 +112,9 @@ import PageNav from "../components/PageNav.astro";
     }
 
     .bubble-slot {
-      width: min(260px, 100%);
-      aspect-ratio: 1 / 1;
-      border-radius: 999px;
+      width: min(280px, 100%);
+      aspect-ratio: 4 / 3;
+      border-radius: 1rem;
       border: 1px dashed rgba(44, 24, 16, 0.3);
       display: flex;
       align-items: center;
@@ -127,6 +127,7 @@ import PageNav from "../components/PageNav.astro";
       width: 100%;
       height: 100%;
       object-fit: cover;
+      border-radius: 1rem;
     }
 
     .bubble-caption {

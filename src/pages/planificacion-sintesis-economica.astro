@@ -210,10 +210,10 @@ const metrics = [
       box-shadow: 0 20px 45px -35px rgba(0,0,0,0.5);
     }
     .stage-circle {
-      width: 190px;
-      height: 190px;
+      width: 100%;
+      height: 180px;
       margin: 0 auto 1rem;
-      border-radius: 50%;
+      border-radius: 1rem;
       background: rgba(255,255,255,0.5);
       display: flex;
       align-items: center;
@@ -243,12 +243,13 @@ const metrics = [
     .image-slot--has-image {
       padding: 0;
       background: transparent;
+      border-radius: 1rem;
     }
     .image-slot--has-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: inherit;
+      border-radius: 1rem;
       display: block;
     }
     .stage-label {
@@ -334,7 +335,6 @@ const metrics = [
 
     @media (max-width: 1024px) {
       .stage-circle {
-        width: 150px;
         height: 150px;
       }
       .diagram-lines {

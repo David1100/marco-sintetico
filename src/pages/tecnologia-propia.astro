@@ -83,8 +83,10 @@ const exchanges = [
       <p>Articula desarrollo y recursos</p>
     </div>
     <div class="culture-core">
-      <span>Cultura</span>
-      <p>Memoria viva que regula ambos polos</p>
+      <img src="/images/tecnologia-propia/cultura.png" alt="Cultura" />
+      <div class="culture-label">
+        <span>Cultura</span>
+      </div>
     </div>
 
     <svg class="diagram-svg" viewBox="0 0 1200 600" fill="none">
@@ -250,17 +252,30 @@ const exchanges = [
       text-align: center;
       color: #fff;
       box-shadow: 0 20px 40px -25px rgba(0,0,0,0.6);
+      overflow: hidden;
     }
-    .culture-core span {
+    .culture-core img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      position: absolute;
+      inset: 0;
+    }
+    .culture-label {
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      padding: 0.4rem 1rem;
+      border-radius: 2rem;
+      margin-top: auto;
+      margin-bottom: 1.5rem;
+    }
+    .culture-label span {
       font-family: var(--font-headline);
-      font-size: 1.5rem;
-      letter-spacing: 0.2em;
-    }
-    .culture-core p {
-      font-size: 0.85rem;
-      opacity: 0.75;
-      max-width: 140px;
-      margin-top: 0.5rem;
+      font-size: 1rem;
+      letter-spacing: 0.15em;
+      color: #fff;
     }
     .diagram-svg {
       position: absolute;
