@@ -4,10 +4,10 @@ import PageNav from "../components/PageNav.astro";
 ---
 
 <Layout title="Equilibrio Cívico - Arquitectura Sistémica">
-  <main class="relative w-full max-w-7xl mx-auto px-4 py-12 md:py-20 flex flex-col items-center justify-center min-h-screen">
+  <main class="relative w-full max-w-7xl mx-auto px-4 py-8 md:py-20 flex flex-col items-center justify-center min-h-screen">
     <!-- Header -->
-    <header class="w-full text-center mb-36 relative z-10 animate-fade-in">
-      <h1 class="font-body text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-primary mb-4 animate-slide-up" style="animation-delay: 0s; opacity: 0;">
+    <header class="w-full text-center mb-8 md:mb-36 relative z-10 animate-fade-in">
+      <h1 class="font-body text-3xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-primary mb-4 animate-slide-up" style="animation-delay: 0s; opacity: 0;">
         Equilibrio Cívico
       </h1>
       <p class="font-body text-tertiary uppercase tracking-widest text-sm font-semibold opacity-80 animate-slide-up" style="animation-delay: 0.1s; opacity: 0;">
@@ -16,28 +16,10 @@ import PageNav from "../components/PageNav.astro";
     </header>
 
     <!-- Main Diagram -->
-    <section class="relative w-full aspect-[4/3] md:aspect-[16/9] flex items-center justify-center">
-      <!-- SVG Arrows -->
-      <svg class="absolute inset-0 w-full h-full pointer-events-none" fill="none" viewbox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
-        <path class="stroke-primary-container" d="M500 120 L500 240" marker-end="url(#arrowhead-primary)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-        <path class="stroke-tertiary" d="M280 300 Q350 300 420 300" marker-end="url(#arrowhead-tertiary)" stroke-dasharray="8 4" stroke-width="2"></path>
-        <path class="stroke-secondary" d="M720 450 Q600 450 540 380" marker-end="url(#arrowhead-secondary)" stroke-width="2"></path>
-        <defs>
-          <marker id="arrowhead-primary" markerHeight="7" markerWidth="10" orient="auto" refX="9" refY="3.5">
-            <polygon fill="#D2691E" points="0 0, 10 3.5, 0 7"></polygon>
-          </marker>
-          <marker id="arrowhead-tertiary" markerHeight="7" markerWidth="10" orient="auto" refX="9" refY="3.5">
-            <polygon fill="#6B4226" points="0 0, 10 3.5, 0 7"></polygon>
-          </marker>
-          <marker id="arrowhead-secondary" markerHeight="7" markerWidth="10" orient="auto" refX="9" refY="3.5">
-            <polygon fill="#2E8B57" points="0 0, 10 3.5, 0 7"></polygon>
-          </marker>
-        </defs>
-      </svg>
-
+    <section class="relative w-full aspect-square md:aspect-[16/9] flex items-center justify-center">
       <!-- Center Node: VALOR AGREGADO -->
       <div class="relative z-20 group animate-slide-up" style="animation-delay: 0.2s; opacity: 0;">
-        <div class="w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full bg-surface-container-lowest shadow-[0_0_40px_rgba(210,105,30,0.3)] p-2 transition-transform duration-500 group-hover:scale-105">
+        <div class="w-32 h-32 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full bg-surface-container-lowest shadow-[0_0_40px_rgba(210,105,30,0.3)] p-1 md:p-2 transition-transform duration-500 group-hover:scale-105">
           <div class="w-full h-full rounded-full overflow-hidden relative border-4 border-primary">
             <img class="w-full h-full object-cover" alt="Fábrica" src="/images/genialidad/valor_agregado.png" />
             <div class="absolute bottom-3 left-0 right-0 flex justify-center">

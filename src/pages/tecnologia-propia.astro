@@ -44,9 +44,9 @@ const exchanges = [
 ---
 
 <Layout title="Tecnología Propia - Marco Sintético">
-  <header class="w-full max-w-6xl mx-auto pt-10 pb-6 text-center animate-fade-in">
+  <header class="w-full max-w-6xl mx-auto pt-6 md:pt-10 pb-4 md:pb-6 text-center animate-fade-in">
     <span class="text-xs font-bold tracking-[0.4em] uppercase text-on-surface-variant block mb-4">Tecnología Propia</span>
-    <h1 class="font-headline font-extrabold text-4xl md:text-5xl text-primary tracking-tight mb-3">Maneras y Modos</h1>
+    <h1 class="font-headline font-extrabold text-3xl md:text-5xl text-primary tracking-tight mb-3">Maneras y Modos</h1>
     <p class="font-body text-base md:text-lg text-on-surface-variant max-w-3xl mx-auto">
       La cultura se convierte en vector tecnológico cuando enlaza apropiaciones comunitarias con recursos regenerativos.
       Esta página traslada el diagrama manuscrito a una interfaz dinámica que mantiene las mismas relaciones.
@@ -54,26 +54,35 @@ const exchanges = [
   </header>
 
   <!-- Diagram -->
-  <section class="tech-diagram w-full max-w-6xl mx-auto px-4 mb-14">
+  <section class="tech-diagram w-full max-w-20xl mx-auto px-4 mb-14">
+    <div class="diagram-title-outside">
+      <h3>Tecnologia <br> Intermedia</h3>
+    </div>
     <div class="halo halo-left">
+        <div class="halo-meta">
+        <h3>Apropiaciones</h3>
+      </div>
       <div class="halo-circle">
         <img class="animate-float" src="/images/tecnologia-propia/desarrollo.png" alt="Tecnología intermedia" />
       </div>
       <div class="halo-meta">
-        <p class="badge">Tecnología Intermedia</p>
-        <h3>Apropiaciones</h3>
+        <h3>Desarrollo</h3>
       </div>
     </div>
+    <div class="diagram-title-outside-right">
+      <h3>Tecnologia <br> Innovada</h3>
+    </div>
     <div class="halo halo-right">
+      <div class="halo-meta">
+        <h3>Subsistencia</h3>
+      </div>
       <div class="halo-circle">
         <img class="animate-float" src="/images/tecnologia-propia/teconologia.png" alt="Tecnología innovada" />
       </div>
       <div class="halo-meta">
-        <p class="badge">Tecnología Innovada</p>
-        <h3>Subsistencia</h3>
+        <h3>Recursos</h3>
       </div>
     </div>
-
     <div class="node node-top">
       <span class="label">Manera</span>
       <p>Cuida los flujos comunitarios</p>
@@ -91,14 +100,16 @@ const exchanges = [
 
     <svg class="diagram-svg" viewBox="0 0 1200 600" fill="none">
       <defs>
-        <marker id="arrow-rounded" markerHeight="10" markerWidth="16" orient="auto" refX="12" refY="5">
-          <path d="M0,0 L10,5 L0,10" fill="currentColor"></path>
+        <marker id="arrow-rounded" markerHeight="6" markerWidth="10" orient="auto" refX="7" refY="3">
+          <path d="M0,0 L10,3 L0,6" fill="#8B4513"></path>
         </marker>
       </defs>
-      <path d="M260 260 C500 140 700 140 940 260" stroke="currentColor" stroke-width="8" class="arc"></path>
-      <path d="M260 340 C500 460 700 460 940 340" stroke="currentColor" stroke-width="8" class="arc" marker-end="url(#arrow-rounded)"></path>
-      <path d="M600 420 Q520 520 440 420" stroke="currentColor" stroke-width="6" class="loop"></path>
-      <path d="M600 180 Q680 80 760 180" stroke="currentColor" stroke-width="6" class="loop" marker-end="url(#arrow-rounded)"></path>
+      <!-- Líneas superiores hacia Manera border (+50px unidas) -->
+      <path d="M260 260 Q330 120 390 95" stroke="currentColor" stroke-width="5" class="arc" marker-end="url(#arrow-rounded)"></path>
+      <path d="M940 260 Q870 120 810 95" stroke="currentColor" stroke-width="5" class="arc" marker-end="url(#arrow-rounded)"></path>
+      <!-- Líneas inferiores hacia Modo border (+50px unidas) -->
+      <path d="M260 340 Q330 480 390 505" stroke="currentColor" stroke-width="5" class="arc" marker-end="url(#arrow-rounded)"></path>
+      <path d="M940 340 Q870 480 810 505" stroke="currentColor" stroke-width="5" class="arc" marker-end="url(#arrow-rounded)"></path>
     </svg>
   </section>
 
@@ -209,10 +220,10 @@ const exchanges = [
       letter-spacing: 0.08em;
     }
     .halo-left {
-      left: 4%;
+      left: 10%;
     }
     .halo-right {
-      right: 4%;
+      right: 10%;
     }
     .node {
       position: absolute;
@@ -235,6 +246,31 @@ const exchanges = [
     }
     .node-top { top: 30px; }
     .node-bottom { bottom: 30px; }
+.diagram-title-outside, .diagram-title-outside-right {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: left;
+      color: #fff;
+      white-space: nowrap;
+    }
+    .diagram-title-outside {
+      left: 2%;
+    }
+    .diagram-title-outside-right {
+      right: 2%;
+      text-align: right;
+    }
+    .diagram-title-outside h3, .diagram-title-outside-right h3 {
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+    .diagram-title-outside h3 {
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
     .culture-core {
       position: absolute;
       top: 50%;

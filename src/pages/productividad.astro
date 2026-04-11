@@ -5,8 +5,8 @@ import PageNav from "../components/PageNav.astro";
 
 <Layout title="Productividad: Tecnología Punta Propia">
   <!-- Hero Section -->
-  <section class="mb-16 text-center animate-fade-in">
-    <h1 class="font-body font-extrabold text-4xl md:text-6xl text-primary tracking-tight mb-6 animate-slide-up" style="animation-delay: 0s; opacity: 0;">
+  <section class="mb-8 md:mb-16 text-center animate-fade-in">
+    <h1 class="font-body font-extrabold text-3xl md:text-6xl text-primary tracking-tight mb-4 md:mb-6 animate-slide-up" style="animation-delay: 0s; opacity: 0;">
       Productividad: <br/><span class="text-on-surface-variant font-light">Tecnología Punta Propia</span>
     </h1>
     <p class="font-body text-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed animate-slide-up" style="animation-delay: 0.1s; opacity: 0;">
@@ -15,23 +15,17 @@ import PageNav from "../components/PageNav.astro";
   </section>
 
   <!-- Diagram Canvas -->
-  <section class="relative py-12 mb-16">
-    <!-- Background Decorative Flow Lines -->
-    <svg class="absolute inset-0 w-full h-full pointer-events-none opacity-20" preserveaspectratio="none">
-      <path d="M 200 400 Q 600 100 1000 400" fill="none" stroke="#8B4513" stroke-width="4"></path>
-      <path d="M 200 400 Q 600 700 1000 400" fill="none" stroke="#2E8B57" stroke-width="4"></path>
-    </svg>
-
+  <section class="relative py-4 md:py-12 mb-8 md:mb-16">
     <!-- Los Nodos -->
-    <div class="flex flex-col md:flex-row items-center justify-between gap-12 relative z-10">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-12 relative z-10">
       <!-- Node 1: Sabiduría Popular -->
       <div class="flex flex-col items-center group animate-slide-up" style="animation-delay: 0.1s; opacity: 0;">
-        <div class="w-48 h-48 md:w-64 md:h-64 rounded-full bg-surface-container-highest flex items-center justify-center relative overflow-hidden transition-all duration-500 group-hover:scale-105 group-hover:shadow-xl border-4 border-primary/20">
+        <div class="w-32 h-32 md:w-64 md:h-64 rounded-full bg-surface-container-highest flex items-center justify-center relative overflow-hidden transition-all duration-500 group-hover:scale-105 group-hover:shadow-xl border-4 border-primary/20">
           <img class="w-full h-full object-cover opacity-80 mix-blend-multiply" alt="Sabiduría Popular" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi_xycHgbABOV3uZTUta7kGPv3pm7vgun1ddwa2F-t5LWmPfYj1MeDoJitkDffCndydP3LtJn7nHkAOU1WEpGLuiQ5niwCFxpEtEJsqbfqeog1vv5h8Uu8o7stNnU-QsUyKn5zaI4zWifghSiI-Dxb_qH1M-EH1iLCYc1f-ZMVuLOkS97AnLXixCNChGc0r4pyCfiSA_6TJ64QrvaJtXotpnnyYHs3-WA4hPQ9ZOvMYuUEGqrKPfFxDDmiwub2zdwrsqU_yVMLKHg-"/>
           <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
         </div>
-        <div class="mt-6 text-center">
-          <h3 class="font-body font-bold text-lg text-primary uppercase tracking-widest">Sabiduría Popular</h3>
+        <div class="mt-3 md:mt-6 text-center">
+          <h3 class="font-body font-bold text-sm md:text-lg text-primary uppercase tracking-widest">Sabiduría Popular</h3>
           <div class="mt-2 flex items-center justify-center gap-2 text-on-surface-variant">
             <span class="material-symbols-outlined text-sm">trending_flat</span>
             <span class="font-body text-xs uppercase tracking-tighter">Hacia Tecnología Propia</span>
@@ -46,8 +40,8 @@ import PageNav from "../components/PageNav.astro";
       </div>
 
       <!-- Node 2: Software de la Manera (CENTRAL) -->
-      <div class="flex flex-col items-center group -mt-12 animate-slide-up" style="animation-delay: 0.2s; opacity: 0;">
-        <div class="w-56 h-56 md:w-80 md:h-80 rounded-full bg-surface-container-lowest border-4 border-primary flex items-center justify-center relative overflow-hidden shadow-2xl transition-all duration-500 group-hover:scale-110">
+      <div class="flex flex-col items-center group mt-0 md:-mt-12 animate-slide-up" style="animation-delay: 0.2s; opacity: 0;">
+        <div class="w-40 h-40 md:w-80 md:h-80 rounded-full bg-surface-container-lowest border-4 border-primary flex items-center justify-center relative overflow-hidden shadow-2xl transition-all duration-500 group-hover:scale-110">
           <img class="w-full h-full object-cover opacity-90" alt="Software de la Manera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIWVa1MdR-xtpqjH3JTDDX4Gr6KfbA7mGJVzYg0Ukj3gMuZePeJ22bSsJpab0jhal-wU3T9sZKcMPclBN_7ryfvJ62kj6yEyZzOqjR8OtQ3tm6xvpJMYLn3lXKzahwe971fdrsdVUQxO7UfqhBYgEEzdrCc6yAwanKj7e3O41biqevcVK9y-4xl2OeeknedIA0_-tyGidMpNkzoSfrWrCc07w98_5akwFzCH78qA2U5abBCgPtQYiXrrpeE6ou65QPbCPWc9ZLMuVc"/>
           <div class="absolute inset-0 flex items-center justify-center">
             <div class="w-full h-full bg-primary/5 absolute"></div>
@@ -69,8 +63,8 @@ import PageNav from "../components/PageNav.astro";
       </div>
 
       <!-- Node 3: Software del Modo -->
-      <div class="flex flex-col items-center group animate-slide-up" style="animation-delay: 0.4s; opacity: 0;">
-        <div class="w-48 h-48 md:w-64 md:h-64 rounded-full bg-surface-container-highest flex items-center justify-center relative overflow-hidden transition-all duration-500 group-hover:scale-105 group-hover:shadow-xl border-4 border-tertiary/20">
+      <div class="flex flex-col items-center group mt-4 md:mt-0 animate-slide-up" style="animation-delay: 0.4s; opacity: 0;">
+        <div class="w-32 h-32 md:w-64 md:h-64 rounded-full bg-surface-container-highest flex items-center justify-center relative overflow-hidden transition-all duration-500 group-hover:scale-105 group-hover:shadow-xl border-4 border-tertiary/20">
           <img class="w-full h-full object-cover opacity-80 mix-blend-multiply" alt="Software del Modo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2c0-AVLIQiViqO69oIdIJt5nEWHgffPMybK0u4gVQLn4jZOBGXkYd1y6VZynSgsHqIaRNq08PtysIIeAFfqxrWidieXRtjydpZTwTFDc6XIKK6XvNkV7Ab5hNQlMTq7UgHgP18bZt8CsaRx3NEqVY90V4VVHwtRhYpW2DRskMafBI0M9D_xi9oshF3Q6euMsCmiG_AbsLR38IBWrQBOrTe6ynXGf-DFDdIFVYNFvqX3PiA82MeArhSDzTup3R-Fgtv1Sg_lcKvhxf"/>
           <div class="absolute inset-0 bg-gradient-to-t from-tertiary/20 to-transparent"></div>
         </div>
