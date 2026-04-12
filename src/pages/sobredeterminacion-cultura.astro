@@ -17,25 +17,46 @@ import PageNav from "../components/PageNav.astro";
   <!-- Main Diagram Section -->
   <main class="relative w-full max-w-4xl mx-auto aspect-square md:aspect-[4/3] flex items-center justify-center p-4 md:p-8 mb-16">
     <!-- SVG Connections -->
-    <svg class="absolute inset-0 w-full h-full pointer-events-none opacity-30" viewbox="0 0 100 100">
-      <circle cx="50" cy="50" fill="none" r="30" stroke="#2c694e" stroke-width="0.5"></circle>
-      <line stroke="#00472f" stroke-width="0.5" x1="50" x2="50" y1="50" y2="5"></line>
-      <line stroke="#00472f" stroke-width="0.5" x1="50" x2="82" y1="50" y2="20"></line>
-      <line stroke="#00472f" stroke-width="0.5" x1="50" x2="93" y1="50" y2="50"></line>
-      <line stroke="#00472f" stroke-width="0.5" x1="50" x2="82" y1="50" y2="80"></line>
-      <line stroke="#00472f" stroke-width="0.5" x1="50" x2="50" y1="50" y2="95"></line>
-      <line stroke="#00472f" stroke-width="0.5" x1="50" x2="18" y1="50" y2="80"></line>
-      <line stroke="#00472f" stroke-width="0.5" x1="50" x2="7" y1="50" y2="50"></line>
-      <line stroke="#00472f" stroke-width="0.5" x1="50" x2="18" y1="50" y2="20"></line>
-      <polygon fill="none" points="50,5 82,20 93,50 82,80 50,95 18,80 7,50 18,20" stroke="#00472f" stroke-width="0.3"></polygon>
+    <svg class="absolute inset-0 w-full h-full pointer-events-none opacity-35" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="48" fill="none" stroke="#2c694e" stroke-width="1"></circle>
+      <line x1="50" y1="5" x2="93" y2="50" stroke="#1c5039" stroke-width="0.7" stroke-dasharray="4 2"></line>
+      <line x1="93" y1="50" x2="50" y2="95" stroke="#1c5039" stroke-width="0.7" stroke-dasharray="4 2"></line>
+      <line x1="50" y1="95" x2="7" y2="50" stroke="#1c5039" stroke-width="0.7" stroke-dasharray="4 2"></line>
+      <line x1="7" y1="50" x2="50" y2="5" stroke="#1c5039" stroke-width="0.7" stroke-dasharray="4 2"></line>
+      <line x1="18" y1="20" x2="82" y2="20" stroke="#2c694e" stroke-width="0.7" stroke-dasharray="3 1.5"></line>
+      <line x1="82" y1="20" x2="82" y2="80" stroke="#2c694e" stroke-width="0.7" stroke-dasharray="3 1.5"></line>
+      <line x1="82" y1="80" x2="18" y2="80" stroke="#2c694e" stroke-width="0.7" stroke-dasharray="3 1.5"></line>
+      <line x1="18" y1="80" x2="18" y2="20" stroke="#2c694e" stroke-width="0.7" stroke-dasharray="3 1.5"></line>
+      <line x1="18" y1="20" x2="50" y2="50" stroke="#1c5039" stroke-width="0.7" stroke-dasharray="2 1"></line>
+      {[
+        [50, 5],
+        [82, 20],
+        [93, 50],
+        [82, 80],
+        [50, 95],
+        [18, 80],
+        [7, 50],
+        [18, 20],
+      ].map(([x, y], idx) => (
+        <line
+          x1={x}
+          y1={y}
+          x2={50}
+          y2={50}
+          stroke="#0e2a1d"
+          stroke-width="0.5"
+          stroke-dasharray="1.5 1.5"
+          key={`radial-${idx}`}
+        />
+      ))}
     </svg>
 
     <!-- Enfoque Central (El Núcleo) -->
-    <div class="relative z-20 w-36 h-36 md:w-56 md:h-56 rounded-full p-1 bg-white shadow-xl flex items-center justify-center overflow-hidden border-4 border-surface-container animate-scale-in" style="animation-delay: 0.3s; opacity: 0;">
+<div class="relative z-20 w-44 h-44 md:w-78 md:h-78 rounded-full p-1 bg-white shadow-xl flex items-center justify-center overflow-hidden border-4 border-surface-container animate-scale-in" style="animation-delay: 0.3s; opacity: 0;">
       <img alt="Cultura Central" class="absolute inset-0 w-full h-full object-cover" src="/images/sobredeterminacion/cultura.png"/>
       <div class="absolute inset-0 bg-primary/20 mix-blend-overlay"></div>
-      <div class="relative z-10 flex flex-col items-center justify-center text-white drop-shadow-lg">
-        <span class="font-body font-extrabold text-lg md:text-2xl tracking-widest uppercase">CULTURA</span>
+      <div class="relative z-10 flex flex-col items-center justify-center text-white drop-shadow-lg translate-y-3 md:translate-y-20">
+        <span class="font-body font-extrabold text-xl md:text-3xl tracking-widest uppercase">CULTURA</span>
       </div>
     </div>
 

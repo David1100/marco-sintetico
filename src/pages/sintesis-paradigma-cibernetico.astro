@@ -21,15 +21,22 @@ import PageNav from "../components/PageNav.astro";
     <div class="relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
       <!-- SVG Background -->
       <svg class="absolute inset-0 w-full h-full pointer-events-none hidden lg:block -z-10" fill="none" viewbox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
-        <path class="opacity-40 animate-flow" d="M300 300 C 450 150, 750 150, 900 300" stroke="url(#gradient-flow)" stroke-dasharray="8 8" stroke-width="2"></path>
-        <path class="opacity-40 animate-flow" style="animation-delay: 0.5s;" d="M300 300 C 450 450, 750 450, 900 300" stroke="url(#gradient-flow)" stroke-dasharray="8 8" stroke-width="2"></path>
         <defs>
-        <linearGradient id="gradient-flow" x1="0%" x2="100%" y1="0%" y2="0%">
-        <stop offset="0%" stop-color="#00472f"></stop>
-        <stop offset="50%" stop-color="#9b4500"></stop>
-        <stop offset="100%" stop-color="#303e52"></stop>
-        </linearGradient>
+        <marker id="arrow-right" markerWidth="8" markerHeight="6" refX="6" refY="3" orient="auto">
+          <polygon points="0 0, 8 3, 0 6" fill="#303e52"></polygon>
+        </marker>
+        <marker id="arrow-left" markerWidth="8" markerHeight="6" refX="6" refY="3" orient="auto">
+          <polygon points="0 0, 8 3, 0 6" fill="#00472f"></polygon>
+        </marker>
         </defs>
+        <!-- Propia → Transferida (upper arc, ends at card edges) -->
+        <path class="opacity-90" d="M320 80 Q 600 -80, 880 80" stroke="#1a365e" stroke-width="2" marker-end="url(#arrow-right)" fill="none"></path>
+        <!-- Transferida → Propia (lower arc, ends at card edges) -->
+        <path class="opacity-90" style="animation-delay: 0.5s;" d="M880 460 Q 600 600, 320 468" stroke="#1e5c3e" stroke-width="2" marker-end="url(#arrow-left)" fill="none"></path>
+        <!-- Spring line: Propia (right edge) to Center circle (left edge) -->
+        <path d="M320 300 L 341 294 L 362 306 L 383 294 L 404 306 " stroke="#00472f" stroke-width="2.5" fill="none" marker-end="url(#arrow-left)"></path>
+        <!-- Spring line: Transferida (left edge) to Center circle (right edge) -->
+        <path d="M880 300 L 859 306 L 838 294 L 817 306 " stroke="#303e52" stroke-width="2.5" fill="none" marker-end="url(#arrow-right)"></path>
       </svg>
 
       <!-- Left: TECNOLOGÍA PROPIA -->
@@ -61,22 +68,14 @@ import PageNav from "../components/PageNav.astro";
 
       <!-- Center: CENTRO DE SÍNTESIS -->
       <div class="lg:col-span-4 z-20 flex flex-col items-center animate-scale-in" style="animation-delay: 0.4s; opacity: 0;">
-        <div class="relative w-full aspect-square flex items-center justify-center max-w-[250px] md:max-w-[300px]">
-          <div class="absolute inset-0 rounded-full border-4 border-dashed border-secondary/20 animate-spin-slow" style="animation: spin 60s linear infinite;"></div>
-          <div class="glass-panel w-40 h-40 md:w-64 md:h-64 rounded-full flex flex-col items-center justify-center text-center p-4 md:p-8 shadow-2xl border border-secondary-container/30 relative">
-            <div class="absolute -top-4 px-2 md:px-4 py-1 bg-secondary text-white text-[8px] md:text-[10px] font-bold rounded-full tracking-tighter">Centro de Síntesis</div>
-            <span class="material-symbols-outlined text-secondary text-4xl md:text-5xl mb-2 md:mb-4" style="font-variation-settings: 'FILL' 1;">hub</span>
-            <h3 class="font-body font-extrabold text-sm md:text-lg text-secondary leading-tight uppercase">Tecnología Punta Propia</h3>
-            <p class="text-[8px] md:text-[11px] text-on-secondary-fixed-variant font-bold mt-1 md:mt-2 opacity-70 tracking-widest">(Software de la manera)</p>
-            <div class="mt-2 md:mt-4 flex gap-1">
-              <div class="w-1 h-1 rounded-full bg-secondary"></div>
-              <div class="w-1 h-1 rounded-full bg-secondary opacity-50"></div>
-              <div class="w-1 h-1 rounded-full bg-secondary opacity-25"></div>
-            </div>
+        <div class="relative w-full aspect-square flex flex-col items-center justify-center max-w-[250px] md:max-w-[300px]">
+          <div class="w-40 h-40 md:w-64 md:h-64 rounded-full overflow-hidden shadow-2xl border border-secondary-container/30 relative">
+            <img alt="Tecnología Punta Propia" class="w-full h-full object-cover" src="/images/sintesis-paradigma-cibernetico/tegnologia-propia-punta.png"/>
+            <div class="absolute inset-0 bg-secondary/20 mix-blend-overlay"></div>
           </div>
-          <div class="absolute -top-8 md:-top-12 left-1/2 -translate-x-1/2 flex flex-col items-center">
-            <span class="text-[8px] md:text-[10px] font-bold text-secondary uppercase tracking-[0.3em] mb-1 md:mb-2">Transferencia</span>
-            <span class="material-symbols-outlined text-secondary animate-bounce text-lg md:text-2xl">arrow_downward</span>
+          <div class="mt-4 text-center">
+            <h3 class="font-body font-extrabold text-sm md:text-lg text-secondary leading-tight uppercase">Tecnología Punta Propia</h3>
+            <p class="text-[8px] md:text-[11px] text-on-secondary-fixed-variant font-bold mt-1 opacity-70 tracking-widest">(Software de la manera)</p>
           </div>
         </div>
       </div>
@@ -134,7 +133,7 @@ import PageNav from "../components/PageNav.astro";
   </div>
 
   <PageNav
-    prev={{ href: "/sobredeterminacion-cultura", label: "Sobredeterminación", sublabel: "Cultura" }}
+    prev={{ href: "/sobredeterminacion", label: "Sobredeterminación", sublabel: "Teoría" }}
   />
 
   <style>

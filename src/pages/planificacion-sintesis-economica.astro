@@ -82,12 +82,14 @@ const metrics = [
     <div class="sintesis-diagram">
       <svg class="diagram-lines" viewBox="0 0 1400 500" fill="none">
         <defs>
-          <marker id="arrow-end" markerHeight="12" markerWidth="12" orient="auto" refX="10" refY="6">
-            <polygon points="0 0, 12 6, 0 12" fill="currentColor"></polygon>
+          <marker id="arrow-prod" markerHeight="6" markerWidth="6" orient="auto" refX="5" refY="3">
+            <polygon points="0 0, 6 3, 0 6" fill="currentColor"></polygon>
           </marker>
         </defs>
-        <path d="M140 250 C300 90 520 90 700 250" stroke="currentColor" stroke-width="8" class="arc" marker-end="url(#arrow-end)"></path>
-        <path d="M700 250 C880 410 1100 410 1260 250" stroke="currentColor" stroke-width="8" class="arc" marker-end="url(#arrow-end)"></path>
+        <!-- Circulación → Productividad (upper curved line) -->
+        <path d="M380 -40 Q 530 -160, 680 -40" stroke="currentColor" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#arrow-prod)" fill="none"></path>
+        <!-- Producción → Productividad (lower curved line, inverted) -->
+        <path d="M1000 540 Q 870 600, 740 540" stroke="currentColor" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#arrow-prod)" fill="none"></path>
       </svg>
 
       <div class="stages">
@@ -167,8 +169,8 @@ const metrics = [
   </section>
 
   <PageNav
-    prev={{ href: "/tecnologia-propia", label: "Tecnología", sublabel: "Propia" }}
-    next={{ href: "/las-nuevas-fronteras", label: "Las Nuevas Fronteras", sublabel: "Tecnologías" }}
+    prev={{ href: "/tecnologia-punta-propia", label: "Tecnología", sublabel: "Punta" }}
+    next={{ href: "/genialidad", label: "Genialidad", sublabel: "Innovación" }}
   />
 
   <style>
@@ -187,6 +189,7 @@ const metrics = [
       height: 100%;
       color: rgba(15,118,110,0.4);
       pointer-events: none;
+      z-index: 10;
     }
     .arc {
       stroke-dasharray: 26 18;

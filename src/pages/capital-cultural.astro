@@ -44,15 +44,15 @@ import PageNav from "../components/PageNav.astro";
         <circle cx="500" cy="500" fill="none" r="350" stroke="#cbd5e1" stroke-width="1.5" class="animate-flow" style="animation-delay: 0.3s;"></circle>
         <circle cx="500" cy="500" fill="none" r="250" stroke="#cbd5e1" stroke-width="1.5" class="animate-flow" style="animation-delay: 0.4s;"></circle>
         <!-- Connection Arrows (Outer Loop) -->
-        <path class="text-slate-400 animate-flow" style="animation-delay: 0.5s;" d="M500,130 A370,370 0 0,1 870,500" fill="none" marker-end="url(#arrowhead)" stroke="currentColor" stroke-width="2"></path>
-        <path class="text-slate-400 animate-flow" style="animation-delay: 0.6s;" d="M870,500 A370,370 0 0,1 500,870" fill="none" marker-end="url(#arrowhead)" stroke="currentColor" stroke-width="2"></path>
-        <path class="text-slate-400 animate-flow" style="animation-delay: 0.7s;" d="M500,870 A370,370 0 0,1 130,500" fill="none" marker-end="url(#arrowhead)" stroke="currentColor" stroke-width="2"></path>
-        <path class="text-slate-400 animate-flow" style="animation-delay: 0.8s;" d="M130,500 A370,370 0 0,1 500,130" fill="none" marker-end="url(#arrowhead)" stroke="currentColor" stroke-width="2"></path>
+        <path class="text-slate-400 animate-flow" style="animation-delay: 0.5s;" d="M500,130 A370,370 0 0,0 130,500" fill="none" marker-end="url(#arrowhead)" stroke="currentColor" stroke-width="2"></path>
+        <path class="text-slate-400 animate-flow" style="animation-delay: 0.6s;" d="M130,500 A370,370 0 0,0 500,870" fill="none" marker-end="url(#arrowhead)" stroke="currentColor" stroke-width="2"></path>
+        <path class="text-slate-400 animate-flow" style="animation-delay: 0.7s;" d="M500,870 A370,370 0 0,0 870,500" fill="none" marker-end="url(#arrowhead)" stroke="currentColor" stroke-width="2"></path>
+        <path class="text-slate-400 animate-flow" style="animation-delay: 0.8s;" d="M870,500 A370,370 0 0,0 500,130" fill="none" marker-end="url(#arrowhead)" stroke="currentColor" stroke-width="2"></path>
         <!-- Connection Arrows (Inner Loop) -->
-        <path class="text-slate-600 animate-flow" style="animation-delay: 0.9s;" d="M500,270 A230,230 0 0,0 730,500" fill="none" marker-end="url(#arrowhead)" stroke="currentColor" stroke-width="2"></path>
-        <path class="text-slate-600 animate-flow" style="animation-delay: 1.0s;" d="M730,500 A230,230 0 0,0 500,730" fill="none" marker-end="url(#arrowhead)" stroke="currentColor" stroke-width="2"></path>
-        <path class="text-slate-600 animate-flow" style="animation-delay: 1.1s;" d="M500,730 A230,230 0 0,0 270,500" fill="none" marker-end="url(#arrowhead)" stroke="currentColor" stroke-width="2"></path>
-        <path class="text-slate-600 animate-flow" style="animation-delay: 1.2s;" d="M270,500 A230,230 0 0,0 500,270" fill="none" marker-end="url(#arrowhead)" stroke="currentColor" stroke-width="2"></path>
+        <path class="text-slate-600 animate-flow" style="animation-delay: 0.9s;" d="M500,270 A230,230 0 0,1 730,500" fill="none" marker-end="url(#arrowhead)" stroke="currentColor" stroke-width="2"></path>
+        <path class="text-slate-600 animate-flow" style="animation-delay: 1.0s;" d="M730,500 A230,230 0 0,1 500,730" fill="none" marker-end="url(#arrowhead)" stroke="currentColor" stroke-width="2"></path>
+        <path class="text-slate-600 animate-flow" style="animation-delay: 1.1s;" d="M500,730 A230,230 0 0,1 270,500" fill="none" marker-end="url(#arrowhead)" stroke="currentColor" stroke-width="2"></path>
+        <path class="text-slate-600 animate-flow" style="animation-delay: 1.2s;" d="M270,500 A230,230 0 0,1 500,270" fill="none" marker-end="url(#arrowhead)" stroke="currentColor" stroke-width="2"></path>
         <!-- Labels on Paths -->
         <text class="fill-slate-500 font-bold uppercase animate-fade-in" style="font-size: 14px; letter-spacing: 2px; animation-delay: 1.3s;">
           <textpath href="#path-outer-top-left" startoffset="30%">POLÍTICA</textpath>
@@ -194,7 +194,7 @@ import PageNav from "../components/PageNav.astro";
   </section>
 
   <PageNav
-    prev={{ href: "/apropiacion-productividad-social", label: "Apropiación", sublabel: "Productividad Social" }}
+    prev={{ href: "/productividad", label: "Productividad", sublabel: "Social" }}
     next={{ href: "/capital-social", label: "Capital", sublabel: "Social" }}
   />
 
