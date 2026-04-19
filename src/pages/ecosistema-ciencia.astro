@@ -19,12 +19,20 @@ import PageNav from "../components/PageNav.astro";
     </div>
   </section>
 
-  <section class="py-16">
+<section class="py-16">
     <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-      <div class="rounded-[2.5rem] overflow-hidden shadow-2xl">
+      <div class="rounded-[2.5rem] overflow-hidden shadow-2xl relative">
         <video autoplay loop muted playsinline poster="/images/ecosistema-ciencia/muerte-cuerpo.png" class="w-full h-full object-cover">
           <source src="/images/ecosistema-ciencia/macrosomos.mp4" type="video/mp4" />
         </video>
+        <button 
+          id="audio-ojos-toggle" 
+          class="absolute bottom-4 right-4 z-20 bg-secondary text-white p-3 rounded-full shadow-lg hover:bg-secondary/90 transition-all hover:scale-110"
+          aria-label="Reproducir audio"
+        >
+          <span id="audio-ojos-icon" class="material-symbols-outlined">play_arrow</span>
+        </button>
+        <audio id="audio-ojos" src="/audio_ojos.mp3"></audio>
       </div>
       <div class="space-y-6">
         <h2 class="font-headline text-4xl text-primary">Macrocosmos</h2>
@@ -34,11 +42,29 @@ import PageNav from "../components/PageNav.astro";
         </p>
         <div class="rounded-3xl bg-surface-container border border-outline/10 p-5 text-left">
           <p class="text-xs font-bold uppercase tracking-[0.4em] text-secondary mb-2">Escala Estelar</p>
-          <p class="italic text-on-surface-variant">“Como es arriba, es abajo; el orden universal se refleja en cada átomo.”</p>
+          <p class="italic text-on-surface-variant">"Como es arriba, es abajo; el orden universal se refleja en cada átomo."</p>
         </div>
       </div>
     </div>
   </section>
+
+  <script>
+    const audio = document.getElementById('audio-ojos');
+    const btn = document.getElementById('audio-ojos-toggle');
+    const icon = document.getElementById('audio-ojos-icon');
+    let playing = false;
+    
+    btn.addEventListener('click', () => {
+      if (playing) {
+        audio.pause();
+        icon.textContent = 'play_arrow';
+      } else {
+        audio.play();
+        icon.textContent = 'pause';
+      }
+      playing = !playing;
+    });
+  </script>
 
   <section class="py-16">
     <div class="max-w-6xl mx-auto flex flex-col-reverse lg:flex-row gap-10 items-center">
