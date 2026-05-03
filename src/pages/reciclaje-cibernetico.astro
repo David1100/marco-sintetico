@@ -4,6 +4,18 @@ import PageNav from "../components/PageNav.astro";
 ---
 
 <Layout title="Reciclaje Cibernético - Ecosistema de Productividad Social">
+  <!-- Audio: tiempo libre -->
+  <audio id="tiempo-libre-audio" class="hidden" autoplay loop>
+    <source src="/tiempolibre.mp3" type="audio/mpeg" />
+  </audio>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const audio = document.getElementById('tiempo-libre-audio') as HTMLAudioElement;
+      if (audio) {
+        audio.play().catch(() => {});
+      }
+    });
+  </script>
   <!-- Hero Section -->
   <section class="mb-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
     <div class="lg:col-span-7 animate-slide-up" style="animation-delay: 0s; opacity: 0;">
