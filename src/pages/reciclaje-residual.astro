@@ -25,11 +25,22 @@ import PageNav from "../components/PageNav.astro";
 
     <!-- SVG Flow Lines -->
     <svg class="absolute inset-0 w-full h-full pointer-events-none" viewbox="0 0 1200 800">
+      <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+          <polygon points="0 0, 10 3.5, 0 7" fill="#205f44" />
+        </marker>
+      </defs>
       <path class="text-outline-variant" style="stroke-dasharray: 4;" d="M600,400 Q450,200 300,180" fill="none" stroke="currentColor" stroke-width="2"></path>
       <path class="text-outline-variant" style="stroke-dasharray: 4;" d="M600,400 Q800,200 950,250" fill="none" stroke="currentColor" stroke-width="2"></path>
       <path class="text-outline-variant" style="stroke-dasharray: 4;" d="M600,400 Q800,600 900,650" fill="none" stroke="currentColor" stroke-width="2"></path>
       <path class="text-outline-variant" style="stroke-dasharray: 4;" d="M600,400 Q400,650 250,600" fill="none" stroke="currentColor" stroke-width="2"></path>
       <path class="text-outline-variant" style="stroke-dasharray: 4;" d="M600,400 Q300,400 200,400" fill="none" stroke="currentColor" stroke-width="2"></path>
+      <!-- Flechas del ciclo: Pulpa→Fibras→Follaje→Cáscara→Jugo→Pulpa -->
+      <path d="M180,120 Q100,200 60,280" fill="none" stroke="#205f44" stroke-width="2" marker-end="url(#arrowhead)"></path>
+      <path d="M60,320 Q80,450 120,580" fill="none" stroke="#205f44" stroke-width="2" marker-end="url(#arrowhead)"></path>
+      <path d="M160,620 Q500,650 920,620" fill="none" stroke="#205f44" stroke-width="2" marker-end="url(#arrowhead)"></path>
+      <path d="M960,580 Q1050,400 1040,200" fill="none" stroke="#205f44" stroke-width="2" marker-end="url(#arrowhead)"></path>
+      <path d="M1000,140 Q600,100 220,140" fill="none" stroke="#205f44" stroke-width="2" marker-end="url(#arrowhead)"></path>
       <!-- Energy (W) and Waste (R) Indicators -->
       <g class="font-body text-[10px] font-bold">
         <circle class="fill-secondary" cx="450" cy="300" r="12"></circle>

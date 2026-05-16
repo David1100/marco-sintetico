@@ -11,28 +11,65 @@ import PageNav from "../components/PageNav.astro";
       <p class="sheet-subtitle">Productividad Social</p>
     </header>
 
-    <section class="diagram animate-slide-up" style="animation-delay: 0.1s; opacity: 0;">
+    <section
+      class="diagram animate-slide-up"
+      style="animation-delay: 0.1s; opacity: 0;"
+    >
       <!-- SVG Connection Lines (Background) -->
       <svg class="connections" viewBox="0 0 1000 600">
         <defs>
           <linearGradient id="lineGrad" x1="0%" x2="100%">
-            <stop offset="0%" stop-color="var(--color-primary)" stop-opacity="0.3"></stop>
-            <stop offset="50%" stop-color="var(--color-secondary)" stop-opacity="0.5"></stop>
-            <stop offset="100%" stop-color="var(--color-primary)" stop-opacity="0.3"></stop>
+            <stop
+              offset="0%"
+              stop-color="var(--color-primary)"
+              stop-opacity="0.3"></stop>
+            <stop
+              offset="50%"
+              stop-color="var(--color-secondary)"
+              stop-opacity="0.5"></stop>
+            <stop
+              offset="100%"
+              stop-color="var(--color-primary)"
+              stop-opacity="0.3"></stop>
           </linearGradient>
         </defs>
-        <path class="connection-line" d="M500,300 L500,80" fill="none" stroke="url(#lineGrad)" stroke-width="2"></path>
-        <path class="connection-line" d="M500,300 L750,200" fill="none" stroke="url(#lineGrad)" stroke-width="2"></path>
-        <path class="connection-line" d="M500,300 L650,500" fill="none" stroke="url(#lineGrad)" stroke-width="2"></path>
-        <path class="connection-line" d="M500,300 L350,500" fill="none" stroke="url(#lineGrad)" stroke-width="2"></path>
-        <path class="connection-line" d="M500,300 L250,200" fill="none" stroke="url(#lineGrad)" stroke-width="2"></path>
+        <path
+          class="connection-line"
+          d="M500,300 L500,80"
+          fill="none"
+          stroke="url(#lineGrad)"
+          stroke-width="2"></path>
+        <path
+          class="connection-line"
+          d="M500,300 L750,200"
+          fill="none"
+          stroke="url(#lineGrad)"
+          stroke-width="2"></path>
+        <path
+          class="connection-line"
+          d="M500,300 L650,500"
+          fill="none"
+          stroke="url(#lineGrad)"
+          stroke-width="2"></path>
+        <path
+          class="connection-line"
+          d="M500,300 L350,500"
+          fill="none"
+          stroke="url(#lineGrad)"
+          stroke-width="2"></path>
+        <path
+          class="connection-line"
+          d="M500,300 L250,200"
+          fill="none"
+          stroke="url(#lineGrad)"
+          stroke-width="2"></path>
       </svg>
 
       <!-- Central Circle with Float Animation -->
       <div class="center-node animate-float">
         <div class="circle-frame">
-          <img 
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-zkGLKjuSZbKya1DJA3tQw86PrGQr4U9Zs7AYp2BMSwEF06YSmSxkzEcgBxQ0jHTRouJV5VUpaRDFi5TjxAxF4W0Ov2LtFnOdNaR_Xq6K1B3ubjDQmmlue3rFRIjBts7ummfjPZ7EkFiQKU4_4gq1ydSzQN2_fiuV4-n29-vwREIsEZn0J6Dw8iCg-32pVkIgaGvhwofo8TTEzzphaFcccUYBS4Rmxk69R2c1lK11SLelh83E649XA7FP4BjjHv3ooiuXXDy-1xPn" 
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-zkGLKjuSZbKya1DJA3tQw86PrGQr4U9Zs7AYp2BMSwEF06YSmSxkzEcgBxQ0jHTRouJV5VUpaRDFi5TjxAxF4W0Ov2LtFnOdNaR_Xq6K1B3ubjDQmmlue3rFRIjBts7ummfjPZ7EkFiQKU4_4gq1ydSzQN2_fiuV4-n29-vwREIsEZn0J6Dw8iCg-32pVkIgaGvhwofo8TTEzzphaFcccUYBS4Rmxk69R2c1lK11SLelh83E649XA7FP4BjjHv3ooiuXXDy-1xPn"
             alt="Concreción Vital"
             class="w-full h-full object-cover rounded-full"
           />
@@ -43,57 +80,78 @@ import PageNav from "../components/PageNav.astro";
       <!-- Satellite Nodes -->
       <div class="satellite-nodes">
         <!-- Node 1: Jugo -->
-        <div class="satellite-node node-1 animate-slide-up" style="animation-delay: 0.2s; opacity: 0;">
+        <div
+          class="satellite-node node-1 animate-slide-up"
+          style="animation-delay: 0.2s; opacity: 0;"
+        >
           <div class="node-card glass-card">
-            <span class="material-symbols-outlined text-secondary">opacity</span>
+            <span class="material-symbols-outlined text-secondary">opacity</span
+            >
             <h3 class="node-title">Jugo</h3>
-            <p class="node-desc">Esencia líquida de la productividad social</p>
+            <p class="node-desc">( Liquidos alimenticios )</p>
           </div>
         </div>
 
         <!-- Node 2: Pulpa -->
-        <div class="satellite-node node-2 animate-slide-up" style="animation-delay: 0.3s; opacity: 0;">
+        <div
+          class="satellite-node node-2 animate-slide-up"
+          style="animation-delay: 0.3s; opacity: 0;"
+        >
           <div class="node-card glass-card">
             <span class="material-symbols-outlined text-secondary">grain</span>
             <h3 class="node-title">Pulpa</h3>
-            <p class="node-desc">Cuerpo denso de la síntesis cibernética</p>
+            <p class="node-desc">( Fruta deshidratada)</p>
           </div>
         </div>
 
         <!-- Node 3: Cáscara -->
-        <div class="satellite-node node-3 animate-slide-up" style="animation-delay: 0.4s; opacity: 0;">
+        <div
+          class="satellite-node node-3 animate-slide-up"
+          style="animation-delay: 0.4s; opacity: 0;"
+        >
           <div class="node-card glass-card">
             <span class="material-symbols-outlined text-primary">shield</span>
             <h3 class="node-title">Cáscara</h3>
-            <p class="node-desc">Protección y estructura del sistema</p>
+            <p class="node-desc">( Desperdicios organicos )</p>
           </div>
         </div>
 
         <!-- Node 4: Fibras -->
-        <div class="satellite-node node-4 animate-slide-up" style="animation-delay: 0.5s; opacity: 0;">
+        <div
+          class="satellite-node node-4 animate-slide-up"
+          style="animation-delay: 0.5s; opacity: 0;"
+        >
           <div class="node-card glass-card">
-            <span class="material-symbols-outlined text-primary">rebase_edit</span>
+            <span class="material-symbols-outlined text-primary"
+              >rebase_edit</span
+            >
             <h3 class="node-title">Fibras</h3>
-            <p class="node-desc">Conexiones relacionales técnicas</p>
+            <p class="node-desc">( Industriales )</p>
           </div>
         </div>
 
         <!-- Node 5: Follaje -->
-        <div class="satellite-node node-5 animate-slide-up" style="animation-delay: 0.6s; opacity: 0;">
+        <div
+          class="satellite-node node-5 animate-slide-up"
+          style="animation-delay: 0.6s; opacity: 0;"
+        >
           <div class="node-card glass-card">
             <span class="material-symbols-outlined text-primary">eco</span>
             <h3 class="node-title">Follaje</h3>
-            <p class="node-desc">Captación de recursos externos</p>
+            <p class="node-desc">( Desperdicios vegetales )</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Content Section -->
-    <section class="content-grid animate-slide-up" style="animation-delay: 0.7s; opacity: 0;">
+    <section
+      class="content-grid animate-slide-up"
+      style="animation-delay: 0.7s; opacity: 0;"
+    >
       <div class="content-main">
         <h2 class="content-title">
-          Manera relacional <br/>
+          Manera relacional <br />
           <span class="text-variant">(producción técnica)</span>
         </h2>
         <h2 class="content-title text-secondary">
@@ -105,7 +163,10 @@ import PageNav from "../components/PageNav.astro";
       </div>
 
       <div class="quote-card glass-card">
-        <p class="quote-text">"Múltiples relaciones en la integración de los usos y la universalización de las cosas"</p>
+        <p class="quote-text">
+          "Múltiples relaciones en la integración de los usos y la
+          universalización de las cosas"
+        </p>
         <p class="quote-source">FRAGMENTO DE PERVIVENCIA</p>
       </div>
 
@@ -113,25 +174,41 @@ import PageNav from "../components/PageNav.astro";
         <div class="stat-card glass-card">
           <span class="stat-number">01</span>
           <h4 class="stat-title">Integración</h4>
-          <p class="stat-desc">Capacidad de ensamblar fragmentos en un todo funcional</p>
+          <p class="stat-desc">
+            Capacidad de ensamblar fragmentos en un todo funcional
+          </p>
         </div>
         <div class="stat-card glass-card">
           <span class="stat-number stat-number--secondary">02</span>
           <h4 class="stat-title">Universalización</h4>
-          <p class="stat-desc">Extensión del uso técnico hacia la totalidad del ecosistema</p>
+          <p class="stat-desc">
+            Extensión del uso técnico hacia la totalidad del ecosistema
+          </p>
         </div>
       </div>
     </section>
   </article>
 
   <PageNav
-    prev={{ href: "/proceso-cibernetico", label: "Proceso Cibernético", sublabel: "Paradigma Microelectrónico" }}
-    next={{ href: "/productividad", label: "Productividad", sublabel: "Social" }}
+    prev={{
+      href: "/proceso-cibernetico",
+      label: "Proceso Cibernético",
+      sublabel: "Paradigma Microelectrónico",
+    }}
+    next={{
+      href: "/productividad",
+      label: "Productividad",
+      sublabel: "Social",
+    }}
   />
 
   <style>
     .sheet {
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(250, 242, 226, 0.92));
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.95),
+        rgba(250, 242, 226, 0.92)
+      );
       border-radius: 2.5rem;
       padding: clamp(1.5rem, 5vw, 3rem);
       border: 1px solid rgba(44, 24, 16, 0.12);
@@ -169,7 +246,7 @@ import PageNav from "../components/PageNav.astro";
     }
 
     .diagram {
-        padding: 50px;
+      padding: 50px;
       position: relative;
       min-height: 700px;
       display: flex;
@@ -223,11 +300,27 @@ import PageNav from "../components/PageNav.astro";
       position: absolute;
     }
 
-    .node-1 { top: 15%; left: 43%; transform: translateX(-50%); }
-    .node-2 { top: 20%; right: 15%; }
-    .node-3 { bottom: 10%; right: 28%; }
-    .node-4 { bottom: 10%; left: 28%; }
-    .node-5 { top: 20%; left: 15%; }
+    .node-1 {
+      top: 15%;
+      left: 43%;
+      transform: translateX(-50%);
+    }
+    .node-2 {
+      top: 20%;
+      right: 15%;
+    }
+    .node-3 {
+      bottom: 10%;
+      right: 28%;
+    }
+    .node-4 {
+      bottom: 10%;
+      left: 28%;
+    }
+    .node-5 {
+      top: 20%;
+      left: 15%;
+    }
 
     .node-card {
       width: 160px;
@@ -263,7 +356,9 @@ import PageNav from "../components/PageNav.astro";
     }
 
     @keyframes drawLine {
-      to { stroke-dashoffset: 0; }
+      to {
+        stroke-dashoffset: 0;
+      }
     }
 
     .content-grid {

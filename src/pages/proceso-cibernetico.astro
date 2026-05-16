@@ -9,49 +9,87 @@ const arrowLabels = ["TELEMATICA", "PRIVATICA", "INFORMATICA"];
   <article class="sheet relative overflow-hidden">
     <div class="sheet-grain" aria-hidden="true"></div>
 
-    <header class="sheet-header animate-fade-in" style="animation-delay: 0s; opacity: 0;">
-      <h1 class="sheet-title">Proceso Cibernético (Computación, Automatización, Robotización)</h1>
+    <header
+      class="sheet-header animate-fade-in"
+      style="animation-delay: 0s; opacity: 0;"
+    >
+      <h1 class="sheet-title">
+        Proceso Cibernético (Computación, Automatización, Robotización)
+      </h1>
     </header>
 
-    <section class="diagram animate-slide-up" style="animation-delay: 0.1s; opacity: 0;">
+    <section
+      class="diagram animate-slide-up"
+      style="animation-delay: 0.1s; opacity: 0;"
+    >
       <div class="diagram-grid">
         <div class="diagram-left">
           <div class="label-card">
             <p>Paradigma</p>
             <p>Microelectrónico</p>
+            (Nanotecnología)
           </div>
         </div>
 
         <div class="diagram-center">
-          <div class="circle-frame animate-scale-in" style="animation-delay: 0.15s; opacity: 0;">
+          <div
+            class="circle-frame animate-scale-in"
+            style="animation-delay: 0.15s; opacity: 0;"
+          >
             <div class="circle-ring circle-ring--outer"></div>
             <div class="circle-ring circle-ring--inner"></div>
-            <div class="circle-image" data-path="/images/proceso-cibernetico/paradigma.png">
-              <img src="/images/proceso-cibernetico/paradigma.png" alt="Ilustración del paradigma microelectrónico" loading="lazy" decoding="async" onerror="this.remove();" />
+            <div
+              class="circle-image"
+              data-path="/images/proceso-cibernetico/paradigma.png"
+            >
+              <img
+                src="/images/proceso-cibernetico/paradigma.png"
+                alt="Ilustración del paradigma microelectrónico"
+                loading="lazy"
+                decoding="async"
+                onerror="this.remove();"
+              />
             </div>
           </div>
           <p class="circle-caption">Tecnología Punta</p>
         </div>
 
         <div class="diagram-right">
-          {arrowLabels.map((label, index) => (
-            <div class="arrow-strip" style={`animation-delay: ${0.2 + index * 0.05}s;`}>
-              <span>{label}</span>
-            </div>
-          ))}
+          {
+            arrowLabels.map((label, index) => (
+              <div
+                class="arrow-strip"
+                style={`animation-delay: ${0.2 + index * 0.05}s;`}
+              >
+                <span>{label}</span>
+              </div>
+            ))
+          }
         </div>
       </div>
     </section>
   </article>
 
   <PageNav
-    prev={{ href: "/social-poder-politico", label: "Espacio Social", sublabel: "Poder Político" }}
-    next={{ href: "/practica-pervivencia", label: "Práctica", sublabel: "Pervivencia" }}
+    prev={{
+      href: "/social-poder-politico",
+      label: "Espacio Social",
+      sublabel: "Poder Político",
+    }}
+    next={{
+      href: "/practica-pervivencia",
+      label: "Práctica",
+      sublabel: "Pervivencia",
+    }}
   />
 
   <style>
     .sheet {
-      background: radial-gradient(circle at top, rgba(255, 255, 255, 0.95), rgba(250, 242, 226, 0.92));
+      background: radial-gradient(
+        circle at top,
+        rgba(255, 255, 255, 0.95),
+        rgba(250, 242, 226, 0.92)
+      );
       border-radius: 2.75rem;
       padding: clamp(1.8rem, 5vw, 3.8rem);
       border: 1px solid rgba(44, 24, 16, 0.18);
@@ -62,7 +100,13 @@ const arrowLabels = ["TELEMATICA", "PRIVATICA", "INFORMATICA"];
     .sheet-grain {
       position: absolute;
       inset: 0;
-      background-image: repeating-linear-gradient(90deg, rgba(139, 69, 19, 0.04) 0, rgba(139, 69, 19, 0.04) 1px, transparent 1px, transparent 10px);
+      background-image: repeating-linear-gradient(
+        90deg,
+        rgba(139, 69, 19, 0.04) 0,
+        rgba(139, 69, 19, 0.04) 1px,
+        transparent 1px,
+        transparent 10px
+      );
       opacity: 0.35;
       pointer-events: none;
       mix-blend-mode: multiply;
@@ -182,7 +226,11 @@ const arrowLabels = ["TELEMATICA", "PRIVATICA", "INFORMATICA"];
       position: relative;
       padding: 0.9rem 1.25rem;
       border-radius: 999px;
-      background: linear-gradient(90deg, rgba(46, 139, 87, 0.15), rgba(46, 139, 87, 0.5));
+      background: linear-gradient(
+        90deg,
+        rgba(46, 139, 87, 0.15),
+        rgba(46, 139, 87, 0.5)
+      );
       color: var(--color-secondary);
       font-family: var(--font-body);
       letter-spacing: 0.05em;
@@ -192,7 +240,9 @@ const arrowLabels = ["TELEMATICA", "PRIVATICA", "INFORMATICA"];
       align-items: center;
       justify-content: center;
       gap: 1rem;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
       box-shadow: 0 12px 24px -10px rgba(46, 139, 87, 0.45);
     }
 
@@ -249,8 +299,12 @@ const arrowLabels = ["TELEMATICA", "PRIVATICA", "INFORMATICA"];
     }
 
     @keyframes slowSpin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
     }
   </style>
 </Layout>
