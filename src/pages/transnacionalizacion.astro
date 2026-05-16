@@ -130,7 +130,7 @@ import PageNav from "../components/PageNav.astro";
           fill="none"
           stroke="#0061a4"
           stroke-width="2"
-          marker-end="url(#arrowhead-primary)"
+          marker-start="url(#arrowhead-primary-reverse)"
         >
         </path>
         <text text-anchor="middle">
@@ -172,7 +172,7 @@ import PageNav from "../components/PageNav.astro";
           d="M 580 460 Q 652 375 725 365"
           fill="none"
           id="flow7"
-          marker-start="url(#arrowhead-secondary-reverse)"
+          marker-end="url(#arrowhead-secondary)"
           stroke="#565f71"
           stroke-width="2"></path>
         <text dy="15">
@@ -315,7 +315,15 @@ import PageNav from "../components/PageNav.astro";
   </main>
 
   <PageNav
-    prev={{ href: "/planificacion-sintesis-economica", label: "Planificación", sublabel: "Síntesis" }}
-    next={{ href: "/las-nuevas-fronteras", label: "Las Nuevas", sublabel: "Fronteras" }}
+    prev={{
+      href: "/planificacion-sintesis-economica",
+      label: "Planificación",
+      sublabel: "Síntesis",
+    }}
+    next={{
+      href: "/las-nuevas-fronteras",
+      label: "Las Nuevas",
+      sublabel: "Fronteras",
+    }}
   />
 </Layout>
