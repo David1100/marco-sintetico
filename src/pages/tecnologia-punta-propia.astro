@@ -3,130 +3,98 @@ import Layout from "../layouts/Layout.astro";
 import PageNav from "../components/PageNav.astro";
 ---
 
-<Layout title="Apropiación Social - Ecosistema">
-  <!-- Header Section -->
-  <header class="max-w-5xl mx-auto mb-12 md:mb-16 text-center lg:text-left animate-fade-in">
-    <h1 class="font-body text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary tracking-tight mb-4 animate-slide-up" style="animation-delay: 0s; opacity: 0;">
-      Apropiación Social
+<Layout title="Tecnología Punta Propia - Ecosistema">
+  <header class="max-w-5xl mx-auto mb-12 md:mb-16 text-center animate-fade-in">
+    <h1 class="font-body text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary tracking-tight mb-4 animate-slide-up">
+      PRODUCTIVIDAD: 
     </h1>
-    <p class="font-body text-lg text-tertiary-container max-w-2xl leading-relaxed animate-slide-up" style="animation-delay: 0.1s; opacity: 0;">
-      Un modelo sistémico de integración humana, tecnológica y cultural para el desarrollo productivo.
+    <p class="font-body text-lg text-tertiary-container max-w-2xl mx-auto leading-relaxed animate-slide-up" style="animation-delay: 0.1s; opacity: 0;">
+      Tecnología punta propia.
     </p>
   </header>
 
-  <!-- Central Ecosystem Diagram -->
-  <div class="relative grid grid-cols-1 lg:grid-cols-3 gap-12 items-center mb-16">
-    <!-- Input Flows: Column 1 -->
-    <div class="flex flex-col gap-12 lg:order-1">
-      <!-- Flow 1: Promoción Humana -->
-      <div class="group relative bg-surface-container rounded-xl p-1 overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 animate-slide-up" style="animation-delay: 0.2s; opacity: 0;">
-        <img class="w-full h-48 object-cover rounded-full" alt="Promoción Humana" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoByAIQwSMJMRouGUEWIk23Ze1tq5fKkKgAfli5dll9f_etraEv6Oy8sqcSDjDp66suE1qvpIs3kwDGe_5Y1bEAq_LeKPm_3Izx0CZk7oPnWp17U37EofXhu2Ms9-5eqhRQ0YKsSFHAkrvmOElsB32R1CQ0OChr-aSTeGNT4lhisXjgfRvukLGP_IyPhm_GKGdmn94U9pnmZ3tv7Wkz3RG2JnVB3_KBDQuRrze1umXu98Yu_vC1pV1rYHGHLmOR23-uOsoXzh_4Lny" />
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-2 text-primary">
-            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">diversity_3</span>
-            <h3 class="font-body font-bold text-xl uppercase tracking-wider">Promoción Humana</h3>
-          </div>
-          <p class="text-sm text-on-surface-variant leading-relaxed">Fomento de las capacidades individuales y colectivas enraizadas en el bienestar territorial.</p>
-        </div>
+  <div class="relative flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-20 py-16 px-8">
+    
+<!-- SVG Lines - positioned absolutely behind circles -->
+    <svg class="absolute inset-0 w-full h-full pointer-events-none z-0" viewBox="0 0 1000 400" preserveAspectRatio="xMidYMid meet">
+      <defs>
+        <marker id="arrow-purple" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto">
+          <polygon points="0 0, 14 5, 0 10" fill="#6750A4"/>
+        </marker>
+        <marker id="arrow-green" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto">
+          <polygon points="0 0, 14 5, 0 10" fill="#9CBA7F"/>
+        </marker>
+      </defs>
+      
+      <!-- Line 1 to 2 with Arrow -->
+      <line x1="220" y1="200" x2="340" y2="200" stroke="#79747E" stroke-width="4" opacity="0.9" marker-end="url(#arrow-purple)"/>
+      
+      <!-- Line 3 to 2 with Arrow -->
+      <line x1="700" y1="200" x2="560" y2="200" stroke="#6750A4" stroke-width="4" opacity="0.9" marker-end="url(#arrow-purple)"/>
+      
+      <!-- Line 1 to 3 (above circles) with arrow -->
+      <path d="M 160 50 Q 500 -50 820 50" fill="none" stroke="#9CBA7F" stroke-width="4" opacity="0.9" marker-end="url(#arrow-green)"/>
+      
+      <!-- Line 3 to 1 (below circles) with arrow -->
+      <path d="M 820 350 Q 500 450 160 350" fill="none" stroke="#9CBA7F" stroke-width="4" opacity="0.9" marker-end="url(#arrow-green)"/>
+    </svg>
+
+    <!-- Circle 1: SABIDURIA POPULAR / TECNOLOGIA PROPIA -->
+    <div class="relative flex flex-col items-center z-20 animate-slide-up -left-16" style="animation-delay: 0.2s; opacity: 0;">
+      <span class="font-body text-xs font-bold uppercase tracking-widest text-secondary backdrop-blur-lg mb-3 px-4 py-1 bg-secondary-container/30 rounded-full shadow-sm">
+        SABIDURÍA POPULAR
+      </span>
+      <div class="relative w-44 h-44 md:w-52 md:h-52 lg:w-56 lg:h-56">
+        <div class="absolute inset-0 rounded-full border-4 border-secondary-container shadow-xl"></div>
+        <img 
+          class="w-full h-full object-cover rounded-full" 
+          alt="Tecnología Propia" 
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoByAIQwSMJMRouGUEWIk23Ze1tq5fKkKgAfli5dll9f_etraEv6Oy8sqcSDjDp66suE1qvpIs3kwDGe_5Y1bEAq_LeKPm_3Izx0CZk7oPnWp17U37EofXhu2Ms9-5eqhRQ0YKsSFHAkrvmOElsB32R1CQ0OChr-aSTeGNT4lhisXjgfRvukLGP_IyPhm_GKGdmn94U9pnmZ3tv7Wkz3RG2JnVB3_KBDQuRrze1umXu98Yu_vC1pV1rYHGHLmOR23-uOsoXzh_4Lny"
+        />
       </div>
-      <!-- Flow 2: Redes de Promoción Tecnológica -->
-      <div class="group relative bg-surface-container rounded-xl p-1 overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 animate-slide-up" style="animation-delay: 0.3s; opacity: 0;">
-        <img class="w-full h-48 object-cover rounded-full" alt="Redes Tecnológicas" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH9ZV4BlZgOLcsZh7lCFwVhKrHPDs_uMn5v4Wdc2-z8BztCdR3e_W8lJeWb0DjWuFNowAN-gp-cxNBuz6--LNAggGbjxC6xqg3Amv2YB-QR83K6xQ3HLSRHlbMa9WDWGX16noTbzEv9zEaAYc4spFvQgzc7acr8sN2BqaCsmgeoxowySs6TtPzF-748dLwCrCW_-e7JJV8Kp49Iftht8iMQ9ZPGIRFp_6W7uTYBdlWQetHCwOTrYmdJjZxd99pa7MCLJ-yKtG53iiR" />
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-2 text-primary">
-            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">hub</span>
-            <h3 class="font-body font-bold text-xl uppercase tracking-wider">Redes Tecnológicas</h3>
-          </div>
-          <p class="text-sm text-on-surface-variant leading-relaxed">Infraestructura conectiva que habilita el intercambio de saberes técnicos y digitales.</p>
-        </div>
-      </div>
+      <span class="font-body text-sm font-bold uppercase tracking-wider text-primary mt-4 px-4 py-2 bg-primary-container/30 backdrop-blur-lg rounded-full shadow-sm">
+        TECNOLOGÍA PROPIA
+      </span>
     </div>
 
-    <!-- Convergent Center: Column 2 -->
-    <div class="lg:order-2 flex flex-col items-center justify-center relative py-12">
-      <!-- SVG Flow Lines (Hidden on Mobile) -->
-      <svg class="absolute inset-0 w-full h-full pointer-events-none hidden lg:block" viewbox="0 0 400 600">
-        <path class="text-outline-variant flow-line opacity-30" d="M 0 100 Q 200 100 200 300" fill="none" stroke="currentColor" stroke-width="2"></path>
-        <path class="text-outline-variant flow-line opacity-30" d="M 0 500 Q 200 500 200 300" fill="none" stroke="currentColor" stroke-width="2"></path>
-        <path class="text-outline-variant flow-line opacity-30" d="M 400 300 Q 200 300 200 300" fill="none" stroke="currentColor" stroke-width="2"></path>
-      </svg>
-      <div class="relative z-20 w-80 h-80 md:w-[450px] md:h-[450px] flex items-center justify-center animate-slide-up" style="animation-delay: 0.4s; opacity: 0;">
-        <!-- Background Glow -->
-        <div class="absolute inset-0 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
-        <!-- Main Convergent Circle -->
-        <div class="relative bg-primary-container text-on-primary-container rounded-full w-full h-full flex flex-col items-center justify-center text-center p-10 border-8 border-surface-container shadow-2xl">
-          <div class="mb-6 overflow-hidden rounded-full border-4 border-on-primary-container/20 w-32 h-32 md:w-48 md:h-48">
-            <img class="w-full h-full object-cover" alt="Comunidad" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDb6RBWAZ-oeJFgnTgchUNwjEGzpKMzgZvfepAImABNR-40leJVuHrkjQQdyrG2D_Jyq5hfW6u6cniKw6v_w0JCbHXGWqN0o7umC7zdMjD4b2wq3mlPgteCd00ZeiuPb7_PxvBS86RhZvGbBDKkO78m6uwkzu6zFgr9aKphImreDxMqkhuCEoxyeNqJsabKu3M7q5nH_X2EzsufOBcDPu4raG8qSFc4uJAGYWoEJ8gAndcbhpUwUTUVhZOjTOfkPm_VSxeu9YEnTIk" />
-          </div>
-          <h2 class="font-body font-black text-xl md:text-2xl leading-tight tracking-tighter">
-            APROPIACIÓN SOCIAL DE LA TECNOLOGÍA
-          </h2>
-          <div class="mt-4 flex gap-2">
-            <span class="px-3 py-1 bg-on-primary-container text-primary text-[10px] font-bold rounded-full uppercase tracking-tighter">Naturaleza</span>
-            <span class="px-3 py-1 bg-secondary text-on-secondary text-[10px] font-bold rounded-full uppercase tracking-tighter">Sociedad</span>
-          </div>
-        </div>
+    <!-- Circle 2: SOFTWARE DE LA MANERA / TECNOLOGIA PUNTA PROPIA -->
+    <div class="relative flex flex-col items-center z-20 animate-slide-up" style="animation-delay: 0.4s; opacity: 0;">
+      <span class="font-body text-xs font-bold uppercase tracking-widest text-primary mb-3 px-4 py-1 bg-primary-container/30 backdrop-blur-lg rounded-full shadow-sm">
+        SOFTWARE DE LA MANERA
+      </span>
+      <div class="relative w-52 h-52 md:w-60 md:h-60 lg:w-64 lg:h-64">
+        <div class="absolute inset-0 bg-primary/10 rounded-full blur-2xl animate-pulse"></div>
+        <div class="absolute inset-0 rounded-full border-8 border-primary-container shadow-2xl"></div>
+        <img 
+          class="w-full h-full object-cover rounded-full" 
+          alt="Tecnología Punta Propia" 
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH9ZV4BlZgOLcsZh7lCFwVhKrHPDs_uMn5v4Wdc2-z8BztCdR3e_W8lJeWb0DjWuFNowAN-gp-cxNBuz6--LNAggGbjxC6xqg3Amv2YB-QR83K6xQ3HLSRHlbMa9WDWGX16noTbzEv9zEaAYc4spFvQgzc7acr8sN2BqaCsmgeoxowySs6TtPzF-748dLwCrCW_-e7JJV8Kp49Iftht8iMQ9ZPGIRFp_6W7uTYBdlWQetHCwOTrYmdJjZxd99pa7MCLJ-yKtG53iiR"
+        />
       </div>
+      <span class="font-body text-sm font-bold uppercase tracking-wider text-primary mt-4 px-4 py-2 bg-primary-container/30 backdrop-blur-lg rounded-full shadow-sm">
+        TECNOLOGÍA PUNTA PROPIA
+      </span>
     </div>
 
-    <!-- Input Flows: Column 3 -->
-    <div class="flex flex-col gap-12 lg:order-3">
-      <!-- Flow 3: Capital Cultural -->
-      <div class="group relative bg-surface-container rounded-xl p-1 overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 animate-slide-up" style="animation-delay: 0.5s; opacity: 0;">
-        <img class="w-full h-48 object-cover rounded-full" alt="Capital Cultural" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuvYFFwtM3KqGFT9kIJ0lnqwijkR0fomDzf9IzMy3F2nyyPruGVZZZzYPUZI_gw6chi02doFLPOF_HiJTFnvcOWPi1aMLVo0Q9fsVD1c8B7JUEeQ_0gmh1UEDknaz0srZ_3tBm5zIh1Tg03Of2WSiiCH4m21IRPGQpSVZLtyDI1yOSfITqg5u66f-wGHhG8015s2LRw_rsIOvStGWYu1WKA_p9ZYaINtxOjgHscXXHL3LS9sXcP8KWLrYq05MckUdBgvuaMNFzfXR5" />
-        <div class="p-6">
-          <div class="flex items-center gap-3 mb-2 text-primary">
-            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">theater_comedy</span>
-            <h3 class="font-body font-bold text-xl uppercase tracking-wider">Capital Cultural</h3>
-          </div>
-          <p class="text-sm text-on-surface-variant leading-relaxed">El acervo simbólico y artístico que define la identidad y el propósito de la comunidad.</p>
-        </div>
+    <!-- Circle 3: SOFTWARE DEL MODO / TRANSFERENCIA TECNOLOGIA DE PUNTA -->
+    <div class="relative flex flex-col items-center z-20 animate-slide-up" style="animation-delay: 0.6s; opacity: 0;">
+      <span class="font-body text-xs font-bold uppercase backdrop-blur-lg tracking-widest text-tertiary mb-3 px-4 py-1 bg-tertiary-container/30 rounded-full shadow-sm">
+        SOFTWARE DEL MODO
+      </span>
+      <div class="relative w-44 h-44 md:w-52 md:h-52 lg:w-56 lg:h-56">
+        <div class="absolute inset-0 rounded-full border-4 border-tertiary-container shadow-xl"></div>
+        <img 
+          class="w-full h-full object-cover rounded-full" 
+          alt="Transferencia Tecnología de Punta" 
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuvYFFwtM3KqGFT9kIJ0lnqwijkR0fomDzf9IzMy3F2nyyPruGVZZZzYPUZI_gw6chi02doFLPOF_HiJTFnvcOWPi1aMLVo0Q9fsVD1c8B7JUEeQ_0gmh1UEDknaz0srZ_3tBm5zIh1Tg03Of2WSiiCH4m21IRPGQpSVZLtyDI1yOSfITqg5u66f-wGHhG8015s2LRw_rsIOvStGWYu1WKA_p9ZYaINtxOjgHscXXHL3LS9sXcP8KWLrYq05MckUdBgvuaMNFzfXR5"
+        />
       </div>
-      <!-- Secondary Annotation Card -->
-      <div class="glass-card border border-white/20 rounded-xl p-8 shadow-sm animate-slide-up" style="animation-delay: 0.6s; opacity: 0;">
-        <div class="flex items-center gap-3 mb-4 text-secondary">
-          <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">settings_suggest</span>
-          <h4 class="font-body font-bold text-sm uppercase tracking-widest">Núcleo Central</h4>
-        </div>
-        <div class="space-y-4">
-          <div class="flex justify-between items-center text-xs">
-            <span class="font-bold text-primary uppercase">Cultura Administrativa</span>
-            <span class="text-on-surface-variant">Eficiencia Social</span>
-          </div>
-          <div class="h-1 bg-surface-container rounded-full overflow-hidden">
-            <div class="h-full bg-primary w-3/4"></div>
-          </div>
-          <div class="flex justify-between items-center text-xs pt-2">
-            <span class="font-bold text-secondary uppercase">Tiempo y Ocio Creador</span>
-            <span class="text-on-surface-variant">Riqueza Humana</span>
-          </div>
-          <div class="h-1 bg-surface-container rounded-full overflow-hidden">
-            <div class="h-full bg-secondary w-full"></div>
-          </div>
-        </div>
-      </div>
+      <span class="font-body text-sm font-bold backdrop-blur-lg uppercase tracking-wider text-tertiary mt-4 px-4 py-2 bg-tertiary-container/30 rounded-full shadow-sm">
+        TRANSFERENCIA TECNOLOGÍA DE PUNTA
+      </span>
     </div>
+
   </div>
-
-  <!-- Technical Footnote -->
-  <footer class="mt-20 border-t border-outline-variant/20 pt-12 text-center animate-slide-up" style="animation-delay: 0.7s; opacity: 0;">
-    <div class="inline-flex flex-col md:flex-row items-center gap-4 md:gap-12 bg-surface-container-low px-10 py-6 rounded-full border border-white shadow-inner">
-      <div class="flex items-center gap-3">
-        <span class="text-primary font-black text-lg">01.</span>
-        <span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Gestión del Tiempo</span>
-      </div>
-      <div class="w-2 h-2 rounded-full bg-outline-variant hidden md:block"></div>
-      <div class="flex items-center gap-3">
-        <span class="text-secondary font-black text-lg">02.</span>
-        <span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Soberanía Tecnológica</span>
-      </div>
-      <div class="w-2 h-2 rounded-full bg-outline-variant hidden md:block"></div>
-      <div class="flex items-center gap-3">
-        <span class="text-tertiary font-black text-lg">03.</span>
-        <span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Productividad Social</span>
-      </div>
-    </div>
-  </footer>
 
   <PageNav
     prev={{ href: "/aptitud-trabajo", label: "Aptitud", sublabel: "Trabajo" }}
