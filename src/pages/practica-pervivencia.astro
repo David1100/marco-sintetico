@@ -32,13 +32,17 @@ import PageNav from "../components/PageNav.astro";
               stop-color="var(--color-primary)"
               stop-opacity="0.3"></stop>
           </linearGradient>
+          <marker id="arrow" markerWidth="12" markerHeight="12" refX="6" refY="6" orient="auto">
+            <path d="M2,2 L6,6 L2,10 z" fill="var(--color-primary)" />
+          </marker>
         </defs>
         <path
-          class="connection-line"
-          d="M500,300 L500,80"
+          class="connection-line jugo-line"
+          d="M498,150 L500,300"
           fill="none"
           stroke="url(#lineGrad)"
-          stroke-width="2"></path>
+          stroke-width="2"
+          marker-end="url(#arrow)"></path>
         <path
           class="connection-line"
           d="M500,300 L750,200"
@@ -353,6 +357,11 @@ import PageNav from "../components/PageNav.astro";
       stroke-dasharray: 1000;
       stroke-dashoffset: 1000;
       animation: drawLine 3s ease-out forwards;
+    }
+
+    .connection-line.jugo-line {
+      stroke-dasharray: none;
+      animation: none;
     }
 
     @keyframes drawLine {
